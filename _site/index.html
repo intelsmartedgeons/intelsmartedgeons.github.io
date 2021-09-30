@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Docs | Documentation Jekyll theme.</title>
+<meta name="generator" content="Jekyll v3.4.1" />
+<meta property="og:title" content="Docs" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Documentation Jekyll theme." />
+<meta property="og:description" content="Documentation Jekyll theme." />
+<link rel="canonical" href="http://localhost:4000/intel-smart-edge-open/" />
+<meta property="og:url" content="http://localhost:4000/intel-smart-edge-open/" />
+<meta property="og:site_name" content="Docs" />
+<script type="application/ld+json">
+{"@type":"WebSite","headline":"Docs","url":"http://localhost:4000/intel-smart-edge-open/","description":"Documentation Jekyll theme.","name":"Docs","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <meta property="og:image" content="http://localhost:4000/intel-smart-edge-open/uploads/"/>
+  <!-- <link rel="stylesheet" href="/intel-smart-edge-open/assets/css/main.css"> -->
+  <link rel="stylesheet" href="/intel-smart-edge-open/assets/css/custom.css">
+  <link rel="shortcut icon" type="image/png" href="/intel-smart-edge-open/uploads/favicon.png" >
+  <link rel="alternate" type="application/rss+xml" title="Docs" href="/intel-smart-edge-open/feed.xml">
+  <script type="text/javascript" src="/intel-smart-edge-open/assets/js/jquery.js"></script>
+  <script src="/intel-smart-edge-open/assets/js/main.js"></script>
+  
+    <script>
+function searchResults(form) {
+
+    var currentItem = null;
+    var search = document.getElementById(form);
+    var results = document.getElementById(form + "-results");
+    var toggle = document.getElementById(form + "-toggle");
+
+    function removeActive() {
+        for (i = 0; i < results.children.length; i++) {
+            results.children[i].classList.remove("uk-background-muted");
+        }
+    }
+
+    // Detect all clicks on the document
+    document.addEventListener("click", function(event) {
+
+        var isClickSearch = false;
+        var isClickResults = false;
+        var isClickSearchToggle = false;
+
+        if (search !== null) {
+            isClickSearch = search.contains(event.target);
+        }
+
+        if (results !== null) {
+            isClickResults = results.contains(event.target);
+        }
+
+        if (toggle !== null) {
+            isClickSearchToggle = toggle.contains(event.target);
+        }
+
+        if (isClickSearch || isClickSearchToggle) {
+            results.style.display = "block";
+        }        
+
+        if (!isClickResults && !isClickSearch && !isClickSearchToggle) {
+            results.style.display = "none";
+        }        
+        
+    });    
+
+    results.addEventListener("mouseover", function(event) {
+
+        removeActive();
+        event.target.parentElement.classList.add("uk-background-muted");
+        currentItem = null;
+
+    });
+
+    results.addEventListener("mouseout", function(event) {
+        event.target.parentElement.classList.remove("uk-background-muted");
+    });
+
+
+    search.addEventListener("keyup", function(event) {
+
+        var resultItems = results.children;
+        var resultCount = results.children.length;
+                                
+        if (event.keyCode === 40) {
+
+            if (currentItem < (resultCount - 1)) {
+                if (currentItem === null) {
+                    currentItem = 0;
+                } else {
+                    removeActive();
+                    currentItem++;
+                }
+                removeActive();
+                resultItems[currentItem].classList.add("uk-background-muted");
+            }
+            
+        } else if (event.keyCode === 38) {
+
+            if (currentItem > 0) {
+                if (currentItem === null) {
+                    currentItem = 0;
+                } else {
+                    removeActive();
+                    currentItem--;
+                }
+                removeActive();
+                resultItems[currentItem].classList.add("uk-background-muted");
+            }
+
+        } else if (event.keyCode === 13) {
+
+            resultItems[currentItem].children[0].click();
+
+        }
+
+    });
+
+}
+</script>
+  
+  
+  
+</head>
+
+    <body>
+
+    
+        
+
+
+
+<header class="uk-background-center-center uk-background-cover" style="">
+    <div class="uk-overlay-header" style="">
+
+        <div data-uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent; top: 200">
+    <nav class="uk-navbar-container">
+        <div class="uk-container">
+            <div data-uk-navbar>
+                <div class="uk-navbar-left">
+                    <!-- <a class="uk-navbar-item uk-logo uk-visible@m" href="/intel-smart-edge-open/">Docs</a> -->
+                    <a class="uk-navbar-item uk-logo uk-visible@m" href="/intel-smart-edge-open/">Intel&reg; Smart Edge Open</a>
+                    
+                        <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas-docs" data-uk-toggle><span data-uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Intel&reg; Smart Edge Open</span></a>
+                    
+
+                    <ul class="uk-navbar-nav uk-visible@m">
+                        
+                            
+                            
+                            
+                                
+                                    
+                                        <li class="uk-active"><a href="/intel-smart-edge-open/" >Home</a></li>
+                                                                                                        
+                                
+                            
+                        
+                            
+                            
+                            
+                                
+                                    
+                                        <li><a href="/intel-smart-edge-open/docs/openness_releasenotes/" >Docs</a></li>
+                                                                                                        
+                                
+                            
+                        
+                            
+                            
+                            
+                                
+                                    
+                                        <li><a href="/intel-smart-edge-open/release-notes/" >Release Notes</a></li>
+                                                                                                        
+                                
+                            
+                        
+                            
+                            
+                            
+                                
+                                    
+                                        <li><a href="/intel-smart-edge-open/contact/" >Contact</a></li>
+                                                                                                        
+                                
+                            
+                        
+                    </ul>
+                </div>
+                <div class="uk-navbar-center uk-hidden@m">
+                    <a class="uk-navbar-item uk-logo" href="/intel-smart-edge-open/">Docs</a>
+                </div>
+                <div class="uk-navbar-right">
+                    
+                        
+                    
+
+                    <ul class="uk-navbar-nav uk-visible@m">
+                        
+                            
+                            
+                            
+                                
+                                    <li><div class="uk-navbar-item"><a class="uk-button uk-button-primary-outline" href="/intel-smart-edge-open/changelog-timeline/" >Changelog</a></div></li>
+                                
+                            
+                        
+                            
+                            
+                            
+                                
+                                    <li><div class="uk-navbar-item"><a class="uk-button uk-button-success" href="/intel-smart-edge-open/contact/" >Contact</a></div></li>
+                                
+                            
+                        
+                    </ul>
+
+                    
+                        <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-toggle><span data-uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span></a>
+                    
+
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+        <!-- <div class="uk-section section-hero uk-position-relative" data-uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true">
+            <div class="uk-container uk-container-small">
+                <!-  ->
+                <h1 class="uk-heading-primary uk-text-center uk-margin-remove-top"></h1>
+                
+
+                <!- 
+                <div class="hero-search">
+
+                    <-- Html Elements for Search -->
+                    <!-- <div class="uk-position-relative">
+                        <form class="uk-search uk-search-default uk-width-1-1" name="search-hero" onsubmit="return false;">
+                            <span class="uk-search-icon-flip" data-uk-search-icon></span>
+                            <input id="search-hero" class="uk-search-input uk-box-shadow-large" type="search" placeholder="Search for answers" autocomplete="off">
+                        </form>
+                        <ul id="search-hero-results" class="uk-position-absolute uk-width-1-1 uk-list"></ul>
+                    </div> -->
+
+                    <!-- <script>
+                    SimpleJekyllSearch({
+                        searchInput: document.getElementById('search-hero'),
+                        resultsContainer: document.getElementById('search-hero-results'),
+                        noResultsText: '<li class="no-results">No results found</li>',
+                        searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+                        json: "/intel-smart-edge-open/search.json"
+                    });
+
+                    searchResults("search-hero");
+
+                    </script> ->
+
+                </div>
+                 ->
+
+            </div>
+        </div> -->
+
+    </div>
+</header>
+    
+
+    
+    
+<div class="uk-section boxHead">
+    <div class="uk-container">
+        <h1 class="uk-text-center">Bring your edge solution to market faster</h1>
+        <p class="lead uk-text-center">Speed up development with reference solutions designed for common network edge and on-premises use cases, powered by a Certified Kubernetes* cloud-native stack.</p>
+
+        <div class="uk-child-width-1-3@m uk-grid-match uk-text-center uk-margin-medium-top" data-uk-grid="">
+            <div class="boxHeadBox">
+                <div class="uk-card uk-card-default uk-box-shadow-medium uk-card-hover uk-card-body uk-inline border-radius-large border-xlight">
+                    <span class="uk-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="346.847" height="312.833" viewBox="0 0 346.847 312.833">
+                            <g id="accelerate-time-to-market" transform="translate(-1 314.554)">
+                            <path id="Path_2332" data-name="Path 2332" d="M321.4-314.1c-11.8,2.9-18.9,15.9-15,27.1l1.6,4.5-26.8,26.7L254.4-229H193v56h11l.2-22.3.3-22.2,50.5-.2,50.5-.3,2.7,4.9c3.8,7,10.2,10.6,18.3,10.6,27.1-.2,28.9-39.9,1.8-42.2-5-.4-6.6-.1-11.3,2.4a17.413,17.413,0,0,0-8.5,8l-3,5.2-16.7.1c-9.3,0-16.8-.3-16.8-.7s10-10.8,22.1-22.9l22.2-22.2,3.6,1.5c5,2.1,13.2,1.2,18.2-2.1,8.8-5.9,12.1-16.8,8-26.1-1.2-2.7-2.9-5.8-3.9-6.8C338.1-312.9,327.9-315.7,321.4-314.1Z" fill="#0068b5" />
+                            <path id="Path_2333" data-name="Path 2333" d="M143.2-243.9c-4.6,1.4-11.8,8.8-13.1,13.5-3.1,11.1,1.7,22.1,11.4,26l4.5,1.9v23.9l-3.1,3.2-3,3.1,4.5,2.7a28.074,28.074,0,0,0,5.3,2.6c.5,0,2.3-1.5,4.1-3.3l3.2-3.3v-29.2l4.5-2.6a22.037,22.037,0,0,0,10-15.2C173.9-236,158.8-248.4,143.2-243.9Z" fill="#0068b5" />
+                            <path id="Path_2334" data-name="Path 2334" d="M231.5-160l-23,23h-58l-2.7,5a37.995,37.995,0,0,0-2.8,5.5c0,.3,15.6.5,34.8.5h34.7l23-23,23-23H326v-11H254.5Z" fill="#0068b5" />
+                            <path id="Path_2335" data-name="Path 2335" d="M46.5-166.9c-8.8,5-16.2,9.3-16.4,9.5s3.5,7.1,8.2,15.4L47-127l-3.4,4.8a103.345,103.345,0,0,0-5.5,8.9L36-109H1v39H18.3l17.2.1,2.7,5.7c1.5,3.1,3.7,7.3,4.9,9.3l2.2,3.5L36.7-36.6C31.9-28.4,28-21.5,28-21.1c.1,1.2,33.4,19.5,33.7,18.6,1.5-4.1,17.1-29,18.1-28.9.7.1,5.4.2,10.6.2l9.5.2,7.6,13.3c4.1,7.4,8.2,14.2,8.9,15.2,1.2,1.7,2.4,1.2,17.7-7.5,9-5.1,16.5-9.4,16.7-9.5.1-.2-3.6-6.9-8.3-15S134-49.3,134-49.6c0-.2,1.7-3,3.8-6.3a64.344,64.344,0,0,0,5.2-9l1.2-3.1H180v-39H145.4l-3.1-6.3c-1.8-3.4-4.1-7.6-5.2-9.2l-1.9-3,8.8-15c4.9-8.3,8.5-15.3,8.2-15.7-.9-.8-31.9-18.8-32.6-18.8-.2,0-4.3,6.8-9.1,15.1-7.7,13.2-9,15-10.9,14.5A70.042,70.042,0,0,0,89-146l-8.5-.1L72.1-161c-4.7-8.3-8.7-15-9-15S55.3-171.9,46.5-166.9Zm57.2,52c24.7,11.9,20.8,47.9-6,55.4C71.1-52,49.5-84.1,66.3-106.2,75.7-118.5,89.6-121.8,103.7-114.9Z" fill="#0068b5" />
+                            <path id="Path_2336" data-name="Path 2336" d="M318.5-151.6a22.1,22.1,0,0,0-11,10.5l-1.8,4.1H257v11h49l1.3,3.2c2.2,5.1,8.7,10.4,14.3,11.6,16.6,3.5,29.9-10.7,25.3-27.1-1.3-4.9-6.3-10.5-11.4-12.8C330.8-153.3,322.8-153.5,318.5-151.6Z" fill="#0068b5" />
+                            <path id="Path_2337" data-name="Path 2337" d="M188-79.5V-74h26.4L242-46.5,269.5-19h18.3c18.1,0,18.3,0,19.1,2.3,4.2,11,19.2,16.2,30.2,10.4,11.4-6,14.2-22.5,5.6-32.4-10.2-11.6-29-9-35.2,4.8L305.7-30H274.5L253.2-51.3C241.6-63,232-72.9,232-73.3s21.2-.7,47-.7h47V-85H188Z" fill="#0068b5" />
+                            </g>
+                        </svg>
+                    </span>
+                    <h3 class="uk-card-title">Accelerate your time to market</h3>
+                    <p>Reduce cost and performance risks associated with developing cloud-native networking platforms with reference architectures optimized for Intel&reg; hardware.</p>
+                </div>
+            </div>
+            <div class="boxHeadBox">
+                <div class="uk-card uk-card-default uk-box-shadow-medium uk-card-hover uk-card-body uk-inline border-radius-large border-xlight">
+                    <span class="uk-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="356" height="411.2" viewBox="0 0 356 411.2">
+                            <g id="simplify-complex-network-architectures" transform="translate(-1 412)">
+                              <path id="Path_2356" data-name="Path 2356" d="M94.2-363.2C47.9-336.5,10-314.3,10-313.9c0,.3,1.8,1.4,3.9,2.4l4,1.7,80.6-46.5,80.6-46.6,80.4,46.5c44.2,25.5,80.9,46.4,81.4,46.4,1.3,0,7.1-3.3,7.1-4.1,0-.6-168.2-97.9-169.1-97.9C178.7-411.9,140.6-390,94.2-363.2Z" fill="#0068b5" />
+                              <path id="Path_2357" data-name="Path 2357" d="M1-206.3v102.8L86.8-54c47.1,27.2,87.2,50.3,89,51.3L179-.8v-116l-3.4-2.1a15.146,15.146,0,0,0-4-2.1c-.3,0-.7,23.8-.8,53l-.3,53L89.8-61.6,9-108.2v-93.5c0-51.4.3-93.2.8-93,7.4,4.2,87.3,50.3,89,51.3,2.2,1.4,2.2,1.4,2.2-3.3v-4.8L56.8-277c-24.3-14-46.8-27-50-28.8L1-309.1Z" fill="#0068b5" />
+                              <path id="Path_2358" data-name="Path 2358" d="M307.5-280.5c-26.9,15.6-49.4,28.6-49.8,28.7-.5.2-.7,2.4-.5,5l.3,4.6L303-268.5l45.5-26.3.3,93.1c.1,51.2-.1,93.4-.5,93.8-.5.4-36.1,21.1-79.3,45.9-43.2,24.9-79.1,45.8-79.8,46.5-.8.7-1.2,2.8-1,5.3l.3,4.1,84.3-48.7L357-103.4V-206.2c0-56.5-.1-102.8-.2-102.8C356.6-308.9,334.5-296.1,307.5-280.5Z" fill="#0068b5" />
+                              <path id="Path_2359" data-name="Path 2359" d="M148.7-268.8c-23.4,13.5-29.5,17.4-28.5,18.4.7.6,14.3,8.6,30.1,17.7l28.8,16.6L209-233.3c16.5-9.5,30-17.5,30-17.8,0-.6-56.1-33.3-59-34.3C179.1-285.7,165.8-278.6,148.7-268.8Z" fill="#0068b5" />
+                              <path id="Path_2360" data-name="Path 2360" d="M110-206.3v39.8l27.7,16c15.2,8.8,30.7,17.7,34.5,19.8l6.8,3.9v-79.7L150.3-223c-15.7-9.1-31.2-18-34.5-19.8l-5.8-3.3Z" fill="#0068b5" />
+                              <path id="Path_2361" data-name="Path 2361" d="M217.8-228.7,188-211.5v79.7l3.3-1.9c1.7-1,15.2-8.8,30-17.3L248-166.4v-39.8c0-21.9-.1-39.8-.2-39.8C247.6-245.9,234.1-238.2,217.8-228.7Z" fill="#0068b5" />
+                            </g>
+                        </svg>
+                    </span>
+                    <h3 class="uk-card-title">Simplify Complex Network Architectures</h3>
+                    <p>Deploy reference architectures for common use cases and edge locations</p>
+                </div>
+            </div>
+            <div class="boxHeadBox">
+                <div class="uk-card uk-card-default uk-box-shadow-medium uk-card-hover uk-card-body uk-inline border-radius-large border-xlight">
+                    <span class="uk-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="368" height="424.302" viewBox="0 0 368 424.302">
+                            <g id="ready-for-5G-networking" transform="translate(-1 425.501)">
+                              <path id="Path_2338" data-name="Path 2338" d="M137-398.2c-26.1,15.1-65.7,37.9-87.9,50.8L8.7-324.1l4.6,2.2,4.5,2.2,83.4-48.2,83.5-48.2L267.9-368c45.7,26.4,83.5,48,84.1,48,1.1,0,8.2-4.1,7.8-4.5-.3-.3-173.6-100.4-174.8-101C184.7-425.6,163.1-413.3,137-398.2Z" fill="#0068b5" />
+                              <path id="Path_2339" data-name="Path 2339" d="M240-350.8c-7.4,4.3-14.1,8.2-14.8,8.7-1.5.9,28.1,18.4,30.2,17.9.7-.2,7.8-4.1,15.9-8.7l14.6-8.5-15.2-8.8c-8.4-4.8-15.6-8.7-16.2-8.7C254-358.8,247.4-355.2,240-350.8Z" fill="#0068b5" />
+                              <path id="Path_2340" data-name="Path 2340" d="M102.5-343.9c-7.7,4.4-14.4,8.4-14.8,8.8-.6.6,28.2,18.1,29.8,18.1s30.4-17.5,29.7-18.1c-1.4-1.4-28.7-16.9-29.7-16.9C116.9-352,110.2-348.4,102.5-343.9Z" fill="#0068b5" />
+                              <path id="Path_2341" data-name="Path 2341" d="M220-317.8l.1,20.3,16.6,9.5c9.2,5.2,17,9.6,17.5,9.8.4.2.8-8.8.8-20l-.1-20.3L238.3-328c-9.1-5.2-17-9.7-17.5-9.8C220.4-338,220-329,220-317.8Z" fill="#0068b5" />
+                              <path id="Path_2342" data-name="Path 2342" d="M273.8-329.4,259-320.8v40.7l15.3-8.8,15.2-8.8.3-20.2c.1-11-.1-20.1-.5-20.1C288.8-338,281.9-334.1,273.8-329.4Z" fill="#0068b5" />
+                              <path id="Path_2343" data-name="Path 2343" d="M82-311.8v20.4l16.8,9.7c9.3,5.3,17.2,9.7,17.6,9.7.3,0,.5-9,.4-20.1l-.3-20.1-12-7c-6.6-3.8-14.3-8.3-17.2-9.9l-5.3-3Z" fill="#0068b5" />
+                              <path id="Path_2344" data-name="Path 2344" d="M137.3-323.2l-15.2,8.7-.1,20.3c0,11.2.4,20.2.8,20,.5-.2,7.5-4.1,15.5-8.8l14.7-8.4v-20.3c0-11.2-.1-20.3-.2-20.3C152.6-332,145.7-328,137.3-323.2Z" fill="#0068b5" />
+                              <path id="Path_2345" data-name="Path 2345" d="M1-212.6v106.3L91.7-53.9c49.8,28.8,91,52.5,91.5,52.7.4.2.8-26.7.8-59.7V-121l-4-2-4-2-.2,54.9-.3,54.9-83.2-48L9-111.3v-96.3c0-53,.2-96.4.5-96.4s21.4,12,46.8,26.6c25.4,14.7,46.5,26.9,47,27.1.4.2.7-1.7.7-4.4v-4.8l-31.2-18c-17.2-9.9-40.4-23.3-51.5-29.7L1-318.9Z" fill="#0068b5" />
+                              <path id="Path_2346" data-name="Path 2346" d="M316.8-289.2l-51.7,29.7-.1,4.7c0,2.7.2,4.8.4,4.8s21.4-12.2,47.1-27c25.7-14.9,47.1-27,47.6-27s.9,40.3.9,95.9v96l-2.7,1.9c-1.6,1-39.4,22.9-84,48.7L193-14.7v9.8l4.3-2.5c2.3-1.4,41.9-24.3,87.9-50.8L369-106.5V-212.8c0-58.4-.1-106.2-.2-106.2C368.6-319,345.2-305.6,316.8-289.2Z" fill="#0068b5" />
+                              <path id="Path_2347" data-name="Path 2347" d="M152.8-277.2c-16.9,9.7-30.4,18-30,18.4.4.3,14.5,8.5,31.3,18.2l30.6,17.7,30.4-17.6c16.6-9.6,30.6-17.8,31.1-18.3.8-.8-57.5-35-60.9-35.8C184.3-294.8,170.4-287.4,152.8-277.2Z" fill="#0068b5" />
+                              <path id="Path_2348" data-name="Path 2348" d="M113.2-212.8l.3,41.3L145-153.3c17.3,10,33.2,19.2,35.3,20.3l3.7,2.1v-41.3l-.1-41.3-29.6-17C138-239.9,122-249,118.8-250.8l-5.8-3.3Z" fill="#0068b5" />
+                              <path id="Path_2349" data-name="Path 2349" d="M224.3-235.8,193-217.7v40.9c0,22.4.3,40.8.7,40.8.3,0,14.5-8,31.5-17.8L256-171.5v-41.3c0-22.6-.1-41.2-.2-41.1C255.6-253.9,241.4-245.7,224.3-235.8Z" fill="#0068b5" />
+                              <path id="Path_2350" data-name="Path 2350" d="M242.2-156.6c-7.9,4.6-14.4,8.6-14.3,9,0,.5,6.6,4.6,14.7,9.3,12.2,7,15.1,8.3,16.8,7.5,1.2-.5,8.2-4.5,15.7-8.9l13.6-7.9-15.1-8.7c-8.4-4.8-15.6-8.7-16.2-8.6C256.9-164.9,250-161.2,242.2-156.6Z" fill="#0068b5" />
+                              <path id="Path_2351" data-name="Path 2351" d="M99-148.4c-8,4.6-14.6,8.8-14.8,9.3-.3.9,27.4,17.3,29.4,17.4,1.3,0,30.4-16.5,30.4-17.3,0-.4-14.5-9-26.1-15.4l-4.4-2.4Z" fill="#0068b5" />
+                              <path id="Path_2352" data-name="Path 2352" d="M222-124.7v20.3l16.8,9.7c9.3,5.3,17.2,9.7,17.6,9.7.3,0,.5-9,.4-20.1l-.3-20.1-15.5-9c-8.5-4.9-16.3-9.4-17.2-9.9C222.1-145,222-143.8,222-124.7Z" fill="#0068b5" />
+                              <path id="Path_2353" data-name="Path 2353" d="M277.5-136.1l-15,8.8-.3,20.1c-.1,11.1,0,20.2.3,20.2s7.3-3.9,15.5-8.6l15-8.6v-20.4c0-11.2-.1-20.4-.2-20.3C292.6-144.9,285.8-140.9,277.5-136.1Z" fill="#0068b5" />
+                              <path id="Path_2354" data-name="Path 2354" d="M79-115.7v20.4L95.3-86c8.9,5.1,16.5,9.5,17,9.7.4.2.7-8.7.7-19.9v-20.3l-12.2-7c-6.7-3.9-14.3-8.2-17-9.8L79-136Z" fill="#0068b5" />
+                              <path id="Path_2355" data-name="Path 2355" d="M133.2-127.3,118-118.5v40.6l6.3-3.5c3.4-2,10.4-6,15.4-8.9l9.3-5.2v-20.3c0-11.1-.1-20.2-.3-20.2C148.6-136,141.6-132.1,133.2-127.3Z" fill="#0068b5" />
+                            </g>
+                        </svg>
+                    </span>
+                    <h3 class="uk-card-title">Ready for 5G networking</h3>
+                    <p>Run compute-intensive workloads at the edge at 5G speeds.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="uk-section boxHead boxes5">
+    <div class="uk-container">
+        <h2 class="uk-text-center">Get started with our Experience Kits</h2>
+        <p class="lead uk-text-center">Experience kits are reference architectures based on technologies from across the cloud native landscape, optimized for efficient performance at the network edge.</p>
+
+        <div class="uk-child-width-1-3@m uk-grid-match uk-text-center uk-margin-medium-top" data-uk-grid="">
+            <div class="boxHeadBox">
+                <div class="uk-card uk-card-default uk-box-shadow-medium uk-card-hover uk-card-body uk-inline border-radius-large border-xlight">
+                    <h3 class="uk-card-title">Developer</h3>
+                    <p>The Developer Experience Kit (DEK) lets you easily install and instantiate an Intel&reg; Smart Edge Open edge cluster. Once the cluster has been installed, you can onboard edge applications and run reference implementations</p>
+                </div>
+            </div>
+            <div class="boxHeadBox">
+                <div class="uk-card uk-card-default uk-box-shadow-medium uk-card-hover uk-card-body uk-inline border-radius-large border-xlight">
+                    <h3 class="uk-card-title">uCPE</h3>
+                    <p>Seamlessly connect endpoints using multiple protocols, without needing to invest in specialized hardware.</p>
+                </div>
+            </div>
+            <div class="boxHeadBox">
+                <div class="uk-card uk-card-default uk-box-shadow-medium uk-card-hover uk-card-body uk-inline border-radius-large border-xlight">
+                    <h3 class="uk-card-title">Private Wireless</h3>
+                    <p>Deploy a local, private wireless network for your industrial, retail, or enterprise location. Run compute-intensive workloads at the edge on data collected from intelligent sensors at 5G speeds.</p>
+                </div>
+            </div>
+            <div class="boxHeadBox">
+                <div class="uk-card uk-card-default uk-box-shadow-medium uk-card-hover uk-card-body uk-inline border-radius-large border-xlight">
+                    <h3 class="uk-card-title">Access Edge</h3>
+                    <p>Provide smart indoor coverage solutions based on next-generation fronthaul architecture.</p>
+                </div>
+            </div>
+            <div class="boxHeadBox">
+                <div class="uk-card uk-card-default uk-box-shadow-medium uk-card-hover uk-card-body uk-inline border-radius-large border-xlight">
+                    <h3 class="uk-card-title">Near Edge</h3>
+                    <p>Scale solutions from a single-edge node to multicluster deployments across network edge aggregation points, such as group centers and next-generation central offices.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="uk-section boxHead boxHeadExplore">
+    <div class="uk-container">
+        <h2 class="uk-text-center">Explore</h2>
+        <p class="lead uk-text-center">Get started by exploring documentation below</p>
+        <div class="uk-child-width-1-3@m uk-grid-match uk-text-center uk-margin-medium-top" data-uk-grid="">
+            <div>
+                <div class="boxHeadBox uk-card uk-card-default uk-box-shadow-medium uk-card-hover uk-card-body uk-inline border-radius-large border-xlight">
+                    <span class="uk-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+                            <g id="Group_14" data-name="Group 14" transform="translate(-251 -1229)">
+                              <g id="Ellipse_8" data-name="Ellipse 8" transform="translate(251 1229)" fill="none" stroke="#0068b5" stroke-width="1">
+                                <circle cx="30" cy="30" r="30" stroke="none" />
+                                <circle cx="30" cy="30" r="29.5" fill="none" />
+                              </g>
+                              <g id="settings" transform="translate(258.501 1239.622)">
+                                <g id="Group_13" data-name="Group 13">
+                                  <path id="Path_15" data-name="Path 15" d="M26.518,113.927a.789.789,0,0,0-.159-.454q-1.273-1.523-2.045-2.613a11.163,11.163,0,0,0,.727-1.727l3.522-.545a.529.529,0,0,0,.364-.238.742.742,0,0,0,.158-.443v-4.2a.677.677,0,0,0-.158-.443.656.656,0,0,0-.386-.238l-3.454-.523a15.547,15.547,0,0,0-.773-1.863q.34-.5,1.023-1.363t.954-1.227a.76.76,0,0,0,.159-.432q0-.614-3.272-3.636A.754.754,0,0,0,22.7,93.8a.665.665,0,0,0-.455.159l-2.681,2.022a10,10,0,0,0-1.7-.7L17.338,91.8a.585.585,0,0,0-.227-.4.693.693,0,0,0-.455-.17H12.43a.665.665,0,0,0-.682.545,26.12,26.12,0,0,0-.523,3.5A11.051,11.051,0,0,0,9.476,96L6.863,93.954a.818.818,0,0,0-.477-.159q-.432,0-1.8,1.341a19.269,19.269,0,0,0-1.863,2.022.665.665,0,0,0-.159.455.865.865,0,0,0,.159.454Q4,99.59,4.772,100.68a11.207,11.207,0,0,0-.727,1.727l-3.522.545a.528.528,0,0,0-.364.238.741.741,0,0,0-.159.443v4.2a.676.676,0,0,0,.159.443.559.559,0,0,0,.387.216L4,109.041a11.636,11.636,0,0,0,.8,1.863q-.364.5-1.068,1.386T2.8,113.5a.763.763,0,0,0-.159.431q0,.614,3.272,3.636a.754.754,0,0,0,.477.181.613.613,0,0,0,.454-.159l2.681-2.022a9.953,9.953,0,0,0,1.7.7l.523,3.477a.585.585,0,0,0,.227.4.693.693,0,0,0,.455.17h4.226a.665.665,0,0,0,.682-.545,27.093,27.093,0,0,0,.523-3.522,10.288,10.288,0,0,0,1.75-.7l2.613,2.045a.817.817,0,0,0,.477.159q.432,0,1.784-1.352a23.761,23.761,0,0,0,1.875-2.034A.582.582,0,0,0,26.518,113.927Zm-7.863-4.044a5.605,5.605,0,0,1-4.113,1.7,5.817,5.817,0,0,1,0-11.634,5.817,5.817,0,0,1,4.113,9.93Z" transform="translate(0 -85.773)" fill="#0068b5" />
+                                  <path id="Path_16" data-name="Path 16" d="M342.97,321.129a6.363,6.363,0,0,0-.681-1.182,12.6,12.6,0,0,0,1.159-3.136.2.2,0,0,0-.091-.159q-2.727-1.59-2.818-1.591l-.136.046a20.912,20.912,0,0,0-2.09,2.545q-.454-.045-.681-.046c-.152,0-.379.016-.682.046q-.317-.478-1.181-1.534t-1.045-1.057a5.557,5.557,0,0,0-.682.364q-.636.364-1.341.773t-.8.455a.2.2,0,0,0-.091.159,12.606,12.606,0,0,0,1.159,3.136,6.389,6.389,0,0,0-.681,1.181q-3.386.34-3.386.7v3.181q0,.364,3.386.7a6.572,6.572,0,0,0,.681,1.181,12.612,12.612,0,0,0-1.159,3.136.2.2,0,0,0,.091.159q2.772,1.613,2.818,1.613.182,0,1.045-1.068t1.181-1.545q.454.044.682.045t.681-.045q.317.477,1.181,1.545t1.045,1.068q.045,0,2.818-1.613a.2.2,0,0,0,.091-.159,12.621,12.621,0,0,0-1.159-3.136,6.586,6.586,0,0,0,.681-1.181q3.386-.341,3.386-.7v-3.181Q346.356,321.47,342.97,321.129Zm-3.284,4.351a2.879,2.879,0,1,1,.853-2.056A2.8,2.8,0,0,1,339.687,325.48Z" transform="translate(-302.727 -291.793)" fill="#0068b5" />
+                                  <path id="Path_17" data-name="Path 17" d="M342.97,28.769a6.356,6.356,0,0,0-.681-1.182,12.591,12.591,0,0,0,1.159-3.136.2.2,0,0,0-.091-.159q-2.727-1.591-2.818-1.591l-.136.045a20.922,20.922,0,0,0-2.09,2.545q-.454-.045-.681-.045c-.152,0-.379.015-.682.045q-.317-.477-1.181-1.534T334.722,22.7a5.579,5.579,0,0,0-.682.364q-.636.364-1.341.773t-.8.454a.2.2,0,0,0-.091.159,12.6,12.6,0,0,0,1.159,3.136,6.373,6.373,0,0,0-.681,1.182q-3.386.341-3.386.7v3.181q0,.363,3.386.7a6.612,6.612,0,0,0,.681,1.182,12.605,12.605,0,0,0-1.159,3.136.2.2,0,0,0,.091.159q2.772,1.613,2.818,1.613.182,0,1.045-1.068t1.181-1.545q.454.045.682.045t.681-.045q.317.477,1.181,1.545t1.045,1.068q.045,0,2.818-1.613a.2.2,0,0,0,.091-.159,12.616,12.616,0,0,0-1.159-3.136,6.618,6.618,0,0,0,.681-1.182q3.386-.341,3.386-.7V29.474Q346.356,29.11,342.97,28.769Zm-3.284,4.352a2.88,2.88,0,1,1,.853-2.056A2.8,2.8,0,0,1,339.687,33.121Z" transform="translate(-302.727 -22.702)" fill="#0068b5" />
+                                </g>
+                              </g>
+                            </g>
+                        </svg>
+                    </span>
+                    <h3 class="uk-card-title">Explore Experience Kits</h3>
+                    <ul>
+                        <li><a href="">Overview</a></li>
+                        <li><a href="">Developer</a></li>
+                        <li><a href="">Private Wireless</a></li>
+                        <li><a href="">uCPE</a></li>
+                        <li><a href="">Near Edge</a></li>
+                        <li><a href="">Access</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="boxHeadBox uk-card uk-card-default uk-box-shadow-medium uk-card-hover uk-card-body uk-inline border-radius-large border-xlight">
+                    <span class="uk-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+                            <g id="Group_89" data-name="Group 89" transform="translate(-251 -1229)">
+                              <g id="Ellipse_8" data-name="Ellipse 8" transform="translate(251 1229)" fill="none" stroke="#0068b5" stroke-width="1">
+                                <circle cx="30" cy="30" r="30" stroke="none" />
+                                <circle cx="30" cy="30" r="29.5" fill="none" />
+                              </g>
+                              <g id="magnifying-glass" transform="translate(263 1240.999)">
+                                <path id="Path_18" data-name="Path 18" d="M35.2,31.287l-7.421-7.42a14.817,14.817,0,0,0,2.683-8.632,14.961,14.961,0,0,0-1.2-5.917A14.916,14.916,0,0,0,21.149,1.2a15.18,15.18,0,0,0-11.835,0A14.915,14.915,0,0,0,1.2,9.317a15.179,15.179,0,0,0,0,11.834,14.919,14.919,0,0,0,8.113,8.113,14.968,14.968,0,0,0,5.917,1.2,14.818,14.818,0,0,0,8.633-2.683l7.421,7.4A2.57,2.57,0,0,0,33.231,36,2.769,2.769,0,0,0,35.2,31.287ZM22.079,22.081a9.334,9.334,0,0,1-6.848,2.845,9.335,9.335,0,0,1-6.847-2.845,9.333,9.333,0,0,1-2.845-6.847A9.335,9.335,0,0,1,8.384,8.387a9.333,9.333,0,0,1,6.847-2.845,9.336,9.336,0,0,1,6.848,2.845,9.333,9.333,0,0,1,2.845,6.847A9.334,9.334,0,0,1,22.079,22.081Z" transform="translate(0 -0.003)" fill="#0068b5" />
+                              </g>
+                            </g>
+                          </svg>
+                    </span>
+                    <h3 class="uk-card-title">Explore Building Blocks</h3>
+                    <ul>
+                        <li><a href="">Overview</a></li>
+                        <li><a href="">Telemetry Support</a></li>
+                        <li><a href="">Resource Management</a></li>
+                        <li><a href="">Node Feature Discovery</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="boxHeadBox uk-card uk-card-default uk-box-shadow-medium uk-card-hover uk-card-body uk-inline border-radius-large border-xlight">
+                    <span class="uk-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+                            <g id="Group_90" data-name="Group 90" transform="translate(-251 -1229)">
+                              <g id="Ellipse_8" data-name="Ellipse 8" transform="translate(251 1229)" fill="none" stroke="#0068b5" stroke-width="1">
+                                <circle cx="30" cy="30" r="30" stroke="none" />
+                                <circle cx="30" cy="30" r="29.5" fill="none" />
+                              </g>
+                              <g id="outline-description-24px" transform="translate(258.206 1236.206)">
+                                <g id="Bounding_Boxes">
+                                  <path id="Path_2324" data-name="Path 2324" d="M0,0H45.077V45.077H0Z" fill="none" />
+                                </g>
+                                <g id="Outline" transform="translate(7.513 3.756)">
+                                  <g id="Group_47" data-name="Group 47">
+                                    <rect id="Rectangle_27" data-name="Rectangle 27" width="15" height="4" transform="translate(7.487 26.244)" fill="#0068b5" />
+                                    <rect id="Rectangle_28" data-name="Rectangle 28" width="15" height="3" transform="translate(7.487 19.244)" fill="#0068b5" />
+                                    <path id="Path_2325" data-name="Path 2325" d="M22.782,2H7.756A3.767,3.767,0,0,0,4,5.756V35.807a3.751,3.751,0,0,0,3.738,3.756H30.295a3.767,3.767,0,0,0,3.756-3.756V13.269Zm7.513,33.807H7.756V5.756H20.9v9.391h9.391Z" transform="translate(-4 -2)" fill="#0068b5" />
+                                  </g>
+                                </g>
+                              </g>
+                            </g>
+                          </svg>
+                    </span>
+                    <h3 class="uk-card-title">Onboard Applications</h3>
+                    <ul>
+                        <li><a href="">Overview</a></li>
+                        <li><a href="">Edge DNS</a></li>
+                        <li><a href="">VM Support</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- 
+<div class="uk-section section-featured">
+    <div class="uk-container uk-container-small">
+
+        
+        <h2 class="uk-h1 uk-text-center">Popular Articles</h2>
+        
+
+        
+            <p class="uk-text-center uk-text-lead">Selected featured articles to get you started fast in Jekyll</p>
+        
+        
+        <ul class="uk-list uk-list-large uk-margin-medium-top">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            <li><a class="uk-box-shadow-hover-small" href="/intel-smart-edge-open/docs/faq/">Frequently asked questions section</a></li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            <li><a class="uk-box-shadow-hover-small" href="/intel-smart-edge-open/docs/media/">Adding media to post and doc content</a></li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            <li><a class="uk-box-shadow-hover-small" href="/intel-smart-edge-open/docs/posts/">Creating your first post in Jekyll</a></li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            <li><a class="uk-box-shadow-hover-small" href="/intel-smart-edge-open/docs/videos/">Video lightbox boxes section</a></li>
+            
+        
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+
+
+<div class="uk-section section-videos">
+    <div class="uk-container uk-container-small">
+
+        
+            <h2 class="uk-h1 uk-text-center">Video Tutorials</h2>
+        
+
+        <p class="uk-text-lead uk-text-center">Watch screencasts to get you started fast with Jekyll</p>
+
+        <div class="uk-child-width-1-2@m uk-grid-match uk-text-center uk-margin-medium-top" data-uk-grid data-uk-lightbox>
+        
+            <div>
+                <div class="uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-medium uk-card-body uk-inline border-radius-large border-xlight">
+                    <a class="uk-position-cover" href="https://youtu.be/T1itpPvFWHI" data-caption="Jekyll Introduction"></a>
+                    <span data-uk-icon="icon: play-circle; ratio: 3.4" class=""></span>
+                    <h3 class="uk-card-title uk-margin">Jekyll Introduction</h3>
+                    
+                    <p>Overview of the most popular static generator</p>
+                    
+                </div>
+            </div>
+        
+            <div>
+                <div class="uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-medium uk-card-body uk-inline border-radius-large border-xlight">
+                    <a class="uk-position-cover" href="https://youtu.be/gsYqPL9EFwQ" data-caption="Creating a post"></a>
+                    <span data-uk-icon="icon: play-circle; ratio: 3.4" class=""></span>
+                    <h3 class="uk-card-title uk-margin">Creating a post</h3>
+                    
+                    <p>Lean how to publish your first post in Jekyll</p>
+                    
+                </div>
+            </div>
+        
+        </div>
+
+    </div>
+</div>
+
+<div class="uk-section">
+    <div class="uk-container uk-container-small">
+
+        
+            <h2 class="uk-h1 uk-text-center">Frequently asked questions</h2>
+        
+
+        
+            <p class="uk-text-center uk-text-lead">Find quicke answers to frequent pre-sale questions asked by customers</p>
+        
+
+        
+
+        <ul class="uk-margin-medium-top" data-uk-accordion="multiple: true">
+            
+                <li>
+                    <a class="uk-accordion-title uk-box-shadow-hover-small" href="#">Do you provide customer support?</a>
+                    <div class="article-content uk-accordion-content link-primary"><p>Having support for your purchased item means that we will be available to you to iron out any potential issues you have in using the item.</p>
+
+<h4 id="the-item-support-period">The item support period</h4>
+<p>The item includes support for 6 months from the purchase date. If you’re about to purchase the item, you’ll have the option to purchase extended item support, increasing the item support period up to a maximum of 12 months from the date of purchase.</p>
+
+<h4 id="what-else-is-included">What else is included?</h4>
+<p>Answering questions about how to use the item
+Answering technical questions about the item (and included third party assets)
+Help with defects in the item or included third-party assets
+Item updates to ensure ongoing compatibility and to resolve security vulnerabilities
+Updates to ensure the item works as described and is protected against major security concerns
+Included version updates for all items</p>
+
+<h4 id="whats-not-included-in-item-support">What’s not included in item support?</h4>
+<p>Item support does not include services to modify or extend the item beyond the original features, style and functionality described on the item page. For customization services that will help you tailor the item to your specific requirements, we recommend contacting us to see if we privately offer paid customization service.</p>
+
+<ul>
+  <li>Installation of the item</li>
+  <li>Hosting, server environment, or software</li>
+  <li>Help from authors of included third-party assets</li>
+</ul>
+
+<h4 id="contacting-support">Contacting support</h4>
+<p>Support is provided Mon - Fri through item <a href="https://themeforest.net/item/docs-responsive-documentation-manual-jekyll-theme/21131076/support">support</a> page.</p>
+</div>                
+                </li>
+            
+                <li>
+                    <a class="uk-accordion-title uk-box-shadow-hover-small" href="#">Are updates and bug fixes included in the cost of the item?</a>
+                    <div class="article-content uk-accordion-content link-primary"><p>Regardless of whether you have support or not:</p>
+
+<ul>
+  <li>When we release an update, it will be available for you to download for free</li>
+  <li>You can report bugs</li>
+  <li>You can expect us to keep the item in good working order, working as described and protected against major security issues</li>
+</ul>
+</div>                
+                </li>
+            
+                <li>
+                    <a class="uk-accordion-title uk-box-shadow-hover-small" href="#">Can I extend or renew my item support?</a>
+                    <div class="article-content uk-accordion-content link-primary"><h4 id="item-support-option">Item support option</h4>
+<p>The support options available to you depend on when you make the support purchase.</p>
+
+<ul>
+  <li>A support upgrade is 6 months of additional support that can be purchased at the time of buying the item.</li>
+  <li>A support extension is 6 months of support that can be purchased at any time after the initial purchase of the item, provided the current support period hasn’t expired.</li>
+  <li>A support renewal is 6 months of support that can be purchased after any existing support for an item has expired.</li>
+</ul>
+
+<h4 id="how-do-i-renew-or-extend-my-support">How do I renew or extend my support?</h4>
+<p>In order to extend or renew an item’s support offering, you must have less than 6 months of the existing support period remaining and also the author must still be offering support on their item.</p>
+
+<p>To renew the support component on an item, please follow these steps:</p>
+
+<ul>
+  <li>Log in to your account</li>
+  <li>Hover over your username and click ‘Downloads’ from the drop-down menu.</li>
+  <li>The downloads section displays a list of all the items purchased using your account.</li>
+  <li>Click on ‘Renew support now!’ or ‘Extend now’ next to the item you wish to renew the item support for and that’s it!</li>
+</ul>
+</div>                
+                </li>
+            
+                <li>
+                    <a class="uk-accordion-title uk-box-shadow-hover-small" href="#">Does the item come with installation and setup documentation?</a>
+                    <div class="article-content uk-accordion-content link-primary"><p>Yes, all our items come with either bundled documentation located in your “All files &amp; documentation” download zip or online documentation.</p>
+</div>                
+                </li>
+            
+                <li>
+                    <a class="uk-accordion-title uk-box-shadow-hover-small" href="#">Do you provide customization services for your items?</a>
+                    <div class="article-content uk-accordion-content link-primary"><p>Item support does not include services to modify or extend the item beyond the original features, style and functionality described on the item page.</p>
+
+<p>For customization services that will help you tailor the item to your specific requirements, please <a href="https://themeforest.net/item/docs-responsive-documentation-manual-jekyll-theme/21131076/support">contact us</a> to see if we are available to offer paid customization service or check out service providers on <a href="https://studio.envato.com/">Envato Studio</a>.</p>
+</div>                
+                </li>
+            
+        </ul>
+
+    </div>
+</div>
+
+<div class="uk-section section-team">
+    <div class="uk-container uk-container-expand">
+
+        
+            <h2 class="uk-h1 uk-text-center">We are here to help</h2>
+        
+
+        <p class="uk-text-lead uk-text-center">Our team is just an email away ready to answer your questions</p>
+
+        <div class="uk-margin-medium-top uk-grid-small uk-flex-center uk-text-center uk-margin-medium-top" data-uk-grid>
+
+        
+
+        
+
+            
+
+            <div>
+                <div class="uk-card">
+                    
+                        
+
+                        <img class="uk-border-circle" src="http://localhost:4000/intel-smart-edge-open/uploads/avatar-evan.png" alt="Evan Wells">
+                    
+                    <h5 class="uk-margin-remove-bottom uk-margin-top">Evan Wells</h5>
+                    <p class="uk-article-meta uk-margin-remove-bottom uk-margin-small-top">Support</p>
+                </div>
+            </div>
+        
+
+            
+
+            <div>
+                <div class="uk-card">
+                    
+                        
+
+                        <img class="uk-border-circle" src="http://localhost:4000/intel-smart-edge-open/uploads/avatar-john.png" alt="John Brown">
+                    
+                    <h5 class="uk-margin-remove-bottom uk-margin-top">John Brown</h5>
+                    <p class="uk-article-meta uk-margin-remove-bottom uk-margin-small-top">Support</p>
+                </div>
+            </div>
+        
+
+            
+
+            <div>
+                <div class="uk-card">
+                    
+                        
+
+                        <img class="uk-border-circle" src="http://localhost:4000/intel-smart-edge-open/uploads/avatar-sara.png" alt="Sara Galen">
+                    
+                    <h5 class="uk-margin-remove-bottom uk-margin-top">Sara Galen</h5>
+                    <p class="uk-article-meta uk-margin-remove-bottom uk-margin-small-top">Lead Developer</p>
+                </div>
+            </div>
+        
+
+            
+
+            <div>
+                <div class="uk-card">
+                    
+                        
+
+                        <img class="uk-border-circle" src="http://localhost:4000/intel-smart-edge-open/uploads/avatar-alex.png" alt="Alex Koch">
+                    
+                    <h5 class="uk-margin-remove-bottom uk-margin-top">Alex Koch</h5>
+                    <p class="uk-article-meta uk-margin-remove-bottom uk-margin-small-top">Design Engineer</p>
+                </div>
+            </div>
+        
+
+            
+
+            <div>
+                <div class="uk-card">
+                    
+                        
+
+                        <img class="uk-border-circle" src="http://localhost:4000/intel-smart-edge-open/uploads/avatar-tom.png" alt="Tom Farrell">
+                    
+                    <h5 class="uk-margin-remove-bottom uk-margin-top">Tom Farrell</h5>
+                    <p class="uk-article-meta uk-margin-remove-bottom uk-margin-small-top">Developer</p>
+                </div>
+            </div>
+        
+
+            
+
+            <div>
+                <div class="uk-card">
+                    
+                        
+
+                        <img class="uk-border-circle" src="http://localhost:4000/intel-smart-edge-open/uploads/avatar-daniel.png" alt="Daniel Shultz">
+                    
+                    <h5 class="uk-margin-remove-bottom uk-margin-top">Daniel Shultz</h5>
+                    <p class="uk-article-meta uk-margin-remove-bottom uk-margin-small-top">Developer</p>
+                </div>
+            </div>
+        
+        </div>
+
+    </div>
+</div> -->
+
+<div class="uk-section uk-section-footer uk-text-center">
+    <div class="uk-container uk-container-small">
+        <div data-uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true">
+            <h2>How can we help?</h2>
+            <p class="lead uk-text-center">Still have questions?</p>
+            <a class="uk-button uk-button-primary uk-button-large uk-margin-medium-top" href="/intel-smart-edge-open/contact/">Contact Us</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <div id="offcanvas-docs" data-uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" data-uk-close></button>
+
+        
+        <h5 class="uk-margin-top"></h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
+        
+        </ul>
+        
+        <h5 class="uk-margin-top"></h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
+        
+        </ul>
+        
+        <h5 class="uk-margin-top"></h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
+        
+        </ul>
+        
+        <h5 class="uk-margin-top"></h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
+        
+        </ul>
+        
+
+    </div>
+</div>
+
+
+    <div id="offcanvas" data-uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <a class="uk-logo uk-margin-small-bottom" href="/intel-smart-edge-open/">Docs</a>
+     
+        <button class="uk-offcanvas-close" type="button" data-uk-close></button>
+      
+        <ul class="uk-nav uk-nav-primary uk-margin-top">
+            
+                
+
+                
+
+                
+                    <li class="uk-active"><a href="/intel-smart-edge-open/" >Home</a></li>
+                
+            
+                
+
+                
+
+                
+                    <li><a href="/intel-smart-edge-open/docs/installation/" >Docs</a></li>
+                
+            
+                
+
+                
+
+                
+                    <li><a href="/intel-smart-edge-open/blog/" >Blog</a></li>
+                
+            
+                
+
+                
+
+                
+                    <li><a href="/intel-smart-edge-open/changelog-timeline/" >Changelog</a></li>
+                
+            
+                
+
+                
+
+                
+                    <li><div class="uk-navbar-item"><a class="uk-button uk-button-success" href="/intel-smart-edge-open/contact/" >Contact</a></div></li>
+                
+            
+        </ul>
+
+        <div class="uk-margin-top uk-text-center">
+            <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center uk-grid">
+                
+<div class="uk-first-column">
+    <a href="https://twitter.com/" data-uk-icon="icon: twitter" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+<div>
+    <a href="https://www.facebook.com/" data-uk-icon="icon: facebook" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+<div>
+    <a href="https://www.instagram.com/" data-uk-icon="icon: instagram" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+
+<div>
+    <a href="https://vimeo.com/" data-uk-icon="icon: vimeo" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+   <!--  
+        <footer class="uk-section uk-text-center uk-text-muted">
+    <div class="uk-container uk-container-small">
+
+        <div>
+            <ul class="uk-subnav uk-flex-center">
+                
+                    
+                    
+                    
+                        <li class="uk-active"><a href="/intel-smart-edge-open/" >Home</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/intel-smart-edge-open/blog/" >Blog</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/intel-smart-edge-open/contact/" >Contact</a></li>
+                    
+                
+            </ul>
+        </div>
+        <div class="uk-margin-medium">
+            <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center uk-grid">
+                
+<div class="uk-first-column">
+    <a href="https://twitter.com/" data-uk-icon="icon: twitter" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+<div>
+    <a href="https://www.facebook.com/" data-uk-icon="icon: facebook" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+<div>
+    <a href="https://www.instagram.com/" data-uk-icon="icon: instagram" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+
+<div>
+    <a href="https://vimeo.com/" data-uk-icon="icon: vimeo" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+
+
+            </div>
+        </div>
+        <div class="uk-margin-medium uk-text-small copyright link-secondary">Made by <a href="https://unbound.studio/">Unbound Studio</a> in Cleveland.</div>
+
+    </div>
+</footer>
+
+     -->
+
+    
+
+    
+
+    </body>
+
+</html>
