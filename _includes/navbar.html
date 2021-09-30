@@ -3,14 +3,12 @@
         <div class="uk-container">
             <div data-uk-navbar>
                 <div class="uk-navbar-left">
-                    <!-- <a class="uk-navbar-item uk-logo uk-visible@m" href="{{ "/" | relative_url }}">{% if site.logo %}<img src="{{ site.uploads | absolute_url }}{{ site.logo }}" alt="{{ site.title | escape }}">{% else %}{{ site.title | escape }}{% endif %}</a> -->
-                    <a class="uk-navbar-item uk-logo uk-visible@m" href="{{ "/" | relative_url }}">{% if site.logo %}<img src="{{ site.uploads | absolute_url }}{{ site.logo }}" alt="{{ site.title | escape }}">{% else %}Intel&reg; Smart Edge Open{% endif %}</a>
+                    <a class="uk-navbar-item uk-logo uk-visible@m" href="{{ site.main_url }}">{% if site.logo %}<img src="{{ site.uploads | absolute_url }}{{ site.logo }}" alt="{{ site.title | escape }}">{% else %}Intel&reg; Smart Edge Open{% endif %}</a>
                     {% if site.data.translation[site.lang].mobile_nav_docs %}
-                        <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas-docs" data-uk-toggle><span data-uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Intel&reg; Smart Edge Open</span></a>
+                        <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas-docs" data-uk-toggle><span data-uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">{{ site.data.translation[site.lang].mobile_nav_docs }}</span></a>
                     {% else %}
                         <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas-docs" data-uk-navbar-toggle-icon data-uk-toggle></a>
                     {% endif %}
-
                     <ul class="uk-navbar-nav uk-visible@m">
                         {% for link in site.data.navigation_header.left %}
                             {% if link.url contains 'http' %}
@@ -25,10 +23,10 @@
                             {% endif %}
                             {% if link.title %}
                                 {% if link.button %}
-                                    <li><div class="uk-navbar-item"><a class="uk-button uk-button-{{ link.button }}" href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank" {% endif %}>{{ link.title }}</a></div></li>
+                                    <li><div class="uk-navbar-item"><a class="uk-button uk-button-{{ link.button }}" href="{{ site.main_url }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank" {% endif %}>{{ link.title }}</a></div></li>
                                 {% else %}
                                     {% if link.url %}
-                                        <li{{ current }}><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank" {% endif %}>{{ link.title }}</a></li>
+                                        <li{{ current }}><a href="{{ site.main_url }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank" {% endif %}>{{ link.title }}</a></li>
                                     {% else %}
                                         <li><a href="#">{{ link.title }}</a>
                                         {% if link.dropdown != null %}
@@ -62,7 +60,7 @@
                     </ul>
                 </div>
                 <div class="uk-navbar-center uk-hidden@m">
-                    <a class="uk-navbar-item uk-logo" href="{{ "/" | relative_url }}">{% if site.logo %}<img src="{{ site.uploads | absolute_url }}{{ site.logo }}" alt="{{ site.title | escape }}">{% else %}{{ site.title | escape }}{% endif %}</a>
+                    <a class="uk-navbar-item uk-logo" href="{{ site.main_url }}">{% if site.logo %}<img src="{{ site.uploads | absolute_url }}{{ site.logo }}" alt="{{ site.title | escape }}">{% else %}Intel&reg; Smart Edge Open{% endif %}</a>
                 </div>
                 <div class="uk-navbar-right">
                     {% if site.navbar.search %}
