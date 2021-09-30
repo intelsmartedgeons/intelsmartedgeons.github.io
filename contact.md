@@ -47,7 +47,7 @@ var apiURL = '{{ site.apiURL }}';
     <div class="formRight section-featured">
         <div class="verticalText">
             <h2>How can we help?</h2>
-            <p>Please select a topic below related to you inquiry. If you don’t find what you need, fill out our contact form.</p>
+            <p>Please select a topic below related to your inquiry. If you don’t find what you need, fill out our contact form.</p>
             <ul class="uk-list uk-list-large uk-margin-medium-top">
                 <li>
                     <a class="uk-box-shadow-hover-small" href="/request-license/" title="Request a License">
