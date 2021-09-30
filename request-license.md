@@ -1,8 +1,6 @@
 ---
 layout: page
 permalink: /request-license/
-title: Intel® Smart Edge Open - Request a License, Smart Edge Open license
-description: Please select a topic below related to your inquiry. If you don’t find what you need, fill out the Intel® Smart Edge Open contact form.
 ---
 <link rel="stylesheet" type="text/css" href="{{ "/assets/css/select2.min.css?v=8.5" | relative_url }}">
 <script type="text/javascript" src="{{ "/assets/js/jquery.validate.min.js" | relative_url }}"></script>
@@ -16,9 +14,7 @@ description: Please select a topic below related to your inquiry. If you don’t
 	//});
   });
 </script>
-<script>
-var apiURL = '{{ site.apiURL }}';
-</script>
+
 <!--{% include formspree.html email="my_name@gmail.com" redirect="/thanks/" name="true" subject="true" %}-->
 <h1 class="uk-text-left">Request a License</h1>
 <div class="formLeft">
@@ -26,12 +22,12 @@ var apiURL = '{{ site.apiURL }}';
         <form id="requestAccess"  name="requestAccess" method="post" autocomplete="off">
             <div style="overflow:hidden;">
                 <div class="colLeft">
-                    <label class="validationstar mt-0">First Name<span class="star">*</span></label>
+                    <label class="validationstar">First Name<span class="star">*</span></label>
                     <input type="text" class="form-control" name="name" id="name" placeholder="Type here" value="" maxlength="100">
                     <small class="error" generated="true" for="name" style="display:none;font-size: 100%; font-weight: 400;"></small>
                 </div>
                 <div class="colRight">
-                    <label class="validationstar mt-0">Last Name<span class="star">*</span></label>
+                    <label class="validationstar">Last Name<span class="star">*</span></label>
                     <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Type here" value="" maxlength="100">
                     <small class="error" generated="true" for="last_name" style="display:none;font-size: 100%; font-weight: 400;"></small>
                 </div>
