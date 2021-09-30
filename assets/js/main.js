@@ -9630,13 +9630,8 @@ jQuery(window).on('load', function(){
         jQuery(this).parent('.toggleMenu').toggleClass('showMenu')
     })
     var pathname = window.location.pathname;
-    console.log(pathname);
-    if(pathname.includes('/doc/')){
-    console.log('yes');
+    if(pathname.includes('/docs/')){
 jQuery('.uk-navbar-container .uk-navbar-left .uk-navbar-nav li a[href="'+pathname+'"]').parent('li').addClass('uk-active');
-    }
-    else{
-    console.log('no');
     }
 })
 jQuery(window).on('resize', function(){
