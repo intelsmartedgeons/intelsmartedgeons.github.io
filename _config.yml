@@ -17,8 +17,8 @@ permalink:          /:title/
 
 # Site base hostname & protocol, e.g. http://example.com
 url:                ""
-#url:                "https://onsumaye-team.github.io"
-mainurl:                "http://127.0.0.1:4001/ido"
+mainurl:                "https://onsumaye-team.github.io"
+#mainurl:                "http://127.0.0.1:4001/ido"
 
 # Site logo # e.g. logo.png, upload logo image file to /uploads/ folder
 logo:               
