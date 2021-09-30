@@ -7,6 +7,9 @@ permalink: /contact/
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 <h1 class="uk-text-left">Contact</h1>
+<script>
+var apiURL = '{{ site.apiURL }}';
+</script>
 <div class="formLeft">
     <div class="contact-form-wrap idorequest">
         <form id="contact" name="contact"  method="post" autocomplete="off">

@@ -20,6 +20,7 @@ $button-default-active-background:               transparent !default;
 
 $button-disabled-background:                     transparent !default;
 
+$button-text-color:                              $global-emphasis-color !default;
 $button-text-hover-color:                        $global-emphasis-color !default;
 
 //
@@ -138,6 +139,7 @@ $inverse-button-default-hover-color:            $inverse-global-emphasis-color !
 $inverse-button-default-active-background:      transparent !default;
 $inverse-button-default-active-color:           $inverse-global-emphasis-color !default;
 
+$inverse-button-text-color:                     $inverse-global-emphasis-color !default;
 $inverse-button-text-hover-color:               $inverse-global-emphasis-color !default;
 
 

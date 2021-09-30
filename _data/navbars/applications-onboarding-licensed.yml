@@ -3,22 +3,22 @@ path: /applications-onboard-licensed/
 order: 9
 section:
   - title: Network Edge Application Onboarding
-    path: /ido-specs/doc/applications-onboard/network-edge-applications-onboarding
+    path: /ido-specs/docs/applications-onboard/network-edge-applications-onboarding
     meta_title: 
     meta_description: 
     
   - title: Edge DNS
-    path: /ido-specs/doc/applications-onboard/openness-edgedns
+    path: /ido-specs/docs/applications-onboard/openness-edgedns
     meta_title: 
     meta_description: 
     
   - title: Edge Application Agent (EAA)
-    path: /ido-specs/doc/applications-onboard/openness-eaa
+    path: /ido-specs/docs/applications-onboard/openness-eaa
     meta_title:
     meta_description: 
     
   - title: Certificate Signing
-    path: /ido-specs/doc/applications-onboard/openness-certsigner
+    path: /ido-specs/docs/applications-onboard/openness-certsigner
     meta_title:
     meta_description:
     

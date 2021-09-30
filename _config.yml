@@ -10,15 +10,15 @@ description:        Documentation Jekyll theme.
 lang:               en
 
 # Site subpath, e.g. /blog
-baseurl:            "/"
+baseurl:            ""
 
+
+apiURL: "https://openness-staging.onsumaye.com"
 # Permalink URLs structure, for permalink style options see: https://jekyllrb.com/docs/permalinks/
 permalink:          /:title/
 
 # Site base hostname & protocol, e.g. http://example.com
 url:                ""
-mainurl:                "https://onsumaye-team.github.io"
-#mainurl:                "http://127.0.0.1:4001/ido"
 
 # Site logo # e.g. logo.png, upload logo image file to /uploads/ folder
 logo:               
@@ -28,10 +28,10 @@ navbar:
     search:         true
   
 # Default author settings
-#author:
-    #name:           Pete Seth
-    #title:          Lead Developer  
-    #avatar:         avatar-tom.png
+author:
+    name:           Pete Seth
+    title:          Lead Developer  
+    avatar:         avatar-tom.png
 
 # Author settings, displayed on post and doc pages if front matter references author name e.g. author: peter
 authors:

@@ -1,7 +1,6 @@
 
 function formsubmit() {
-    var opurl = 'https://openness-staging.onsumaye.com/index.php?option=com_products&task=githubpages_release_request';
-    //var opurl='https://openness.localhost.com/index.php?option=com_products&task=githubpages_release_request';
+    var opurl = apiURL+'/index.php?option=com_products&task=githubpages_release_request';
     var form = $("#requestAccess");
     var url =
         $.ajax({
@@ -28,7 +27,7 @@ function formsubmit() {
 
 
 function contactformsubmit() {
-    var opurl = 'https://openness-staging.onsumaye.com/index.php?option=com_products&task=githubpages_contact_request';
+    var opurl = apiURL+'/index.php?option=com_products&task=githubpages_contact_request';
     var form = $("#contact");
     var url =
         $.ajax({

@@ -14,7 +14,9 @@ permalink: /request-license/
 	//});
   });
 </script>
-
+<script>
+var apiURL = '{{ site.apiURL }}';
+</script>
 <!--{% include formspree.html email="my_name@gmail.com" redirect="/thanks/" name="true" subject="true" %}-->
 <h1 class="uk-text-left">Request a License</h1>
 <div class="formLeft">

@@ -4,18 +4,17 @@
 
     overflow: hidden;
 
-    &::before {
+    &::after {
         content: "";
         width: ($accordion-title-line-height * 1em);
         height: ($accordion-title-line-height * 1em);
-        margin-left: $accordion-icon-margin-left;
         float: right;
         @include svg-fill($internal-accordion-close-image, "#000", $accordion-icon-color);
         background-repeat: no-repeat;
         background-position: 50% 50%;
     }
 
-    .uk-open > &::before { @include svg-fill($internal-accordion-open-image, "#000", $accordion-icon-color); }
+    .uk-open > &::after { @include svg-fill($internal-accordion-open-image, "#000", $accordion-icon-color); }
 
 }
 @mixin hook-accordion-title-hover(){}
@@ -26,11 +25,12 @@
 @mixin hook-inverse-accordion-title-hover(){}
 @mixin hook-inverse-component-accordion(){
 
-    .uk-accordion-title::before { @include svg-fill($internal-accordion-close-image, "#000", $inverse-global-color); }
+    .uk-accordion-title::after { @include svg-fill($internal-accordion-close-image, "#000", $inverse-global-color); }
 
-    .uk-open > .uk-accordion-title::before { @include svg-fill($internal-accordion-open-image, "#000", $inverse-global-color); }
+    .uk-open > .uk-accordion-title::after { @include svg-fill($internal-accordion-open-image, "#000", $inverse-global-color); }
 
 }
+@mixin hook-align-misc(){}
 @mixin hook-alert(){}
 @mixin hook-alert-close(){
     color: inherit;
@@ -68,8 +68,6 @@
     }
 
 }
-@mixin hook-align-misc(){}
-@mixin hook-animation-misc(){}
 @mixin hook-article(){}
 @mixin hook-article-adjacent(){}
 @mixin hook-article-title(){}
@@ -98,6 +96,7 @@
     }
 
 }
+@mixin hook-animation-misc(){}
 @mixin hook-background-misc(){}
 @mixin hook-badge(){}
 @mixin hook-badge-hover(){}
@@ -108,12 +107,13 @@
 
     .uk-badge {
         background-color: $inverse-badge-background;
-        color: $inverse-badge-color !important;
+        color: $inverse-badge-color;
         @if(mixin-exists(hook-inverse-badge)) {@include hook-inverse-badge();}
     }
 
     .uk-badge:hover,
     .uk-badge:focus {
+        color: $inverse-badge-hover-color;
         @if(mixin-exists(hook-inverse-badge-hover)) {@include hook-inverse-badge-hover();}
     }
 
@@ -183,9 +183,7 @@
     }
 
     a:hover,
-    .uk-link:hover,
-    .uk-link-toggle:hover .uk-link,
-    .uk-link-toggle:focus .uk-link {
+    .uk-link:hover {
         color: $inverse-base-link-hover-color;
         @if(mixin-exists(hook-inverse-base-link-hover)) {@include hook-inverse-base-link-hover();}
     }
@@ -216,12 +214,7 @@
     h3, .uk-h3,
     h4, .uk-h4,
     h5, .uk-h5,
-    h6, .uk-h6,
-    .uk-heading-small,
-    .uk-heading-medium,
-    .uk-heading-large,
-    .uk-heading-xlarge,
-    .uk-heading-2xlarge {
+    h6, .uk-h6 {
         color: $inverse-base-heading-color;
         @if(mixin-exists(hook-inverse-base-heading)) {@include hook-inverse-base-heading();}
     }
@@ -527,10 +520,7 @@
 @mixin hook-card-media-left(){}
 @mixin hook-card-media-right(){}
 @mixin hook-card-title(){}
-@mixin hook-card-badge(){
-    border-radius: $card-badge-border-radius;
-    text-transform: $card-badge-text-transform;
-}
+@mixin hook-card-badge(){}
 @mixin hook-card-hover(){ box-shadow: $card-hover-box-shadow; }
 @mixin hook-card-default(){ box-shadow: $card-default-box-shadow; }
 @mixin hook-card-default-title(){}
@@ -549,45 +539,33 @@
      * Default
      */
 
-    .uk-card-body > .uk-nav-default {
-        margin-left: (-$card-body-padding-horizontal);
-        margin-right: (-$card-body-padding-horizontal);
-    }
-    .uk-card-body > .uk-nav-default:only-child {
-        margin-top: (-$card-body-padding-vertical + 15px);
-        margin-bottom: (-$card-body-padding-vertical + 15px);
-    }
+    .uk-card-body .uk-nav-default { margin: (-$card-body-padding-vertical + 15px) (-$card-body-padding-horizontal); }
+    .uk-card-title + .uk-nav-default { margin-top: 0; }
 
-    .uk-card-body > .uk-nav-default > li > a,
-    .uk-card-body > .uk-nav-default .uk-nav-header,
-    .uk-card-body > .uk-nav-default .uk-nav-divider {
+    .uk-card-body .uk-nav-default > li > a,
+    .uk-card-body .uk-nav-default .uk-nav-header,
+    .uk-card-body .uk-nav-default .uk-nav-divider {
         padding-left: $card-body-padding-horizontal;
         padding-right: $card-body-padding-horizontal;
     }
 
-    .uk-card-body > .uk-nav-default .uk-nav-sub { padding-left: $nav-sublist-deeper-padding-left + $card-body-padding-horizontal; }
+    .uk-card-body .uk-nav-default .uk-nav-sub { padding-left: $nav-sublist-deeper-padding-left + $card-body-padding-horizontal; }
 
 
     /* Desktop and bigger */
     @media (min-width: $breakpoint-large) {
 
-        .uk-card-body > .uk-nav-default {
-            margin-left: (-$card-body-padding-horizontal-l);
-            margin-right: (-$card-body-padding-horizontal-l);
-        }
-        .uk-card-body > .uk-nav-default:only-child {
-            margin-top: (-$card-body-padding-vertical-l + 15px);
-            margin-bottom: (-$card-body-padding-vertical-l + 15px);
-        }
+        .uk-card-body .uk-nav-default { margin: (-$card-body-padding-vertical-l + 15px) (-$card-body-padding-horizontal-l); }
+        .uk-card-title + .uk-nav-default { margin-top: 0; }
 
-        .uk-card-body > .uk-nav-default > li > a,
-        .uk-card-body > .uk-nav-default .uk-nav-header,
-        .uk-card-body > .uk-nav-default .uk-nav-divider {
+        .uk-card-body .uk-nav-default > li > a,
+        .uk-card-body .uk-nav-default .uk-nav-header,
+        .uk-card-body .uk-nav-default .uk-nav-divider {
             padding-left: $card-body-padding-horizontal-l;
             padding-right: $card-body-padding-horizontal-l;
         }
 
-        .uk-card-body > .uk-nav-default .uk-nav-sub { padding-left: $nav-sublist-deeper-padding-left + $card-body-padding-horizontal-l; }
+        .uk-card-body .uk-nav-default .uk-nav-sub { padding-left: $nav-sublist-deeper-padding-left + $card-body-padding-horizontal-l; }
 
     }
 
@@ -595,23 +573,17 @@
      * Small
      */
 
-    .uk-card-small > .uk-nav-default {
-        margin-left: (-$card-small-body-padding-horizontal);
-        margin-right: (-$card-small-body-padding-horizontal);
-    }
-    .uk-card-small > .uk-nav-default:only-child {
-        margin-top: (-$card-small-body-padding-vertical + 15px);
-        margin-bottom: (-$card-small-body-padding-vertical + 15px);
-    }
+    .uk-card-small .uk-nav-default { margin: (-$card-small-body-padding-vertical + 15px) (-$card-small-body-padding-horizontal); }
+    .uk-card-small .uk-card-title + .uk-nav-default { margin-top: 0; }
 
-    .uk-card-small > .uk-nav-default > li > a,
-    .uk-card-small > .uk-nav-default .uk-nav-header,
-    .uk-card-small > .uk-nav-default .uk-nav-divider {
+    .uk-card-small .uk-nav-default > li > a,
+    .uk-card-small .uk-nav-default .uk-nav-header,
+    .uk-card-small .uk-nav-default .uk-nav-divider {
         padding-left: $card-small-body-padding-horizontal;
         padding-right: $card-small-body-padding-horizontal;
     }
 
-    .uk-card-small > .uk-nav-default .uk-nav-sub { padding-left: $nav-sublist-deeper-padding-left + $card-small-body-padding-horizontal; }
+    .uk-card-small .uk-nav-default .uk-nav-sub { padding-left: $nav-sublist-deeper-padding-left + $card-small-body-padding-horizontal; }
 
     /*
      * Large
@@ -620,28 +592,9 @@
     /* Desktop and bigger */
     @media (min-width: $breakpoint-large) {
 
-        .uk-card-large > .uk-nav-default { margin: 0; }
-        .uk-card-large > .uk-nav-default:only-child { margin: 0; }
+        .uk-card-large .uk-nav-default { margin: (-$card-large-body-padding-vertical-l + 15px) (-$card-large-body-padding-horizontal-l); }
+        .uk-card-large .uk-card-title + .uk-nav-default { margin-top: 0; }
 
-        .uk-card-large > .uk-nav-default > li > a,
-        .uk-card-large > .uk-nav-default .uk-nav-header,
-        .uk-card-large > .uk-nav-default .uk-nav-divider {
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        .uk-card-large > .uk-nav-default .uk-nav-sub { padding-left: $nav-sublist-deeper-padding-left; }
-
-    }
-
-}
-@mixin hook-inverse-card-badge(){}
-@mixin hook-inverse-component-card(){
-
-    &.uk-card-badge {
-        background-color: $inverse-card-badge-background;
-        color: $inverse-card-badge-color;
-        @if(mixin-exists(hook-inverse-card-badge)) {@include hook-inverse-card-badge();}
     }
 
 }
@@ -742,12 +695,10 @@
 @mixin hook-divider-icon-line-left(){}
 @mixin hook-divider-icon-line-right(){}
 @mixin hook-divider-small(){}
-@mixin hook-divider-vertical(){}
 @mixin hook-divider-misc(){}
 @mixin hook-inverse-divider-icon(){}
 @mixin hook-inverse-divider-icon-line(){}
 @mixin hook-inverse-divider-small(){}
-@mixin hook-inverse-divider-vertical(){}
 @mixin hook-inverse-component-divider(){
 
     .uk-divider-icon {
@@ -764,11 +715,6 @@
     .uk-divider-small::after {
         border-top-color: $inverse-divider-small-border;
         @if(mixin-exists(hook-inverse-divider-small)) {@include hook-inverse-divider-small();}
-    }
-
-    .uk-divider-vertical {
-        border-left-color: $inverse-divider-vertical-border;
-        @if(mixin-exists(hook-inverse-divider-vertical)) {@include hook-inverse-divider-vertical();}
     }
 
 }
@@ -885,24 +831,17 @@
     // Placeholder
     //
 
-    .uk-input::-ms-input-placeholder { color: $inverse-form-placeholder-color !important; }
+    .uk-input:-ms-input-placeholder { color: $inverse-form-placeholder-color !important; }
     .uk-input::placeholder { color: $inverse-form-placeholder-color; }
 
-    .uk-textarea::-ms-input-placeholder { color: $inverse-form-placeholder-color !important; }
+    .uk-textarea:-ms-input-placeholder { color: $inverse-form-placeholder-color !important; }
     .uk-textarea::placeholder { color: $inverse-form-placeholder-color; }
 
     //
-    // Select
+    // Radio and checkbox
     //
 
     .uk-select:not([multiple]):not([size]) { @include svg-fill($internal-form-select-image, "#000", $inverse-form-select-icon-color); }
-
-    //
-    // Datalist
-    //
-
-    .uk-input[list]:hover,
-    .uk-input[list]:focus { @include svg-fill($internal-form-datalist-image, "#000", $inverse-form-datalist-icon-color); }
 
     //
     // Radio and checkbox
@@ -917,7 +856,6 @@
     // Focus
     .uk-radio:focus,
     .uk-checkbox:focus {
-        background-color: $inverse-form-radio-focus-background;
         @if(mixin-exists(hook-inverse-form-radio-focus)) {@include hook-inverse-form-radio-focus();}
     }
 
@@ -947,45 +885,20 @@
         @if(mixin-exists(hook-inverse-form-label)) {@include hook-inverse-form-label();}
     }
 
-    // Icon
-    .uk-form-icon { color: $inverse-form-icon-color; }
-    .uk-form-icon:hover { color: $inverse-form-icon-hover-color; }
-
 }
-@mixin hook-grid-divider-horizontal(){}
-@mixin hook-grid-divider-vertical(){}
 @mixin hook-grid-misc(){}
-@mixin hook-inverse-grid-divider-horizontal(){}
-@mixin hook-inverse-grid-divider-vertical(){}
 @mixin hook-inverse-component-grid(){
 
-    .uk-grid-divider > :not(.uk-first-column)::before {
-        border-left-color: $inverse-grid-divider-border;
-        @if(mixin-exists(hook-inverse-grid-divider-horizontal)) {@include hook-inverse-grid-divider-horizontal();}
-    }
-
-    .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before {
-        border-top-color: $inverse-grid-divider-border;
-        @if(mixin-exists(hook-inverse-grid-divider-vertical)) {@include hook-inverse-grid-divider-vertical();}
-    }
+    .uk-grid-divider > :not(.uk-first-column)::before { border-left-color: $inverse-grid-divider-border; }
+    .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before { border-top-color: $inverse-grid-divider-border; }
 
 }
-@mixin hook-heading-small(){}
-@mixin hook-heading-medium(){}
-@mixin hook-heading-large(){}
-@mixin hook-heading-xlarge(){}
-@mixin hook-heading-2xlarge(){}
 @mixin hook-heading-primary(){}
 @mixin hook-heading-hero(){}
 @mixin hook-heading-divider(){}
 @mixin hook-heading-bullet(){}
 @mixin hook-heading-line(){}
 @mixin hook-heading-misc(){}
-@mixin hook-inverse-heading-small(){}
-@mixin hook-inverse-heading-medium(){}
-@mixin hook-inverse-heading-large(){}
-@mixin hook-inverse-heading-xlarge(){}
-@mixin hook-inverse-heading-2xlarge(){}
 @mixin hook-inverse-heading-primary(){}
 @mixin hook-inverse-heading-hero(){}
 @mixin hook-inverse-heading-divider(){}
@@ -993,29 +906,13 @@
 @mixin hook-inverse-heading-line(){}
 @mixin hook-inverse-component-heading(){
 
-    .uk-heading-small {
-        @if(mixin-exists(hook-inverse-heading-small)) {@include hook-inverse-heading-small();}
+    .uk-heading-primary {
+        @if(mixin-exists(hook-inverse-heading-primary)) {@include hook-inverse-heading-primary();}
     }
 
-    .uk-heading-medium {
-        @if(mixin-exists(hook-inverse-heading-medium)) {@include hook-inverse-heading-medium();}
+    .uk-heading-hero {
+        @if(mixin-exists(hook-inverse-heading-hero)) {@include hook-inverse-heading-hero();}
     }
-
-    .uk-heading-large {
-        @if(mixin-exists(hook-inverse-heading-large)) {@include hook-inverse-heading-large();}
-    }
-
-    .uk-heading-xlarge {
-        @if(mixin-exists(hook-inverse-heading-xlarge)) {@include hook-inverse-heading-xlarge();}
-    }
-
-    .uk-heading-2xlarge {
-        @if(mixin-exists(hook-inverse-heading-2xlarge)) {@include hook-inverse-heading-2xlarge();}
-    }
-
-    @if ($deprecated == true) { .uk-heading-primary { @if (mixin-exists(hook-inverse-heading-primary)) {@include hook-inverse-heading-primary();}}}
-
-    @if ($deprecated == true) { .uk-heading-hero { @if (mixin-exists(hook-inverse-heading-hero)) {@include hook-inverse-heading-hero();}}}
 
     .uk-heading-divider {
         border-bottom-color: $inverse-heading-divider-border;
@@ -1034,13 +931,12 @@
     }
 
 }
-@mixin hook-height-misc(){}
 @mixin hook-icon-link(){}
 @mixin hook-icon-link-hover(){}
 @mixin hook-icon-link-active(){}
 @mixin hook-icon-button(){
     transition: 0.1s ease-in-out;
-    transition-property: color, background-color;
+    transition-property: color, background-color
 }
 @mixin hook-icon-button-hover(){}
 @mixin hook-icon-button-active(){}
@@ -1099,11 +995,7 @@
 
 }
 @mixin hook-iconnav(){}
-@mixin hook-iconnav-item(){
-    font-size: $subnav-item-font-size;
-    transition: 0.1s ease-in-out;
-    transition-property: color, background-color;
-}
+@mixin hook-iconnav-item(){}
 @mixin hook-iconnav-item-hover(){}
 @mixin hook-iconnav-item-active(){}
 @mixin hook-iconnav-misc(){}
@@ -1138,25 +1030,19 @@
     }
 
     a.uk-link-muted:hover,
-    .uk-link-muted a:hover,
-    .uk-link-toggle:hover .uk-link-muted,
-    .uk-link-toggle:focus .uk-link-muted  {
+    .uk-link-muted a:hover {
         color: $inverse-link-muted-hover-color;
         @if(mixin-exists(hook-inverse-link-muted-hover)) {@include hook-inverse-link-muted-hover();}
     }
 
     a.uk-link-text:hover,
-    .uk-link-text a:hover,
-    .uk-link-toggle:hover .uk-link-text,
-    .uk-link-toggle:focus .uk-link-text {
+    .uk-link-text a:hover {
         color: $inverse-link-text-hover-color;
         @if(mixin-exists(hook-inverse-link-text-hover)) {@include hook-inverse-link-text-hover();}
     }
 
     a.uk-link-heading:hover,
-    .uk-link-heading a:hover,
-    .uk-link-toggle:hover .uk-link-heading,
-    .uk-link-toggle:focus .uk-link-heading {
+    .uk-link-heading a:hover {
         color: $inverse-link-heading-hover-color;
         @if(mixin-exists(hook-inverse-link-heading-hover)) {@include hook-inverse-link-heading-hover();}
     }
@@ -1164,25 +1050,21 @@
 }
 @mixin hook-inverse-component-list(){
 
-    .uk-list-muted > ::before { color: $inverse-list-muted-color !important; }
-    .uk-list-emphasis > ::before { color: $inverse-list-emphasis-color !important; }
-    .uk-list-primary > ::before { color: $inverse-list-primary-color !important; }
-    .uk-list-secondary > ::before { color: $inverse-list-secondary-color !important; }
-
-    .uk-list-bullet > ::before {
-        @include svg-fill($internal-list-bullet-image, "#000", $inverse-list-bullet-icon-color);
-    }
-
-    .uk-list-divider > :nth-child(n+2) {
+    .uk-list-divider > li:nth-child(n+2) {
         border-top-color: $inverse-list-divider-border;
         @if(mixin-exists(hook-inverse-list-divider)) {@include hook-inverse-list-divider();}
     }
 
-    .uk-list-striped > * {
+    .uk-list-striped > li {
         @if(mixin-exists(hook-inverse-list-striped)) {@include hook-inverse-list-striped();}
     }
 
-    .uk-list-striped > :nth-of-type(odd) { background-color: $inverse-list-striped-background; }
+    .uk-list-striped > li:nth-of-type(odd) { background-color: $inverse-list-striped-background; }
+
+    .uk-list-bullet > li::before {
+        @include svg-fill($internal-list-bullet-image, "#000", $inverse-list-bullet-icon-color);
+        @if(mixin-exists(hook-inverse-list-bullet)) {@include hook-inverse-list-bullet();}
+    }
 
 }
 @mixin hook-inverse-component-totop(){
@@ -1230,6 +1112,7 @@
     //
 
     .uk-search .uk-search-icon { color: $inverse-search-icon-color; }
+
     .uk-search .uk-search-icon:hover { color: $inverse-search-icon-color; }
 
     //
@@ -1240,9 +1123,8 @@
         background-color: $inverse-search-default-background;
         @if(mixin-exists(hook-inverse-search-default-input)) {@include hook-inverse-search-default-input();}
     }
-    
     .uk-search-default .uk-search-input:focus {
-        background-color: $inverse-search-default-focus-background;
+        background-color: $inverse-search-default-background;
         @if(mixin-exists(hook-inverse-search-default-input-focus)) {@include hook-inverse-search-default-input-focus();}
     }
 
@@ -1320,8 +1202,6 @@
     .uk-nav-default .uk-nav-sub a:hover,
     .uk-nav-default .uk-nav-sub a:focus { color: $inverse-nav-default-sublist-item-hover-color; }
 
-    .uk-nav-default .uk-nav-sub li.uk-active > a { color: $inverse-nav-default-sublist-item-active-color; }
-
     //
     // Primary
     //
@@ -1356,17 +1236,6 @@
 
     .uk-nav-primary .uk-nav-sub a:hover,
     .uk-nav-primary .uk-nav-sub a:focus { color: $inverse-nav-primary-sublist-item-hover-color; }
-
-    .uk-nav-primary .uk-nav-sub li.uk-active > a { color: $inverse-nav-primary-sublist-item-active-color; }
-
-    //
-    // Dividers
-    //
-
-    .uk-nav.uk-nav-divider > :not(.uk-nav-divider) + :not(.uk-nav-header, .uk-nav-divider) {
-        border-top-color: $inverse-nav-dividers-border;
-        @if(mixin-exists(hook-nav-dividers)) {@include hook-nav-dividers();}
-    }
 
 }
 @mixin hook-inverse-component-navbar(){
@@ -1561,9 +1430,7 @@
     }
 
     .uk-text-muted { color: $inverse-text-muted-color !important; }
-    .uk-text-emphasis { color: $inverse-text-emphasis-color !important; }
     .uk-text-primary { color: $inverse-text-primary-color !important; }
-    .uk-text-secondary { color: $inverse-text-secondary-color !important; }
 
 }
 @mixin hook-inverse-component-utility(){
@@ -1571,6 +1438,10 @@
     .uk-dropcap::first-letter,
     .uk-dropcap p:first-of-type::first-letter {
         @if(mixin-exists(hook-inverse-dropcap)) {@include hook-inverse-dropcap();}
+    }
+
+    .uk-leader-fill {
+        @if(mixin-exists(hook-inverse-leader)) {@include hook-inverse-leader();}
     }
 
     .uk-logo {
@@ -1627,16 +1498,6 @@
 @mixin hook-label-danger(){}
 @mixin hook-label-misc(){}
 @mixin hook-inverse-label(){}
-@mixin hook-leader(){}
-@mixin hook-leader-misc(){}
-@mixin hook-inverse-leader(){}
-@mixin hook-inverse-component-leader(){
-
-    .uk-leader-fill::after {
-        @if(mixin-exists(hook-inverse-leader)) {@include hook-inverse-leader();}
-    }
-
-}
 @mixin hook-lightbox(){}
 @mixin hook-lightbox-item(){}
 @mixin hook-lightbox-toolbar(){}
@@ -1644,7 +1505,6 @@
 @mixin hook-lightbox-toolbar-icon-hover(){}
 @mixin hook-lightbox-button(){}
 @mixin hook-lightbox-button-hover(){}
-@mixin hook-lightbox-button-active(){}
 @mixin hook-lightbox-misc(){}
 @mixin hook-link-muted(){}
 @mixin hook-link-muted-hover(){}
@@ -1667,6 +1527,7 @@
     }
 
 }
+@mixin hook-list-bullet(){}
 @mixin hook-list-misc(){}
 @mixin hook-inverse-list-divider(){}
 @mixin hook-inverse-list-striped(){
@@ -1677,6 +1538,7 @@
     }
 
 }
+@mixin hook-inverse-list-bullet(){}
 @mixin hook-margin-misc(){}
 @mixin hook-marker(){
     border-radius: 500px;
@@ -1737,7 +1599,6 @@
 @mixin hook-nav-primary-item-active(){}
 @mixin hook-nav-primary-header(){}
 @mixin hook-nav-primary-divider(){}
-@mixin hook-nav-dividers(){}
 @mixin hook-nav-misc(){}
 @mixin hook-inverse-nav-parent-icon(){}
 @mixin hook-inverse-nav-default-item(){}
@@ -1766,7 +1627,6 @@
 @mixin hook-navbar-toggle-icon(){}
 @mixin hook-navbar-toggle-icon-hover(){}
 @mixin hook-navbar-subtitle(){}
-@mixin hook-navbar-primary(){}
 @mixin hook-navbar-transparent(){}
 @mixin hook-navbar-sticky(){}
 @mixin hook-navbar-dropdown(){ box-shadow: $navbar-dropdown-box-shadow; }
@@ -1864,7 +1724,7 @@
 @mixin hook-progress-misc(){}
 @mixin hook-search-input(){}
 @mixin hook-search-default-input(){ border: $search-default-border-width solid $search-default-border; }
-@mixin hook-search-default-input-focus(){ border-color: $search-default-focus-border; }
+@mixin hook-search-default-input-focus(){}
 @mixin hook-search-navbar-input(){}
 @mixin hook-search-large-input(){}
 @mixin hook-search-toggle(){}
@@ -1931,7 +1791,6 @@
 @mixin hook-inverse-subnav-pill-item-onclick(){}
 @mixin hook-inverse-subnav-pill-item-active(){}
 @mixin hook-inverse-subnav-item-disabled(){}
-@mixin hook-svg-misc(){}
 @mixin hook-switcher-misc(){}
 @mixin hook-tab(){
 
@@ -2019,13 +1878,13 @@
 @mixin hook-table-cell(){}
 @mixin hook-table-footer(){}
 @mixin hook-table-caption(){}
+@mixin hook-table-row-active(){}
 @mixin hook-table-divider(){}
 @mixin hook-table-striped(){
     border-top: $table-striped-border-width solid $table-striped-border;
     border-bottom: $table-striped-border-width solid $table-striped-border;
 }
 @mixin hook-table-hover(){}
-@mixin hook-table-row-active(){}
 @mixin hook-table-small(){}
 @mixin hook-table-large(){}
 @mixin hook-table-misc(){
@@ -2142,13 +2001,9 @@
 }
 @mixin hook-tile(){}
 @mixin hook-tile-default(){}
-@mixin hook-tile-default-hover(){}
 @mixin hook-tile-muted(){}
-@mixin hook-tile-muted-hover(){}
 @mixin hook-tile-primary(){}
-@mixin hook-tile-primary-hover(){}
 @mixin hook-tile-secondary(){}
-@mixin hook-tile-secondary-hover(){}
 @mixin hook-tile-misc(){}
 @mixin hook-tooltip(){}
 @mixin hook-tooltip-misc(){}
@@ -2166,10 +2021,12 @@
     // Prevent line wrap
     margin-bottom: -2px;
 }
+@mixin hook-leader(){}
 @mixin hook-logo(){}
 @mixin hook-logo-hover(){}
 @mixin hook-utility-misc(){}
 @mixin hook-inverse-dropcap(){}
+@mixin hook-inverse-leader(){}
 @mixin hook-inverse-logo(){}
 @mixin hook-inverse-logo-hover(){}
 @mixin hook-visibility-misc(){}
