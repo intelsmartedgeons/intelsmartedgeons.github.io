@@ -49,7 +49,7 @@ permalink: /release-notes/
     <ul class="uk-margin-small-top">
         <li>Fixed stability and reliability with 5G Private Wireless Experience Kit with Integrated RAN.</li>
     </ul>
-    <a class="uk-button uk-button-danger uk-button-small uk-margin-small-bottom">Known Issues</a>
+    <a class="uk-button uk-button-warning uk-button-small uk-margin-small-bottom">Known Issues</a>
     <ul class="uk-margin-small-top">
         <li>Radisys CU support for multiple SR-IOV virtual functions has not been validated.</li>
     </ul>
