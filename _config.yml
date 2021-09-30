@@ -92,7 +92,7 @@ disqus:
     shortname:      # 1234
 
 # Google analytics code, get your code here https://www.google.com/analytics/
-google_analytics:
+google_analytics: true
 
 # Number of posts displayed on blog page
 paginate:           10
