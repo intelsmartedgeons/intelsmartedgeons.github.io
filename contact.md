@@ -50,7 +50,7 @@ var apiURL = '{{ site.apiURL }}';
             <p>Please select a topic below related to you inquiry. If you don’t find what you need, fill out our contact form.</p>
             <ul class="uk-list uk-list-large uk-margin-medium-top">
                 <li>
-                    <a class="uk-box-shadow-hover-small" href="/intel-smart-edge-open/request-license/" title="Request a License">
+                    <a class="uk-box-shadow-hover-small" href="/request-license/" title="Request a License">
                         <span class="linkHead">Request a License</span>
                         <span class="linkText">Request for access to our licensed products.</span>
                         <svg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><polyline fill='none' stroke='#0068B5' stroke-width='1.03' points='7 4 13 10 7 16' /></svg>
