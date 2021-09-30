@@ -1,12 +1,17 @@
 ---
 layout: page
 permalink: /contact/
+title: Intel® Smart Edge Open - Contact
+description: Please select a topic below related to your inquiry. If you don’t find what you need, fill out the Intel® Smart Edge Open contact form.
 ---
 <script type="text/javascript" src="{{ "/assets/js/jquery.validate.min.js" | relative_url }}"></script>
 <script type="text/javascript" src="{{ "/assets/js/custom.js" | relative_url }}"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 <h1 class="uk-text-left">Contact</h1>
+<script>
+var apiURL = '{{ site.apiURL }}';
+</script>
 <div class="formOuter">
     <div class="formLeft">
         <div class="contact-form-wrap idorequest">
