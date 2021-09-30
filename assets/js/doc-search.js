@@ -33,7 +33,7 @@ $(document).ready(function () {
             empty: 'No results',
             item(hit) { 
              console.log(hit)
-            return  '<div class="search-item"><div class="columns-left-column"><a href="/'+hit.path+'">'+hit.title+'</a></div></div>'
+            return  '<div class="search-item"><div class="columns-left-column"><a href="'+hit.path+'">'+hit.title+'</a></div></div>'
 
             }
         },
