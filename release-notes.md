@@ -1,6 +1,8 @@
 ---
 layout: page
 permalink: /release-notes/
+title: Intel® Smart Edge Open - Release Notes Updates
+description: Release Notes provides high-level system features, issues, and limitations information for the Intel® Smart Edge Open.
 ---
 
 <!--{% include formspree.html email="my_name@gmail.com" redirect="/thanks/" name="true" subject="true" %}-->
