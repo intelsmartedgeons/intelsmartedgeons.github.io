@@ -12,7 +12,7 @@ function formsubmit() {
             success: function (data) {
                 var data = jQuery.parseJSON(data)
                 if (data.status == 1) {
-                    window.location.href = '/intel-smart-edge-open/thankyou';
+                    window.location.href = '/thankyou';
                 } else {
                     $("#bug").html(data.msg.serverError);
                 }
@@ -39,7 +39,7 @@ function contactformsubmit() {
             success: function (data) {
                 var data = jQuery.parseJSON(data)
                 if (data.status == 1) {
-                    window.location.href = '/intel-smart-edge-open/thankyou';
+                    window.location.href = '/thankyou';
                 } else {
                     $("#bug").html(data.msg.serverError);
                 }
