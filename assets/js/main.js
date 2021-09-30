@@ -9939,36 +9939,8 @@ function hideError() {
 function cleanString(str) {
     return str.replace(/[^A-Za-z0-9,_()&reg;.-:{}$%@!~=+'&#39;`? ]/g, "");
 }
-jQuery(document).on('click', function(event){
-   /*  var className = event.target.className;
-    var nodeName = event.target.nodeName;
-    console.log(className); 
-    console.log(nodeName); 
-    
-    if(event.target.parentNode.className == 'uk-icon uk-navbar-toggle-icon' || event.target.className == 'uk-margin-small-left'){
-        jQuery('.uk-navbar-toggle').attr('aria-expanded', true);
-    }
-    else if (className == 'uk-offcanvas uk-offcanvas-overlay uk-togglabe-leave'){
-        jQuery('.uk-navbar-toggle').attr('aria-expanded', false);
-        console.log('menu close by outside')
-    }
-    else{
-        jQuery('.uk-navbar-toggle').attr('aria-expanded', false);
-        console.log('menu close')
-    } */
-    var className = event.target.className;
-    var nodeName = event.target.nodeName;
-    console.log(className); 
-    console.log(nodeName);
-})
 jQuery(window).on('load', function(){
-   /*  jQuery('.uk-navbar-container .uk-navbar-left .uk-navbar-nav li a').on('click', function(){
-        jQuery('#offcanvas-docs').removeClass('uk-offcanvas-overlay uk-open');
-    }) */
-    /* jQuery('.uk-navbar-toggle').on('click', function(){
-        jQuery(this).toggleClass('showMenu');
-    }) */
-    jQuery('.menuIcon').on('click', function(){
+   jQuery('.menuIcon').on('click', function(){
         jQuery(this).parent('.toggleMenu').toggleClass('showMenu')
     })
 })
