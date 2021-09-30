@@ -32,7 +32,7 @@ $(document).ready(function () {
         templates: {
             empty: 'No results',
             item(hit) { 
-            // console.log(hit)
+             console.log(hit)
             return  '<div class="search-item"><div class="columns-left-column"><a href="/'+landing+hit.path+'">'+hit.title+'</a></div><div class="columns-right-column">'+hit._snippetResult.contents.value+'</div></div>'
 
             }
