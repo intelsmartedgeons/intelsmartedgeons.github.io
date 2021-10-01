@@ -72,7 +72,7 @@ var apiURL = '{{ site.apiURL }}';
                 <small class="error" generated="true" for="interest" style="display:none;font-size: 100%; font-weight: 400;"></small>
             </div>
             <div>
-                <label class="validationstar">What are your use cases for Edge?<span class="star">*</span></label>
+                <label class="validationstar">What are your use cases for edge?<span class="star">*</span></label>
                 <input type="text" class="form-control" name="use_case" id="use_case" placeholder="Type here" value="" maxlength="100">
                 <small class="error" generated="true" for="use_case" style="display:none;font-size: 100%; font-weight: 400;"></small>
             </div>
