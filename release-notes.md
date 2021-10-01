@@ -58,5 +58,5 @@ permalink: /release-notes/
     <p>Previous</p>
 </div>
 <div class="noteRight uk-margin-large-bottom">
-    <a href="/ido-specs/openness_releasenotes/" title="Previous release notes" target="_blank">Previous release notes</a>
+    <a href="/ido-specs/openness_releasenotes/" title="Previous release notes">Previous release notes</a>
 </div>
