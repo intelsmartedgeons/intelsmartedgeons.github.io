@@ -1,8 +1,6 @@
 ---
 layout: page
 permalink: /release-notes/
-title: Intel® Smart Edge Open - Release Notes Updates
-description: Release Notes provides high-level system features, issues, and limitations information for the Intel® Smart Edge Open.
 ---
 
 <!--{% include formspree.html email="my_name@gmail.com" redirect="/thanks/" name="true" subject="true" %}-->
@@ -55,4 +53,10 @@ description: Release Notes provides high-level system features, issues, and limi
     <ul class="uk-margin-small-top">
         <li>Radisys CU support for multiple SR-IOV virtual functions has not been validated.</li>
     </ul>
+</div>
+<div class="noteLeft">
+    <p>Previous</p>
+</div>
+<div class="noteRight">
+    <a href="/ido-specs/openness_releasenotes/" title="Previous release notes" target="_blank">Previous release notes</a>
 </div>
