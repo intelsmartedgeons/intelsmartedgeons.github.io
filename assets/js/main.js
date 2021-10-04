@@ -9984,3 +9984,13 @@ function hideError() {
 function cleanString(str) {
     return str.replace(/[^A-Za-z0-9,_()&reg;.-:{}$%@!~=+'&#39;`? ]/g, "");
 }
+jQuery(window).on('load', function(){
+    jQuery('.menuIcon').on('click', function(){
+          jQuery(this).parent('.toggleMenu').toggleClass('showMenu')
+      })
+  })
+  jQuery(window).on('resize', function(){
+      if(jQuery(window).width() >= 960){
+          jQuery('#offcanvas-docs').removeClass('uk-offcanvas-overlay uk-open');
+      }
+  })
