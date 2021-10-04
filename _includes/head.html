@@ -5,10 +5,10 @@
   {% if page.name == 'index.md' %}
   {% assign pageName = 'Home' %}
   {% else %}
-  {% assign pageName = page.name | replace: ".md","" | replace: "-"," " %}
+  {% assign pageName = page.name %}
   {% endif %}
 
-  {% assign title = page.name | replace: "-"," " | replace: "_"," " | split: ".md" | first %}
+  {% assign title = pageName | replace: "-"," " | replace: "_"," " | split: ".md" | first %}
   {% assign pageTitle = title | split: ' ' %}
   {% capture pageTitleUpper %}{% for word in pageTitle %}{{ word | capitalize }} {% endfor %}{% endcapture %}
 
