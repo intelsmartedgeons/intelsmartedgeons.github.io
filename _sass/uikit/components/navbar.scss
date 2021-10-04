@@ -20,7 +20,8 @@
 //                  `uk-navbar-dropdown-grid`
 //                  `uk-navbar-toggle-icon`
 //
-// Modifiers:       `uk-navbar-transparent`
+// Modifiers:       `uk-navbar-primary`
+//                  `uk-navbar-transparent`
 //                  `uk-navbar-sticky`
 //                  `uk-navbar-dropdown-stack`
 //
@@ -74,6 +75,7 @@ $navbar-dropdown-nav-divider-border-width:       $global-border-width !default;
 $navbar-dropdown-nav-divider-border:             $global-border !default;
 $navbar-dropdown-nav-sublist-item-color:         $global-muted-color !default;
 $navbar-dropdown-nav-sublist-item-hover-color:   $global-color !default;
+$navbar-dropdown-nav-sublist-item-active-color:  $global-emphasis-color !default;
 
 $navbar-dropbar-background:                      $navbar-dropdown-background !default;
 $navbar-dropbar-z-index:                         $global-z-index - 20 !default;
@@ -137,9 +139,9 @@ $navbar-dropbar-z-index:                         $global-z-index - 20 !default;
 /*
  * Horizontal alignment
  * 1. Create position context for centered navbar with sub groups (left/right)
- * 2. Needed for dropdowns because a new position context is created
+ * 2. Fix text wrapping if content is larger than 50% of the container.
+ * 3. Needed for dropdowns because a new position context is created
  *    `z-index` must be smaller than off-canvas
- * 3. Fix text wrapping if the centered section is larger than 50% of the navbar
  * 4. Align sub groups for centered navbar
  */
 
@@ -158,13 +160,11 @@ $navbar-dropbar-z-index:                         $global-z-index - 20 !default;
     left: 50%;
     transform: translate(-50%,-50%);
     /* 2 */
+    width: max-content;
+    box-sizing: border-box;
+    /* 3 */
     z-index: $global-z-index - 10;
 }
-
-/* 3 */
-.uk-navbar-center:not(:only-child) .uk-navbar-nav > li > a,
-.uk-navbar-center:not(:only-child) .uk-navbar-item,
-.uk-navbar-center:not(:only-child) .uk-navbar-toggle { white-space: nowrap; }
 
 /* 4 */
 .uk-navbar-center-left,
@@ -176,9 +176,10 @@ $navbar-dropbar-z-index:                         $global-z-index - 20 !default;
 .uk-navbar-center-left { right: 100%; }
 .uk-navbar-center-right { left: 100%; }
 
-[class*='uk-navbar-center-'] .uk-navbar-nav > li > a,
-[class*='uk-navbar-center-'] .uk-navbar-item,
-[class*='uk-navbar-center-'] .uk-navbar-toggle { white-space: nowrap; }
+[class*='uk-navbar-center-'] {
+    width: max-content;
+    box-sizing: border-box;
+}
 
 
 /* Nav
@@ -208,9 +209,10 @@ $navbar-dropbar-z-index:                         $global-z-index - 20 !default;
 /*
  * Items
  * 1. Center content vertically and horizontally
- * 2. Dimensions
- * 3. Style
- * 4. Required for `a`
+ * 2. Imitate white space gap when using flexbox
+ * 3. Dimensions
+ * 4. Style
+ * 5. Required for `a`
  */
 
 .uk-navbar-nav > li > a,    // Nav item
@@ -221,13 +223,15 @@ $navbar-dropbar-z-index:                         $global-z-index - 20 !default;
     justify-content: center;
     align-items: center;
     /* 2 */
-    box-sizing: border-box;
-    height: $navbar-nav-item-height;
-    padding: 0 $navbar-nav-item-padding-horizontal;
+    column-gap: 0.25em;
     /* 3 */
+    box-sizing: border-box;
+    min-height: $navbar-nav-item-height;
+    padding: 0 $navbar-nav-item-padding-horizontal;
+    /* 4 */
     font-size: $navbar-nav-item-font-size;
     font-family: $navbar-nav-item-font-family;
-    /* 4 */
+    /* 5 */
     text-decoration: none;
 }
 
@@ -247,7 +251,7 @@ $navbar-dropbar-z-index:                         $global-z-index - 20 !default;
 
 .uk-navbar-nav > li:hover > a,
 .uk-navbar-nav > li > a:focus,
-.uk-navbar-nav > li > a.uk-open {
+.uk-navbar-nav > li > a[aria-expanded="true"] {
     color: $navbar-nav-item-hover-color;
     outline: none;
     @if(mixin-exists(hook-navbar-nav-item-hover)) {@include hook-navbar-nav-item-hover();}
@@ -274,6 +278,12 @@ $navbar-dropbar-z-index:                         $global-z-index - 20 !default;
     @if(mixin-exists(hook-navbar-item)) {@include hook-navbar-item();}
 }
 
+/*
+ * Remove margin from the last-child
+ */
+
+.uk-navbar-item > :last-child { margin-bottom: 0; }
+
 
 /* Toggle
  ========================================================================== */
@@ -285,7 +295,7 @@ $navbar-dropbar-z-index:                         $global-z-index - 20 !default;
 
 .uk-navbar-toggle:hover,
 .uk-navbar-toggle:focus,
-.uk-navbar-toggle.uk-open {
+.uk-navbar-toggle[aria-expanded="true"] {
     color: $navbar-toggle-hover-color;
     outline: none;
     text-decoration: none;
@@ -319,6 +329,10 @@ $navbar-dropbar-z-index:                         $global-z-index - 20 !default;
 
 /* Style modifiers
  ========================================================================== */
+
+.uk-navbar-primary {
+    @if(mixin-exists(hook-navbar-primary)) {@include hook-navbar-primary();}
+}
 
 .uk-navbar-transparent {
     @if(mixin-exists(hook-navbar-transparent)) {@include hook-navbar-transparent();}
@@ -461,6 +475,8 @@ $navbar-dropbar-z-index:                         $global-z-index - 20 !default;
 .uk-navbar-dropdown-nav .uk-nav-sub a:hover,
 .uk-navbar-dropdown-nav .uk-nav-sub a:focus { color: $navbar-dropdown-nav-sublist-item-hover-color; }
 
+.uk-navbar-dropdown-nav .uk-nav-sub li.uk-active > a { color: $navbar-dropdown-nav-sublist-item-active-color; }
+
 
 /* Dropbar
  ========================================================================== */
@@ -500,6 +516,7 @@ $navbar-dropbar-z-index:                         $global-z-index - 20 !default;
 // @mixin hook-navbar-toggle-icon(){}
 // @mixin hook-navbar-toggle-icon-hover(){}
 // @mixin hook-navbar-subtitle(){}
+// @mixin hook-navbar-primary(){}
 // @mixin hook-navbar-transparent(){}
 // @mixin hook-navbar-sticky(){}
 // @mixin hook-navbar-dropdown(){}
