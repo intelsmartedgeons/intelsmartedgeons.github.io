@@ -38,6 +38,7 @@ layout: default
                                 
                                 {% for navbar in navbars %}
                                     <h5>{{ navbar.title }}</h5>
+                                    <h4>{{ navbar.path }}</h4>
                                     <ul class="uk-nav uk-nav-default doc-nav">
                                     {% assign repo_path = page.url | prepend:site.baseurl | prepend:site.url %}
                                     {% for nav in navbar.section %}
