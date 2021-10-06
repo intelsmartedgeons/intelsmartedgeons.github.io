@@ -17,7 +17,8 @@ section:
       meta_title: 
       meta_description: 
       
-    - title: SRIOV
+    #- title: SRIOV
+    - title: SR-IOV Network Operator
       path: /docs/components/networking/sriov-network-operator
       meta_title: 
       meta_description: 

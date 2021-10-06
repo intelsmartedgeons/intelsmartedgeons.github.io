@@ -3,7 +3,8 @@ path: /getting-started-licensed/
 order: 6
 section:
   - title: Cluster Setup
-    path: /ido-specs/docs/getting-started/openness-cluster-setup
+    #path: /ido-specs/docs/getting-started/openness-cluster-setup
+    path: /ido-specs/docs/getting-started/smartedge-open-cluster-setup
     meta_title: 
     meta_description: 
     

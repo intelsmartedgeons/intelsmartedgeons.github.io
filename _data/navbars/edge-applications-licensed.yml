@@ -3,6 +3,7 @@ path: /applications-licensed/
 order: 10
 section:
   - title: O-RAN Front Haul Network Radio Access Network
-    path: /ido-specs/docs/reference-architectures/ran/openness_xran
+    #path: /ido-specs/docs/reference-architectures/ran/openness_xran
+    path: /ido-specs/docs/reference-architectures/ran/smartedge-open_xran
     meta_title: 
     meta_description: 
