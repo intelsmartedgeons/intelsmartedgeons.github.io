@@ -183,10 +183,13 @@
         article{
             article{
                 .article-content{
-                    .highlighter-rouge{
-                        .highlight{
-                            display: none;
-                        }
+                    .highlighter-rouge:first-child{
+                        display: none;
+                    }
+                    table{
+                        display: block;
+                        max-width: 100%;
+                        overflow-x: auto;
                     }
                 }
             }
