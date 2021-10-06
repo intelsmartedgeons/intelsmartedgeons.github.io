@@ -184,7 +184,9 @@
             article{
                 .article-content{
                     .highlighter-rouge{
-                        display: none;
+                        .highlight{
+                            display: none;
+                        }
                     }
                 }
             }
