@@ -165,15 +165,6 @@
                         padding: 0;
                         line-height: 1.8;
                     }
-                    &.uk-active{
-                        a{
-                            color: $blue;
-                            font-weight: bold;
-                            &:before{
-                                display: none;
-                            }
-                        }
-                    }
                 }
             }
         }
@@ -224,11 +215,11 @@
             height: 70vh;
             top: 17%;
             padding: 20px 0 20px 20px;
-            width: 280px;
+            width: 320px;
             border-style: solid;
             border-color: #ccc;
             border-width: 2px 2px 2px 0px;
-            left: -280px;
+            left: -320px;
             transition: .3s;
             #contact-button{
                 display: block;

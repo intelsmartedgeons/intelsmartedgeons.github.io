@@ -5,6 +5,7 @@
 //
 // Sub-objects:     `uk-offcanvas-bar`
 //                  `uk-offcanvas-container`
+//                  `uk-offcanvas-content`
 //                  `uk-offcanvas-page`
 //
 // Adopted:         `uk-offcanvas-close`
@@ -13,7 +14,7 @@
 //                  `uk-offcanvas-bar-animation`
 //                  `uk-offcanvas-reveal`
 //                  `uk-offcanvas-overlay`
-//                  `uk-offcanvas-container-animation`
+//                  `uk-offcanvas-content-animation`
 //
 // States:          `uk-open`
 //
@@ -78,6 +79,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
  * 1. Set position
  * 2. Size and style
  * 3. Allow scrolling
+ * 4. Transform
  */
 
 .uk-offcanvas-bar {
@@ -85,7 +87,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
     position: absolute;
     top: 0;
     bottom: 0;
-    left: (-$offcanvas-bar-width);
+    left: 0;
     /* 2 */
     box-sizing: border-box;
     width: $offcanvas-bar-width;
@@ -94,6 +96,8 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
     /* 3 */
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    /* 4 */
+    transform: translateX(-100%);
     @if(mixin-exists(hook-offcanvas-bar)) {@include hook-offcanvas-bar();}
 }
 
@@ -101,7 +105,6 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
 @media (min-width: $breakpoint-medium) {
 
     .uk-offcanvas-bar {
-        left: (-$offcanvas-bar-width-m);
         width: $offcanvas-bar-width-m;
         padding: $offcanvas-bar-padding-vertical-m $offcanvas-bar-padding-horizontal-m;
     }
@@ -115,39 +118,28 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
 /* Flip modifier */
 .uk-offcanvas-flip .uk-offcanvas-bar {
     left: auto;
-    right: (-$offcanvas-bar-width);
-}
-
-/* Tablet landscape and bigger */
-@media (min-width: $breakpoint-medium) {
-
-    .uk-offcanvas-flip .uk-offcanvas-bar { right: (-$offcanvas-bar-width-m); }
-
+    right: 0;
+    transform: translateX(100%);
 }
 
 /*
  * Open
  */
 
-.uk-open > .uk-offcanvas-bar { left: 0; }
-.uk-offcanvas-flip .uk-open > .uk-offcanvas-bar {
-    left: auto;
-    right: 0;
-}
+.uk-open > .uk-offcanvas-bar { transform: translateX(0); }
 
 /*
  * Slide Animation (Used in slide and push mode)
  */
 
-.uk-offcanvas-bar-animation { transition: left 0.3s ease-out; }
-.uk-offcanvas-flip .uk-offcanvas-bar-animation { transition-property: right; }
+.uk-offcanvas-bar-animation { transition: transform 0.3s ease-out; }
 
 /*
  * Reveal Animation
  * 1. Set position
  * 2. Clip the bar
  * 3. Animation
- * 4. Reset position
+ * 4. Reset transform
  */
 
 .uk-offcanvas-reveal {
@@ -165,13 +157,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
 
 .uk-offcanvas-reveal .uk-offcanvas-bar {
     /* 4 */
-    left: 0;
-}
-
-.uk-offcanvas-flip .uk-offcanvas-reveal .uk-offcanvas-bar {
-    /* 4 */
-    left: auto;
-    right: 0;
+    transform: translateX(0);
 }
 
 .uk-open > .uk-offcanvas-reveal { width: $offcanvas-bar-width; }
@@ -246,7 +232,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
 .uk-offcanvas-overlay.uk-open::before { opacity: 1; }
 
 
-/* Prevent scrolling
+/* Container
  ========================================================================== */
 
 /*
@@ -257,40 +243,49 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
 .uk-offcanvas-page,
 .uk-offcanvas-container { overflow-x: hidden; }
 
+/*
+ * Prevent all scrollbars if overlay is used
+ */
 
-/* Container
+.uk-offcanvas-container-overlay { overflow: hidden; }
+
+
+/* Content
  ========================================================================== */
 
 /*
  * Prepare slide-out animation (Used in reveal and push mode)
  * Using `position: left` instead of `transform` because position `fixed` elements like sticky navbars
  * lose their fixed state and behaves like `absolute` within a transformed container
- * 1. Provide a fixed width and prevent shrinking
+ * Note: JS sets a fixed width and height so the page can slide-out without shrinking
+ * 1. Smooth scrolling
  */
 
-.uk-offcanvas-container {
+.uk-offcanvas-container .uk-offcanvas-content {
     position: relative;
     left: 0;
     transition: left 0.3s ease-out;
     /* 1 */
-    box-sizing: border-box;
-    width: 100%;
+    -webkit-overflow-scrolling: touch;
 }
+
+/* Disable scrolling if overlay mode */
+.uk-offcanvas-overlay .uk-offcanvas-content { overflow-y: hidden; }
 
 /*
  * Activate slide-out animation
  */
 
-:not(.uk-offcanvas-flip).uk-offcanvas-container-animation { left: $offcanvas-bar-width; }
+:not(.uk-offcanvas-flip) > .uk-offcanvas-content-animation { left: $offcanvas-bar-width; }
 
-.uk-offcanvas-flip.uk-offcanvas-container-animation { left: (-$offcanvas-bar-width); }
+.uk-offcanvas-flip > .uk-offcanvas-content-animation { left: (-$offcanvas-bar-width); }
 
 /* Tablet landscape and bigger */
 @media (min-width: $breakpoint-medium) {
 
-    :not(.uk-offcanvas-flip).uk-offcanvas-container-animation { left: $offcanvas-bar-width-m; }
+    :not(.uk-offcanvas-flip) > .uk-offcanvas-content-animation { left: $offcanvas-bar-width-m; }
 
-    .uk-offcanvas-flip.uk-offcanvas-container-animation { left: (-$offcanvas-bar-width-m); }
+    .uk-offcanvas-flip > .uk-offcanvas-content-animation { left: (-$offcanvas-bar-width-m); }
 
 }
 
