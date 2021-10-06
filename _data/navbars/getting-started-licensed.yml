@@ -29,6 +29,7 @@ section:
     meta_description: 
        
   - title: Kubernetes Dashboard
-    path: /ido-specs/doc/getting-started/kubernetes-dashboards
+    #path: /ido-specs/doc/getting-started/kubernetes-dashboards
+    path: /ido-specs/doc/getting-started/kubernetes-dashboard
     meta_title: 
     meta_description: 
