@@ -169,7 +169,7 @@
                         a{
                             color:$blue;
                             font-weight: bold;
-                            &::after{
+                            &::before{
                                 display: none;
                             }
                         }
