@@ -69,10 +69,21 @@ $accordion-content-margin-top:                  $global-margin !default;
  ========================================================================== */
 
 .uk-accordion-content {
-    display: flow-root;
     margin-top: $accordion-content-margin-top;
     @if(mixin-exists(hook-accordion-content)) {@include hook-accordion-content();}
 }
+
+/*
+ * Micro clearfix
+ */
+
+.uk-accordion-content::before,
+.uk-accordion-content::after {
+    content: "";
+    display: table;
+}
+
+.uk-accordion-content::after { clear: both; }
 
 /*
  * Remove margin from the last-child
@@ -98,7 +109,7 @@ $accordion-content-margin-top:                  $global-margin !default;
 // ========================================================================
 
 $inverse-accordion-title-color:              $inverse-global-emphasis-color !default;
-$inverse-accordion-title-hover-color:        $inverse-global-color !default;
+$inverse-accordion-title-hover-color:        $inverse-global-inverse-color !default;
 
 
 

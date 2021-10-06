@@ -13,7 +13,7 @@ lang:               en
 baseurl:            ""
 
 
-apiURL: "https://openness-staging.onsumaye.com"
+apiURL: "https://www.openness.org"
 # Permalink URLs structure, for permalink style options see: https://jekyllrb.com/docs/permalinks/
 permalink:          /:title/
 
@@ -27,10 +27,13 @@ navbar:
     sticky:         true
     search:         true
 
+# Default footer image settings
+#footer:
+    #copyright:      Made by <a href="https://unbound.studio/">Unbound Studio</a> in Cleveland.
+
 
 # Google analytics code, get your code here https://www.google.com/analytics/
 google_analytics: true
-
 
 # Path to post content assets directory i.e post images, pdfs etc
 uploads:            /uploads/
