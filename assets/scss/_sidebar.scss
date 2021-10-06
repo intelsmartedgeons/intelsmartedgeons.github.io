@@ -186,6 +186,17 @@
             }
         }
     }
+    & + .uk-width-1-1{
+        article{
+            article{
+                .article-content{
+                    .highlighter-rouge{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }
 @media (min-width:1200px){
     .sidebar-fixed-width{
