@@ -70,7 +70,7 @@ section:
       
     - title: Visual Compute Accelerator Card - Analytics (VCA-A)
       #path: /ido-specs/doc/building-blocks/enhanced-platform-awareness/openness-vcac-a
-      path: /ido-specs/doc/building-blocks/enhanced-platform-awareness/smartedge-open-vcac-a.md
+      path: /ido-specs/doc/building-blocks/enhanced-platform-awareness/smartedge-open-vcac-a
       meta_description:
       
     - title: Intel QuickAssist Adapter
