@@ -5,7 +5,7 @@ layout: default
 <link rel="stylesheet" href="{{ "/assets/css/ido-specs.css" | relative_url }}" type="text/css" />
 <script src="{{ "/assets/js/bootstrap.js" | relative_url }}"></script>
 <script src="{{ "/assets/js/doc-search.js" | relative_url }}"></script>
-<script src="{{ "/assets/js/ido-specs.js" | site.main_url }}"></script>
+<script src="{{ "/assets/js/ido-specs.js" | relative_url }}"></script>
 <div class="uk-section">
     <div class="uk-container">
         <div class="uk-grid-large" data-uk-grid>
@@ -42,7 +42,7 @@ layout: default
                                     {% assign repo_path = page.url | prepend:site.baseurl | prepend:site.url %}
                                     {% for nav in navbar.section %}
                                     {% assign doc_url = nav.path | append:"/" %}
-                                    <li class="{% if doc_url == repo_path %}uk-active{% endif %}"><a href="{{ nav.path}}">{{ nav.title }}</a></li>
+                                    <li class="{% if doc_url == repo_path %}uk-active{% endif %}"><a href="{{ nav.path}}">{{ nav.title }} Hello</a></li>
                                     {% endfor %}
                                     </ul>
                                 {% endfor %}
