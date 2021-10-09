@@ -12,14 +12,13 @@ lang:               en
 # Site subpath, e.g. /blog
 baseurl:            ""
 
+
 apiURL: "https://openness-staging.onsumaye.com"
 # Permalink URLs structure, for permalink style options see: https://jekyllrb.com/docs/permalinks/
 permalink:          /:title/
 
 # Site base hostname & protocol, e.g. http://example.com
 url:                ""
-
-main_url:           "https://onsumaye-team.github.io"
 
 # Site logo # e.g. logo.png, upload logo image file to /uploads/ folder
 logo:               

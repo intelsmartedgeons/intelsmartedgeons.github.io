@@ -227,13 +227,13 @@ function searchResults(form) {
 
 <h1 class="uk-text-left">Contact</h1>
 <script>
-var apiURL = 'https://www.openness.org';
+var apiURL = 'https://openness-staging.onsumaye.com';
 </script>
 
 <div class="formOuter">
     <div class="formLeft">
         <div class="contact-form-wrap idorequest">
-            <form id="contact" name="contact" method="post" autocomplete="off">
+            <form id="contact" name="contact" method="post" autocomplete="off" action="https://formspree.io/f/mgerqred">
                 <div style="overflow:hidden;">
                     <div class="colLeft">
                         <label class="validationstar">First Name<span class="star">*</span></label>
@@ -260,6 +260,10 @@ var apiURL = 'https://www.openness.org';
                     <input type="submit" id="sub" name="requestAccess" value="Send Message" title="Send Message" class="uk-button uk-button-primary uk-button-large uk-margin-medium-top contact-btn" />
                 </div>
             </form>
+            <form name="new_contact" id="new_contact" action="https://formspree.io/f/mgerqred" method="post">
+                <input type="hidden" name="subject" id="subject" value="Intel® Smart Edge Open - Contact" />
+                <input type="hidden" name="message" id="new_message" value="" />
+            </form>
         </div>
     </div>
     <div class="formRight section-featured">
@@ -275,7 +279,7 @@ var apiURL = 'https://www.openness.org';
                     </a>
                 </li>
                 <li>
-                    <a class="uk-box-shadow-hover-small" href="https://networkbuilders.intel.com/intel-technologies/publications" title="Get Inspired">
+                    <a class="uk-box-shadow-hover-small" target="_blank" href="https://networkbuilders.intel.com/intel-technologies/publications" title="Get Inspired">
                         <span class="linkHead">Get Inspired</span>
                         <span class="linkText">Discover the solutions Smart Edge Open has  provided.</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#0068B5" stroke-width="1.03" points="7 4 13 10 7 16" /></svg>
