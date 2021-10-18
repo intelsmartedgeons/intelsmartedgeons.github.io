@@ -9,7 +9,7 @@ title: Blog
         <h1 class="uk-article-title uk-text-center">{{ page.title | escape }}</h1>
 
         {% for post in paginator.posts %}
-        <div class="uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-medium card-post uk-inline border-radius-medium border-xlight uk-width-1-1 uk-margin">
+        <div class="uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-medium card-post uk-inline border-radius-medium border-xlight uk-width-1-1 uk-margin blogBox">
             <a class="uk-position-cover" href="{{ post.url | relative_url }}"></a>
             <div class="uk-card-header">
                 <div class="uk-grid-small uk-flex-middle" uk-grid>
@@ -32,7 +32,7 @@ title: Blog
                   
                   
                     <div class="uk-width-expand">
-                        <h3 class="uk-card-title uk-margin-remove-bottom">{{ post.title }}</h3>
+                        <h3 class="uk-card-title">{{ post.title }}</h3>
                         <p class="uk-text-meta uk-margin-remove-top"><time datetime="{{ post.date | date_to_xmlschema }}">
                             {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
                             {{ post.date | date: date_format }}
