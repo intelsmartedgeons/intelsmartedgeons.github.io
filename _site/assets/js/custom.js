@@ -27,14 +27,7 @@ function formsubmit() {
 
 
 function contactformsubmit() {
-
-    var fullName = document.getElementById('first_name').value;
-
-    var userMsg = "Dear "+fullName+",\n\n";
-    userMsg += "Thank you for contacting us. We have received your feedback. Please expect a response from us within 5 business days.\n\n";
-    userMsg += 'Thank you,\n<span class="il">Intel&reg; Smart Edge Open</span> Team';
-    jQuery("#new_message").val(userMsg);
-    /*var opurl = apiURL+'/index.php?option=com_products&task=githubpages_contact_request';
+    var opurl = apiURL+'/index.php?option=com_products&task=githubpages_contact_request';
     var form = $("#contact");
     var url =
         $.ajax({
@@ -53,29 +46,8 @@ function contactformsubmit() {
                 // $('#result').attr("value",result)s;
 
             }
-        });*/
-    var form = document.getElementById("contact");
-    //Call Function
-    async function handleSubmit(event) {
-        //event.preventDefault();
-        //var status = document.getElementById("my-form-status");
-        var data = new FormData(event.target);
-        fetch(event.target.action, {
-            method: form.method,
-            body: data,
-            headers: {
-                'Accept': 'application/json'
-            }
-        }).then(response => {
-            /*status.innerHTML = "Thanks for your submission!";
-            form.reset()*/
-            //window.location.href = '/thankyou';
-            newContact();
-        }).catch(error => {
-            $("#bug").html("Oops! There was a problem submitting your form");
         });
-    }
-    form.addEventListener("submit", handleSubmit);
+
 
 
 }
@@ -373,25 +345,4 @@ function hideError() {
 
 function cleanString(str) {
     return str.replace(/[^A-Za-z0-9,_()&reg;.-:{}$%@!~=+'&#39;`? ]/g, "");
-}
-
-function newContact(){
-    var new_contact = document.getElementById("new_contact");
-    //Call Function
-    async function handleSubmit(event) {
-        //event.preventDefault();
-        var data = new FormData(event.target);
-        fetch(event.target.action, {
-            method: new_contact.method,
-            body: data,
-            headers: {
-                'Accept': 'application/json'
-            }
-        }).then(response => {
-            window.location.href = '/thankyou';
-        }).catch(error => {
-            $("#bug").html("Oops! There was a problem submitting your form");
-        });
-    }
-    new_contact.addEventListener("submit", handleSubmit);
 }
