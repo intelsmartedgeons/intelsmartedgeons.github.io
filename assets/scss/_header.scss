@@ -15,12 +15,12 @@
             margin-left: auto;
             li{
                 a{
-                    color: $menuColor;
+                    color: #BDC3C7;
                     height: 103px;
                     font: 18px/22px 'Intel One Display Regular';
                     letter-spacing: 0.7px;
                     &:hover{
-                        color: $blue;
+                        color: #00c7fd;
                     }
                 }
                 &.uk-active{
