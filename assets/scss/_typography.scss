@@ -21,11 +21,7 @@ h3{
     letter-spacing: 0.8px;
     color: $black;
     margin: 0 auto 20px;
-}/* 
-.headLine{
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 20px;
-} */
+}
 p{
     margin: 0 auto 20px;
     clear: both;
@@ -36,6 +32,9 @@ ul, li{
     margin-top: 0;
     clear: both;
     word-break: break-word;
+}
+ul > li > ul{
+    margin-bottom: 0 !important;
 }
 svg, svg *{
     color: $blue;
