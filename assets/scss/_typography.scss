@@ -74,6 +74,9 @@ pre code{
         font-size: 16px; 
     }
 }
+:not(pre)>code, :not(pre)>kbd, :not(pre)>samp{
+    color: #00c7fd;
+}
 @media (max-width:1199px){
     *{
         font: 16px/1.4 'Intel One Display Light', Arial;

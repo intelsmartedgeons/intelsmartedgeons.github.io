@@ -195,7 +195,7 @@
         article{
             article{
                 .article-content{
-                    .highlighter-rouge:first-child{
+                    .highlighter-rouge:first-child, .highlighter-rouge:nth-child(2){
                         display: none;
                     }
                     table{
