@@ -63,7 +63,7 @@ a{
         background-color: darken($blue, 10%);
     }
 }
-.uk-article-title{
+.uk-article-title:not(.blog-title){
     display: none;
 }
 pre code{
