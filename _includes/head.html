@@ -4,6 +4,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% if page.name == 'index.md' %}
   {% assign pageName = 'Home' %}
+  {% elsif page.name == 'index.html' %}
+  {% assign pageName = 'Blog' %}
   {% else %}
   {% assign pageName = page.name %}
   {% endif %}
