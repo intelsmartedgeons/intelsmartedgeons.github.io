@@ -38,6 +38,9 @@
         color: #00c7fd;
         font-weight: 600;
     }
+    & + .highlighter-rouge{
+        display: none;
+    }
 }
 @media (max-width:959px){
     .uk-navbar-container{
