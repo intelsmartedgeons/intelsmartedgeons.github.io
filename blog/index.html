@@ -41,7 +41,7 @@ title: Blog
                 </div>
             </div>
             <div class="uk-card-body">
-                {{ post.excerpt }}
+                {{ post.excerpt | strip_html | truncatewords: 25 }}
             </div>
             <div class="uk-card-footer">
                 <span class="uk-button uk-button-text">{{ site.data.translation[site.lang].read_more | default: "Read more" }} &rarr;</span>
@@ -51,6 +51,12 @@ title: Blog
         {% endfor %}
 
         {% include paginate-blog.html %}
-
     </div>
+    <script>
+        // Table of contents scroll to
+        UIkit.scroll('#markdown-toc a', {
+            duration: 400,
+            offset: 120
+        });
+    </script>
 </div>

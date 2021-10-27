@@ -10,11 +10,12 @@ left:
   - title: Release Notes
     url: /release-notes/
 
+  - title: Blog
+    url: /blog/
+    
   - title: Contact
     url: /contact/
 
-  - title: Blog
-    url: /blog/
    # dropdown:
 
      # - title: Timeline Style
