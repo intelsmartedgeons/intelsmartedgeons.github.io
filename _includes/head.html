@@ -7,7 +7,12 @@
   {% elsif page.name == 'index.html' %}
   {% assign pageName = 'Blog' %}
   {% else %}
-  {% assign pageName = page.name %}
+    {% assign post_page_url = page.url | slice: 1, 4 %}
+    {% if post_page_url == 'post' %}
+      {% assign pageName = page.title %}
+    {% else %}
+      {% assign pageName = page.name %}
+    {% endif %}
   {% endif %}
   {% assign title = pageName | replace: "-"," " | replace: "_"," " | split: ".md" | first %}
   {% assign pageTitle = title | split: ' ' %}
