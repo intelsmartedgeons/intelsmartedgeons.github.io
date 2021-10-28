@@ -20,6 +20,7 @@
   <title>Intel® Smart Edge Open | {{ pageTitleUpper }}</title>
   {% seo title=false %}
   <meta property="og:image" content="{% if site.logo contains 'http' %}{{ site.logo }}{% else %}{{ site.uploads | absolute_url }}{{ site.logo }}{% endif %}"/>
+  <meta name="robots" content="noindex, nofollow"/>
   <!-- <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}"> -->
   <link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}">
   <link rel="shortcut icon" type="image/png" href="{{ "uploads/favicon.png" | relative_url }}" >
