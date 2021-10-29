@@ -72,6 +72,15 @@
             }
         }
     }
+    &.boxAPI{
+        margin-bottom: 100px;
+        .boxHeadBox{
+            ul{
+                padding-left: 0;
+                margin-bottom: 15px;
+            }
+        }
+    }
 }
 @media (min-width:960px){
     .boxHead.boxes5 .boxHeadBox:not(:nth-child(3n)):after{
