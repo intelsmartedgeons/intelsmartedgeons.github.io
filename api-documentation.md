@@ -29,6 +29,27 @@ title: API Documentation
 		</div>
 		<div class="api-description"></div>
 	</div>-->
+    <div class="boxHead boxHeadExplore uk-child-width-1-3@m uk-grid-match uk-text-center uk-margin-medium-top uk-grid uk-grid-stack" data-uk-grid="">
+        <div class="uk-first-column">
+            <div class="boxHeadBox uk-card uk-card-default uk-box-shadow-medium uk-card-hover uk-card-body uk-inline border-radius-large border-xlight">
+                <h3 class="uk-card-title">HTTP Rest</h3>
+                <ul>
+					{% for api_nav in site.data.api_documentation %}
+                    <li class="fa-angle-right"><a href="{{ api_nav.url }}" title="{{ api_nav.title }}">{{ api_nav.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="boxHeadBox uk-card uk-card-default uk-box-shadow-medium uk-card-hover uk-card-body uk-inline border-radius-large border-xlight">
+                <h3 class="uk-card-title">GRPC</h3>
+                <ul>
+					<li class="fa-angle-right"><a href="" title="Edge Lifecycle Management API">Edge Lifecycle Management API</a></li>
+                    <li class="fa-angle-right"><a href="" title="Edge Virtualization Infrastructure API">Edge Virtualization Infrastructure API</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 	<div class="container">
 		<div id="developer-views" class="developer-wrap">
 			<div class="row">
