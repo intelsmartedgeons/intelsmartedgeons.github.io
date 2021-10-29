@@ -75,9 +75,10 @@
     &.boxAPI{
         margin-bottom: 100px;
         .boxHeadBox{
+            padding: 25px 15px;
             ul{
                 padding-left: 0;
-                margin-bottom: 15px;
+                margin-bottom: 15px !important;
             }
         }
     }
