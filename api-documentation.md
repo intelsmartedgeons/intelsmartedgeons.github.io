@@ -50,27 +50,6 @@ title: API Documentation
             </div>
         </div>
     </div>
-	<div class="container">
-		<div id="developer-views" class="developer-wrap">
-			<div class="row">
-				<div class="right">
-					<div id="apidoc" class="developerSection">
-                        <!--<h1 class="main-heading">API Documentation</h1>-->
-						<div class="apidoc-wrap">
-							<div class="apidoc-box">
-								<h2 class="h2-smaller">HTTP Rest</h2>
-								<ul class="docsList">
-                                    {% for api_nav in site.data.api_documentation %}
-                                        <li class="fa-angle-right"><a href="{{ api_nav.url }}" title="{{ api_nav.title }}">{{ api_nav.title }}</a></li>
-                                    {% endfor %}
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 </section>
 
 <!--Swagger Api Code Start Here  -->  
