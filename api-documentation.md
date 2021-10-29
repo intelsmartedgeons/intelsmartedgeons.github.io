@@ -5,6 +5,29 @@ title: API Documentation
 #description: Please select a topic below related to your inquiry. If you don’t find what you need, fill out the Intel® Smart Edge Open contact form.
 ---
 <link rel="stylesheet" type="text/css" href="/swagger-ui/swagger-ui.css" >
+<div class="contentAreaAPI">
+    <div class="api-col-wrap">
+        <div class="api-col-left"><h2><a href="//api-documentation" class="backBtn" style="font-size:16px;"><span>&lt;</span> API Documentation</a></h2></div>
+        <div class="api-col-right">
+            <!--<select name="program" id="program" class="select-p-c js-example-placeholder-single js-states form-control">-->
+            <select name="program" id="program" class="form-control">
+                <option value="">Select API</option>
+                <option selected="" value="agent-auth">Edge Application API</option>
+                <option value="controller">Controller API</option>
+                <option value="edge-auth">Edge Application Authentication API</option>
+                <option value="api-cups">Core Network Configuration API</option>
+                <option value="af">5G APPLICATION FUNCTION (AF)</option>
+                <option value="nef">5G NETWORK EXPOSURE FUNCTION (NEF)</option>
+                <option value="5goam">5G OAM</option>	
+                <option value="emco">EMCO</option>
+            </select>
+        </div>
+    </div>
+    <div class="api-description">
+        <h1>Edge Application API</h1>
+        <p>Edge Application APIs enable developers to build edge compute services capable of taking advantage of tactile applications that respond to the changing user, network or resource scenarios. In addition, these APIs can also be used to port existing public/private cloud applications to the edge based on OpenNESS.</p>
+    </div>
+</div>
 <section class="inner-page-padding" id="swagger-ui">
     <!--<div class="contentArea2">
 		<div class="api-col-wrap">
