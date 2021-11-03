@@ -5,7 +5,7 @@ description: Please select a topic below related to your inquiry. If you don’t
 ---
 <link rel="stylesheet" type="text/css" href="{{ "/assets/css/select2.min.css?v=8.5" | relative_url }}">
 <script type="text/javascript" src="{{ "/assets/js/jquery.validate.min.js" | relative_url }}"></script>
-<script type="text/javascript" src="{{ "/assets/js/select2.min.js" | relative_url }}"></script>
+<!--<script type="text/javascript" src="{{ "/assets/js/select2.min.js" | relative_url }}"></script>-->
 <script type="text/javascript" src="{{ "/assets/js/custom.js" | relative_url }}"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
