@@ -13,7 +13,7 @@ lang:               en
 baseurl:            ""
 
 
-apiURL: "https://openness-staging.onsumaye.com"
+apiURL: "https://openness-qa.onsumaye.com" #https://openness-staging.onsumaye.com/
 # Permalink URLs structure, for permalink style options see: https://jekyllrb.com/docs/permalinks/
 permalink:          /:title/
 
