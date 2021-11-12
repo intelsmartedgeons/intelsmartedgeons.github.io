@@ -64,39 +64,39 @@ title: API Documentation
         //Switch
         switch(apiUrl) {
             case 'eaa':
-                swag_url = 'https://raw.githubusercontent.com/open-ness/specs/master/schema/eaa/eaa.swagger.json';
+                swag_url = 'https://raw.githubusercontent.com/smart-edge-open/specs/master/schema/eaa/eaa.swagger.json';
                 api_description = "<h1>Edge Application API</h1>";
-                api_description += "<p>Edge Application APIs enable developers to build edge compute services capable of taking advantage of tactile applications that respond to the changing user, network or resource scenarios. In addition, these APIs can also be used to port existing public/private cloud applications to the edge based on OpenNESS.</p>";
+                api_description += "<p>Edge Application APIs enable developers to build edge compute services capable of taking advantage of tactile applications that respond to the changing user, network or resource scenarios. In addition, these APIs can also be used to port existing public/private cloud applications to the edge based on Smart Edge Open.</p>";
             break;
             case 'controller':
-                swag_url = 'https://raw.githubusercontent.com/open-ness/specs/master/schema/controller/api.swagger.json';
+                swag_url = 'https://raw.githubusercontent.com/smart-edge-open/specs/master/schema/controller/api.swagger.json';
                 api_description = "<h1>Controller API</h1>";
-                api_description += "<p>Controller APIs enable centralized management of OpenNESS edge nodes, and can be called by a UI frontend or by external orchestrators. The API provides an abstraction layer for an operations admin, enabling them to maintain a list of OpenNESS edge nodes, configure apps, manage policies and DNS, and more.</p>";
+                api_description += "<p>Controller APIs enable centralized management of Smart Edge Open edge nodes, and can be called by a UI frontend or by external orchestrators. The API provides an abstraction layer for an operations admin, enabling them to maintain a list of Smart Edge Open edge nodes, configure apps, manage policies and DNS, and more.</p>";
             break;
             case 'auth':
-                swag_url = 'https://raw.githubusercontent.com/open-ness/specs/master/schema/auth/auth.swagger.json';
+                swag_url = 'https://raw.githubusercontent.com/smart-edge-open/specs/master/schema/auth/auth.swagger.json';
                 api_description = "<h1>Edge Application Authentication API</h1>";
                 api_description += "<p>Edge Application Authentication APIs enable authentication of apps that intend to call Edge Application APIs, by validating the identity of the requesting application and issuing it a valid TLS certificate.</p>";
             break;
             case 'cups':
-                swag_url = 'https://raw.githubusercontent.com/open-ness/specs/master/schema/cups/cups.swagger.json';
+                swag_url = 'https://raw.githubusercontent.com/smart-edge-open/specs/master/schema/cups/cups.swagger.json';
                 api_description = "<h1>Core Network Configuration API</h1>";
                 api_description += "<p>Core Network Configuration APIs enable network configuration operations to be performed, such as configuring the traffic policy for the core network to steer traffic towards the edge nodes.</p>";
             break;
             case 'af':
-                swag_url = 'https://raw.githubusercontent.com/open-ness/specs/master/schema/af/af.openapi.yaml';
+                swag_url = 'https://raw.githubusercontent.com/smart-edge-open/specs/master/schema/af/af.openapi.yaml';
                 api_description = "<h1>5G APPLICATION FUNCTION (AF)</h1><p></p>";
             break;
             case 'nef':
-                swag_url = 'https://raw.githubusercontent.com/open-ness/specs/master/schema/nef/nef_traffic_influence_openapi.yaml';
+                swag_url = 'https://raw.githubusercontent.com/smart-edge-open/specs/master/schema/nef/nef_traffic_influence_openapi.yaml';
                 api_description = "<h1>5G NETWORK EXPOSURE FUNCTION (NEF)</h1><p></p>";
             break;
             case '5goam':
-                swag_url = 'https://raw.githubusercontent.com/open-ness/specs/master/schema/5goam/5goam.swagger.yaml';
+                swag_url = 'https://raw.githubusercontent.com/smart-edge-open/specs/master/schema/5goam/5goam.swagger.yaml';
                 api_description = "<h1>5G OAM</h1><p></p>";
             break;
             case 'emco':
-                swag_url = 'https://raw.githubusercontent.com/open-ness/EMCO/main/docs/emco_apis.yaml';
+                swag_url = 'https://raw.githubusercontent.com/smart-edge-open/EMCO/main/docs/emco_apis.yaml';
                 api_description = "<h1>EMCO</h1><p></p>";
             break;
         }
