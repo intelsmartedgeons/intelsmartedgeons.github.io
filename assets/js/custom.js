@@ -53,7 +53,8 @@ function contactformsubmit() {
 }
 jQuery(document).ready(function () {
     jQuery("input[name='existing_member']").click(function () {
-
+        //Reset Value of 
+        jQuery('input:text[name=represet_company_name]').val('');
         if (jQuery('input:radio[name=existing_member]:checked').val() == "yes") {
             $('#companyname').empty();
             $('#companyname').append('<option value="" selected="selected">Select Company</option>');
