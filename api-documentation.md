@@ -4,7 +4,8 @@ permalink: /api-documentation/
 title: API Documentation
 #description: Please select a topic below related to your inquiry. If you don’t find what you need, fill out the Intel® Smart Edge Open contact form.
 ---
-<link rel="stylesheet" type="text/css" href="/swagger-ui/swagger-ui.css">
+<link rel="stylesheet" type="text/css" href="/swagger-ui/swagger-custom.css?v=3">
+<link rel="stylesheet" type="text/css" href="/swagger-ui/swagger-ui.css?v=3">
 <div class="contentAreaAPI" style="display:none;">
     <div class="api-col-wrap">
         <div class="api-col-left"><h2><a href="/api-documentation/" class="backBtn" style="font-size:16px;"><span>&lt;</span> API Documentation</a></h2></div>
@@ -47,6 +48,7 @@ title: API Documentation
         </div>
     </div>
 </section>
+<div id="swagger-ui-second"></div>
 
 <!--Swagger Api Code Start Here  -->  
 <script src="/swagger-ui/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -54,7 +56,7 @@ title: API Documentation
 <script src="/swagger-ui/swagger-ui-standalone-preset.js"></script>
 
 <script type="text/javascript">
-    var swag_url = "", api_description = "";
+    var swag_url = "", api_description = ""; swag_url_second = "";
     var apiUrl = new URL(window.location.href);
     apiUrl = apiUrl.searchParams.get("api");
     
@@ -85,10 +87,12 @@ title: API Documentation
             break;
             case 'af':
                 swag_url = 'https://raw.githubusercontent.com/smart-edge-open/specs/master/schema/af/af.openapi.yaml';
+                swag_url_second = 'https://raw.githubusercontent.com/open-ness/specs/master/schema/af/af_pfd.openapi.yaml';
                 api_description = "<h1>5G APPLICATION FUNCTION (AF)</h1><p></p>";
             break;
             case 'nef':
                 swag_url = 'https://raw.githubusercontent.com/smart-edge-open/specs/master/schema/nef/nef_traffic_influence_openapi.yaml';
+                swag_url_second = 'https://raw.githubusercontent.com/open-ness/specs/master/schema/nef/nef_pfd_management_openapi.yaml';
                 api_description = "<h1>5G NETWORK EXPOSURE FUNCTION (NEF)</h1><p></p>";
             break;
             case '5goam':
@@ -109,6 +113,22 @@ title: API Documentation
             window.swaggerUi = SwaggerUIBundle({
                 url: swag_url,
                 dom_id: '#swagger-ui',
+                deepLinking: true,
+                validatorUrl: null,  
+                presets: [
+                    SwaggerUIBundle.presets.apis,
+                    SwaggerUIStandalonePreset
+                ],
+                plugins: [
+                    SwaggerUIBundle.plugins.DownloadUrl
+                ],
+                layout: "StandaloneLayout"
+            });
+        }
+        if(swag_url_second != ''){
+            window.swaggerUi = SwaggerUIBundle({
+                url: swag_url_second,
+                dom_id: '#swagger-ui-second',
                 deepLinking: true,
                 validatorUrl: null,  
                 presets: [
