@@ -49,7 +49,7 @@ title: API Documentation
 </section>
 
 <!--Swagger Api Code Start Here  -->  
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="/swagger-ui/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="/swagger-ui/swagger-ui-bundle.js"></script>
 <script src="/swagger-ui/swagger-ui-standalone-preset.js"></script>
 
@@ -66,12 +66,12 @@ title: API Documentation
             case 'eaa':
                 swag_url = 'https://raw.githubusercontent.com/smart-edge-open/specs/master/schema/eaa/eaa.swagger.json';
                 api_description = "<h1>Edge Application API</h1>";
-                api_description += "<p>Edge Application APIs enable developers to build edge compute services capable of taking advantage of tactile applications that respond to the changing user, network or resource scenarios. In addition, these APIs can also be used to port existing public/private cloud applications to the edge based on Smart Edge Open.</p>";
+                api_description += "<p>Edge Application APIs enable developers to build edge compute services capable of taking advantage of tactile applications that respond to the changing user, network or resource scenarios. In addition, these APIs can also be used to port existing public/private cloud applications to the edge based on Intel® Smart Edge Open.</p>";
             break;
             case 'controller':
                 swag_url = 'https://raw.githubusercontent.com/smart-edge-open/specs/master/schema/controller/api.swagger.json';
                 api_description = "<h1>Controller API</h1>";
-                api_description += "<p>Controller APIs enable centralized management of Smart Edge Open edge nodes, and can be called by a UI frontend or by external orchestrators. The API provides an abstraction layer for an operations admin, enabling them to maintain a list of Smart Edge Open edge nodes, configure apps, manage policies and DNS, and more.</p>";
+                api_description += "<p>Controller APIs enable centralized management of Intel® Smart Edge Open edge nodes, and can be called by a UI frontend or by external orchestrators. The API provides an abstraction layer for an operations admin, enabling them to maintain a list of Intel® Smart Edge Open edge nodes, configure apps, manage policies and DNS, and more.</p>";
             break;
             case 'auth':
                 swag_url = 'https://raw.githubusercontent.com/smart-edge-open/specs/master/schema/auth/auth.swagger.json';
