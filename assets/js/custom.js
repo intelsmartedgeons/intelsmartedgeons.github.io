@@ -10,11 +10,11 @@ function formsubmit() {
             data: form.serialize(),
             success: function (data) {
                 var data = jQuery.parseJSON(data)
-                /*if (data.status == 1) {
+                if (data.status == 1) {
                     window.location.href = '/thankyou';
                 } else {
                     $("#bug").html(data.msg.serverError);
-                }*/
+                }
                 // var result=data;
                 // $('#result').attr("value",result)s;
 
