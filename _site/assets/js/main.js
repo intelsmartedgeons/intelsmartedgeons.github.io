@@ -9782,7 +9782,7 @@ jQuery(document).ready(function() {
             return false;
         }
     });
-    jQuery("#requestAccess").validate({
+    /*jQuery("#requestAccess").validate({
         errorElement: "small",
         ignore: "",
         focusInvalid: false,
@@ -9974,7 +9974,7 @@ jQuery(document).ready(function() {
         submitHandler: function(form) {
             contactformsubmit();
         }
-    });
+    });*/
 });
 
 function hideError() {

@@ -112,6 +112,7 @@ jQuery(document).ready(function () {
         ignore: "",
         focusInvalid: false,
         invalidHandler: function (form, validator) {
+            console.log(validator)
             if (!validator.numberOfInvalids())
                 return;
             jQuery('html, body').animate({
@@ -146,6 +147,7 @@ jQuery(document).ready(function () {
             },
             companyname: {
                 required: function () {
+                    //console.log(jQuery('input:radio[name="existing_member"]:checked').val())
                     if (jQuery('input:radio[name="existing_member"]:checked').val() == 'yes') {
                         return true;
                     } else {
