@@ -6,10 +6,13 @@ title: API Documentation
 ---
 <link rel="stylesheet" type="text/css" href="/swagger-ui-open/swagger-custom.css">
 <link rel="stylesheet" type="text/css" href="/swagger-ui-open/swagger-ui.css">
+<style>
+    .api-col-right.no-icon:after{ display:none;}
+</style>
 <div class="contentAreaAPI" style="display:none;">
     <div class="api-col-wrap">
         <div class="api-col-left"><h2><a href="/api-documentation/" class="backBtn" style="font-size:16px;"><span>&lt;</span> API Documentation</a></h2></div>
-        <div class="api-col-right">
+        <div class="api-col-right no-icon">
             <select name="program" id="program" class="form-control">
                 <option value="">Select API</option>
                 {% for api_nav in site.data.api_documentation %}
@@ -100,7 +103,8 @@ title: API Documentation
                 api_description = "<h1>5G OAM</h1><p></p>";
             break;
             case 'emco':
-                swag_url = 'https://raw.githubusercontent.com/smart-edge-open/EMCO/main/docs/emco_apis.yaml';
+                //swag_url = 'https://raw.githubusercontent.com/smart-edge-open/EMCO/main/docs/emco_apis.yaml';
+                swag_url = 'https://raw.githubusercontent.com/smart-edge-open/EMCO/main/docs/swagger-specs-for-APIs/emco_apis.yaml';
                 api_description = "<h1>EMCO</h1><p></p>";
             break;
         }
