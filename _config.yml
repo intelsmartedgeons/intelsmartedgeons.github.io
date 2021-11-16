@@ -14,7 +14,7 @@ baseurl:            ""
 
 
 #apiURL: "https://openness.localhost.com"
-apiURL: "https://openness-qa.onsumaye.com"
+apiURL: "https://openness-staging.onsumaye.com"
 # Permalink URLs structure, for permalink style options see: https://jekyllrb.com/docs/permalinks/
 permalink:          /:title/
 
