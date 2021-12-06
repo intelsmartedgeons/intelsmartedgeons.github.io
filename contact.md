@@ -7,7 +7,7 @@ description: Please select a topic below related to your inquiry. If you don’t
 <script type="text/javascript" src="{{ "/assets/js/jquery.validate.min.js" | relative_url }}"></script>
 <script type="text/javascript" src="{{ "/assets/js/custom.js" | relative_url }}"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<!--<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>-->
 <h1 class="uk-text-left">Contact</h1>
 <script>
 var apiURL = '{{ site.apiURL }}';
@@ -16,6 +16,7 @@ var apiURL = '{{ site.apiURL }}';
     <div class="formLeft">
         <div class="contact-form-wrap idorequest">
             <form id="contact" name="contact"  method="post" autocomplete="off">
+                <input type="hidden" name="g-recaptcha-response" value=""/>
                 <div style="overflow:hidden;">
                     <div class="colLeft">
                         <label class="validationstar">First Name<span class="star">*</span></label>
@@ -37,6 +38,12 @@ var apiURL = '{{ site.apiURL }}';
                     <label class="validationstar">Message<span class="star">*</span></label>
                     <textarea rows="10" name="message" id="message"></textarea>
                     <small class="error" generated="true" for="message" style="display:none;font-size: 100%; font-weight: 400;"></small>
+                </div>
+                <div>
+                    <label class="validationstar"></label>
+                    <div class="g-recaptcha" data-callback="hideError" data-sitekey="6Lea6ZIUAAAAAAbh0d1IpEtWKbepJRUd6-oNyTsk"></div>
+                    <input type="hidden" class="ignoreHidden hiddenRecaptcha" name="hiddenRecaptcha" id="hiddenRecaptcha">
+                    <small class="error" generated="true" for="hiddenRecaptcha" style="display:none;font-size: 100%; font-weight: 400;"></small>
                 </div>
                 <div>	
                     <input type="submit" id="sub" name="requestAccess" value="Send Message" title="Send Message"  class="uk-button uk-button-primary uk-button-large uk-margin-medium-top contact-btn">

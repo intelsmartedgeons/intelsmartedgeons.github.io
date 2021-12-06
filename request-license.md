@@ -8,7 +8,7 @@ description: Please select a topic below related to your inquiry. If you don’t
 <!--<script type="text/javascript" src="{{ "/assets/js/select2.min.js" | relative_url }}"></script>-->
 <script type="text/javascript" src="{{ "/assets/js/custom.js" | relative_url }}"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<!--<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>-->
 <script type="text/javascript">
   jQuery(document).ready(function(){
 	  //jQuery('.select-p-c').select2({
@@ -95,7 +95,13 @@ var apiURL = '{{ site.apiURL }}';
 						<label class="form-check-label" for="agreecheck" style="font-weight: normal;">By submitting this form, you are confirming you are an adult 18 years or older and you agree to share your personal information with Intel to use for this business request. Intel’s websites and communications are subject to our <a href="https://www.intel.com/content/www/us/en/privacy/intel-privacy-notice.html" rel="nofollow" target="_blank" title="Privacy">Privacy</a> Notice and <a href="http://www.intel.com/content/www/us/en/legal/terms-of-use.html" rel="nofollow" target="_blank" title="Terms of Use">Terms of Use</a>.<br><small class="error" generated="true" for="agreecheck" style="display:none"></small></label>
 					</div>
                 </div>
-			</div> -->	
+			</div> -->
+            <div>
+                <label class="validationstar"></label>
+                <div class="g-recaptcha" data-callback="hideError" data-sitekey="6Lea6ZIUAAAAAAbh0d1IpEtWKbepJRUd6-oNyTsk"></div>
+                <input type="hidden" class="ignoreHidden hiddenRecaptcha" name="hiddenRecaptcha" id="hiddenRecaptcha">
+                <small class="error" generated="true" for="hiddenRecaptcha" style="display:none;font-size: 100%; font-weight: 400;"></small>
+            </div>
             <div>	
                 <input type="submit" id="sub" name="requestAccess" value="Send Message" title="Send Message" class="uk-button uk-button-primary uk-button-large uk-margin-medium-top contact-btn">
             </div>
