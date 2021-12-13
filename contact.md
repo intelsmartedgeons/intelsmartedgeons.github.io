@@ -78,11 +78,9 @@ var apiURL = '{{ site.apiURL }}';
                     </a>
                 </li>
                 <li>
-                    <a class="uk-box-shadow-hover-small uk-text-center" href="https://networkbuilders.intel.com/register-under-an-existing-company" target="_blank" title="Become a Partner">
-                        <span class="linkHead uk-text-center">Technical Issues?</span>
-                        <span class="linkText uk-text-center">For help with Developer Experience Kit, submit via <a href="https://github.com/smart-edge-open/open-developer-experience-kits/issues" rel="nofollow" target="_blank" title="GitHub Issues">GitHub Issues</a></span>
-                        <span class="linkText uk-text-center">For help with Intel® Smart Edge Open licensed experience kits, contact your Intel representative</span>
-                    </a>
+                    <span class="linkHead uk-text-center">Technical Issues?</span>
+                    <span class="linkText uk-text-center">For help with Developer Experience Kit, submit via <a href="https://github.com/smart-edge-open/open-developer-experience-kits/issues" rel="nofollow" target="_blank" title="GitHub Issues">GitHub Issues</a></span>
+                    <span class="linkText uk-text-center">For help with Intel® Smart Edge Open licensed experience kits, contact your Intel representative</span>
                 </li>
             </ul>
         </div>
