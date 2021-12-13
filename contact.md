@@ -77,6 +77,13 @@ var apiURL = '{{ site.apiURL }}';
                         <svg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><polyline fill='none' stroke='#0068B5' stroke-width='1.03' points='7 4 13 10 7 16' /></svg>
                     </a>
                 </li>
+                <li>
+                    <a class="uk-box-shadow-hover-small uk-text-center" href="https://networkbuilders.intel.com/register-under-an-existing-company" target="_blank" title="Become a Partner">
+                        <span class="linkHead uk-text-center">Technical Issues?</span>
+                        <span class="linkText uk-text-center">For help with Developer Experience Kit, submit via <a href="https://github.com/smart-edge-open/open-developer-experience-kits/issues" rel="nofollow" target="_blank" title="GitHub Issues">GitHub Issues</a></span>
+                        <span class="linkText uk-text-center">For help with Intel® Smart Edge Open licensed experience kits, contact your Intel representative</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
