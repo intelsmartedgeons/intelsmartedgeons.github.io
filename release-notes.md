@@ -23,7 +23,12 @@ permalink: /release-notes/
 <p>We are excited to announce an O-RAN compliant near-real time RAN Interface Controller (RIC) is available for the Developer Experience Kit and will soon be available for download from the <a target="_blank" href="https://www.intel.com/content/www/us/en/developer/tools/software-catalog/full-catalog.html?s=Newest&q=%22smart%2Bedge%2Bopen%22">Intel&reg; Developer Catalog.</a> The RIC can be used for development and testing of ORAN AI/ML xAPPs. A 5G RAN simulator is provided to facilitate development and testing.</p>
 
 <p>Support has been added for the next generation Intel&reg; Xeon&reg;  D processor. More details will be provided after the product has launched.</p>
-
+<br>
+<style>
+    .uk-button.uk-button-info.uk-button-small.uk-margin-small-bottom{ 
+        margin-bottom: 20px !important;
+        }
+</style>
 </div>
 
 <div class="noteLeft">
