@@ -131,11 +131,14 @@ function searchResults(form) {
   
   
   
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-P73DFQM');</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H4BRRJX1RE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H4BRRJX1RE');
+</script>
   
 </head>
 
@@ -247,17 +250,17 @@ function searchResults(form) {
 
 <script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
 
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&amp;render=explicit" async="" defer=""></script>
-
+<!--<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>-->
 <h1 class="uk-text-left">Contact</h1>
 <script>
-var apiURL = 'https://openness-qa.onsumaye.com';
+var apiURL = 'https://openness-staging.onsumaye.com';
 </script>
 
 <div class="formOuter">
     <div class="formLeft">
         <div class="contact-form-wrap idorequest">
             <form id="contact" name="contact" method="post" autocomplete="off">
+                <input type="hidden" name="g-recaptcha-response" value="" />
                 <div style="overflow:hidden;">
                     <div class="colLeft">
                         <label class="validationstar">First Name<span class="star">*</span></label>
@@ -279,6 +282,12 @@ var apiURL = 'https://openness-qa.onsumaye.com';
                     <label class="validationstar">Message<span class="star">*</span></label>
                     <textarea rows="10" name="message" id="message"></textarea>
                     <small class="error" generated="true" for="message" style="display:none;font-size: 100%; font-weight: 400;"></small>
+                </div>
+                <div>
+                    <label class="validationstar"></label>
+                    <div class="g-recaptcha" data-callback="hideError" data-sitekey="6Lea6ZIUAAAAAAbh0d1IpEtWKbepJRUd6-oNyTsk"></div>
+                    <input type="hidden" class="ignoreHidden hiddenRecaptcha" name="hiddenRecaptcha" id="hiddenRecaptcha" />
+                    <small class="error" generated="true" for="hiddenRecaptcha" style="display:none;font-size: 100%; font-weight: 400;"></small>
                 </div>
                 <div>	
                     <input type="submit" id="sub" name="requestAccess" value="Send Message" title="Send Message" class="uk-button uk-button-primary uk-button-large uk-margin-medium-top contact-btn" />
@@ -311,6 +320,11 @@ var apiURL = 'https://openness-qa.onsumaye.com';
                         <span class="linkText">Join our Partner Program and be featured in our Network Builders Program.</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#0068B5" stroke-width="1.03" points="7 4 13 10 7 16" /></svg>
                     </a>
+                </li>
+                <li>
+                    <span class="linkHead uk-text-center">Technical Issues?</span>
+                    <span class="linkText uk-text-center">For help with Developer Experience Kit, submit via <a href="https://github.com/smart-edge-open/open-developer-experience-kits/issues" rel="nofollow" target="_blank" title="GitHub Issues">GitHub Issues</a></span>
+                    <span class="linkText uk-text-center">For help with Intel® Smart Edge Open licensed experience kits, contact your Intel representative</span>
                 </li>
             </ul>
         </div>
