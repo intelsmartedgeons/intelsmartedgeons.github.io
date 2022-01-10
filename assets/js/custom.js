@@ -362,6 +362,10 @@ function getXhrKnown(reqName){
         type: 'POST',
         url: apiURL+'/xhr-known.php',
         crossDomain: true,
+        beforeSend: function (xhr) {
+            //Show Loader
+            $(".overlay").show();
+        },
         success: function (data) {
             var dataObj = jQuery.parseJSON(data);
             var xhrKnown = "";
