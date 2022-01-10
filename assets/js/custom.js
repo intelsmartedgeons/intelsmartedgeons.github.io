@@ -1,7 +1,7 @@
 
 function formsubmit(xhrKnown) {
     //var opurl = apiURL+'/index.php?option=com_products&task=githubpages_release_request';
-    var opurl = apiURL+'/contact-us.php';
+    var opurl = apiURL+'/request-license.php';
     var form = $("#requestAccess");
     var url =
         $.ajax({
