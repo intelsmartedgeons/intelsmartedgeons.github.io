@@ -17,6 +17,7 @@ var apiURL = '{{ site.apiURL }}';
         <div class="contact-form-wrap idorequest">
             <form id="contact" name="contact"  method="post" autocomplete="off">
                 <input type="hidden" name="g-recaptcha-response" value=""/>
+                <div id="bugsDiv"><small class="error">Error content here</small></div>
                 <div style="overflow:hidden;">
                     <div class="colLeft">
                         <label class="validationstar">First Name<span class="star">*</span></label>
