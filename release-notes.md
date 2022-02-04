@@ -25,7 +25,7 @@ permalink: /release-notes/
         <li>5G CNFs - User equipment sometimes fails to reattach when it moves from idle mode to active mode. This issue will be addressed with future 5G Core CNF upgrades.</li>
     </ul>
     <a href="https://github.com/smart-edge-open/docs/blob/main/release-notes/release-notes-se-open-PWEK-22-01.md" rel="nofollow" target="_blank" title="Read more">Read more</a>
-    <br>
+    <br><br><br>
     <style>
         .uk-button.uk-button-info.uk-button-small.uk-margin-small-bottom{ 
             margin-bottom: 20px !important;
