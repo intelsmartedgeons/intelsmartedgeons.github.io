@@ -4,7 +4,9 @@
     width: 100%;
     .leftSection{
         margin: 0;
-        position: relative;
+        position: absolute;
+        top: 70px;
+        transition: 0.3s all;
         #contact-button{
             display: none;
         }
@@ -153,9 +155,6 @@
             overflow-y: auto;
             padding-right: 20px;
             clear: both;
-            position: absolute;
-            top: 70px;
-            transition: 0.3s all;
             border-right:1px solid #ccc;
             h5{
                 margin-bottom: 10px;
@@ -195,10 +194,11 @@
                     }
                 }
             }
-            &.collapsedAreaFixed{
-                position: fixed;
-                top: 130px;
-            }
+        }
+        &.leftSectionFixed{
+            position: fixed;
+            top: 125px;
+            transition: 0.3s all;
         }
     }
     .doc-nav{
