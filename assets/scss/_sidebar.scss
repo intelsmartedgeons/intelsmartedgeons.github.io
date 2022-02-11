@@ -5,8 +5,9 @@
     .leftSection{
         margin: 0;
         position: absolute;
-        top: 70px;
+        top: 125px;
         transition: 0.3s all;
+        max-width: 320px;
         #contact-button{
             display: none;
         }
