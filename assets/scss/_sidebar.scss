@@ -4,6 +4,7 @@
     width: 100%;
     .leftSection{
         margin: 0;
+        position: relative;
         #contact-button{
             display: none;
         }
@@ -152,6 +153,9 @@
             overflow-y: auto;
             padding-right: 10px;
             clear: both;
+            position: absolute;
+            top: 70px;
+            transition: 0.3s all;
             h5{
                 margin-bottom: 10px;
             }
@@ -189,6 +193,10 @@
                         }
                     }
                 }
+            }
+            &.collapsedAreaFixed{
+                position: fixed;
+                top: 130px;
             }
         }
     }
