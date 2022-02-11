@@ -9635,9 +9635,14 @@ function cleanString(str) {
     return str.replace(/[^A-Za-z0-9,_()&reg;.-:{}$%@!~=+'&#39;`? ]/g, "");
 }
 jQuery(window).on('load', function(){
+    setTimeout(function(){
+        jQuery('.sidebar-docs .leftSection .collapsedArea').animate({
+            scrollTop: jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').offset().top
+        });
+    }, 1000)
     if(jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').length > 0){
         jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parents('.hasChild').addClass('openList');
-        jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parent('.uk-nav').slideDown();
+        jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parents('.hasChild').children('.uk-nav').slideDown();
     }
    jQuery('.menuIcon').on('click', function(){
         jQuery(this).parent('.toggleMenu').toggleClass('showMenu')
