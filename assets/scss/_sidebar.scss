@@ -156,6 +156,7 @@
             position: absolute;
             top: 70px;
             transition: 0.3s all;
+            border-right:1px solid #ccc;
             h5{
                 margin-bottom: 10px;
             }
@@ -224,6 +225,8 @@
         }
     }
 }
+::-webkit-scrollbar-thumb{background-color: #aaa;}
+::-webkit-scrollbar{width:5px;}
 @media (min-width:1200px){
     .sidebar-fixed-width{
         width:380px;
