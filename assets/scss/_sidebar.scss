@@ -163,12 +163,21 @@
             * + h5{
                 margin-top: 20px;
             }
+            >ul{
+                padding-left: 0;
+            }
             ul{
                 margin-top: 0;
-                padding-left: 0;
+                list-style-type: none;
+                >li{
+                    padding-left: 18px;
+                }
                 li{
                     position: relative; 
-                    padding: 5px 0 0 18px;
+                    padding: 5px 0 0 0;
+                    span{
+                        padding-left: 18px;
+                    }
                     &.hasChild{
                         margin-bottom: 7px;
                         cursor: pointer;
@@ -177,21 +186,25 @@
                             color:#262626;
                             font-weight: 600;
                             font-size: 16px;
+                            &:before{
+                                content: ""; 
+                                border-left: 7px solid #262626; 
+                                border-top: 5px solid transparent; 
+                                border-bottom: 5px solid transparent; 
+                                line-height: 10px; 
+                                display: block; 
+                                position: absolute; 
+                                left: 1px;
+                                top:12px;
+                                transition: 0.5s;
+                                transform: rotate(0deg);
+                            }
                         }
-                        &:before{
-                            content: ""; 
-                            border-left: 7px solid #262626; 
-                            border-top: 5px solid transparent; 
-                            border-bottom: 5px solid transparent; 
-                            line-height: 10px; 
-                            display: block; 
-                            position: absolute; 
-                            left: 1px;
-                            top:12px;
-                            transition: 0.5s;
-                            transform: rotate(0deg);
+                        &.openList{
+                            >span{
+                                &:before{transform: rotate(90deg);}
+                            }
                         }
-                        &.openList:before{transform: rotate(90deg);}
                     }
                     > ul{
                         display: none;
