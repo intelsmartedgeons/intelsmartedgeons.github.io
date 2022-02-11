@@ -160,9 +160,10 @@
             }
             ul{
                 margin-top: 0;
-                margin-top: 0;
+                padding-left: 0;
                 li{
-                    position: relative; padding: 5px 0 0 20px; list-style-type: none;color:#333333;
+                    position: relative; 
+                    padding: 5px 0 0 20px;
                     &.hasChild{
                         > span{cursor: pointer;}
                         &:before{
