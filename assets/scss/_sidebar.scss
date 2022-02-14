@@ -283,8 +283,13 @@
             }
         }
     }
-    .uk-navbar-container .uk-navbar-left .uk-logo{
-        font-size: 30px;
+    .uk-navbar-container .uk-navbar-left{
+        .uk-logo{
+            font-size: 30px;
+        }
+        .uk-navbar-nav li a{
+            padding: 0 10px;
+        }
     }
 }
 @media (max-width:959px){
