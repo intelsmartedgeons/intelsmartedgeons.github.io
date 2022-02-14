@@ -276,9 +276,15 @@
 @media (max-width:1199px){
     .sidebar-docs{
         padding-right: 15px;
-        .leftSection .searchBar-section .popover .arrow:after{
-            top:2px;
+        .leftSection{
+            width: 220px;
+            .searchBar-section .popover .arrow:after{
+                top:2px;
+            }
         }
+    }
+    .uk-navbar-container .uk-navbar-left .uk-logo{
+        font-size: 30px;
     }
 }
 @media (max-width:959px){
