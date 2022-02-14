@@ -340,12 +340,11 @@
                     color: #fff;
                 }
             }
-            /* &.leftSectionIn{
-                left:0;
-                transition: 0.3s;
-            } */
             .searchBar-section{
                 width: calc(100% - 20px);
+                input[type=text]{
+                    margin-bottom: 10px;
+                }
             }
             .collapsedArea{
                 height: 80%;
