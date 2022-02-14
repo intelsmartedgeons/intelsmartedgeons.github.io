@@ -363,6 +363,11 @@
         display: block !important;
     }
 }
+@media (min-width:960x){
+    .sidebar-docs .leftSection{
+        left: auto;
+    }
+}
 @media (min-width:960px) and (max-width:1199px){
     .sidebar-fixed-width{
         & + .uk-width-1-1{
