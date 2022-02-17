@@ -9635,10 +9635,8 @@ function cleanString(str) {
     return str.replace(/[^A-Za-z0-9,_()&reg;.-:{}$%@!~=+'&#39;`? ]/g, "");
 }
 jQuery(window).on('load', function(){
-    var pathname = window.location.pathname;
-    pathname = pathname + window.location.search;
-    pathname = pathname + window.location.hash;
-    if(pathname.includes('/docs/')){
+    var pathname = window.location.pathname + window.location.search + window.location.hash;
+    if(pathname.includes('/docs/') || pathname.includes('/ido-specs/')){
         jQuery('.sidebar-docs .leftSection .collapsedArea ul li span a[href="'+pathname+'"]').parent('span').parent('li').addClass('uk-active');
     }
     if(jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').length > 0){
@@ -9655,6 +9653,20 @@ jQuery(window).on('load', function(){
    jQuery('.menuIcon').on('click', function(){
         jQuery(this).parent('.toggleMenu').toggleClass('showMenu')
     })
+    if(jQuery('#breadcrumbs').length){
+        setTimeout(function(){
+            const breadcrumbs    = document.querySelector('#breadcrumbs');
+            const allActiveTabs  = document.querySelectorAll('.openList');
+            let nodeList = '';
+            allActiveTabs.forEach(function(activeTab, i) {
+                nodeList = (i == 0) ? activeTab.firstElementChild.innerHTML : nodeList+" > "+activeTab.firstElementChild.innerHTML;
+                //console.log(nodeList);
+            });
+            const linkText =  jQuery('.sidebar-docs .leftSection .collapsedArea ul li span a[href="'+pathname+'"]').text();
+            breadcrumbs.insertAdjacentHTML("beforeend", nodeList+ " > " +linkText);
+
+        }, 10)
+    }
 })
 jQuery(window).on('resize', function(){
     if(jQuery(window).width() >= 960){
@@ -9668,19 +9680,4 @@ jQuery(window).on('scroll', function(){
     else{
         jQuery('.leftSection').removeClass('leftSectionFixed');
     }
-})
-
-// Added by Gaurav kumar
-jQuery(window).on('load', function(){
-	setTimeout(function(){
-		const breadcrumbs    = document.querySelector('#breadcrumbs');
-		const allActiveTabs  = document.querySelectorAll('.openList');
-		let nodeList = '';
-		allActiveTabs.forEach(function(activeTab, i) {
-			nodeList = (i == 0) ? activeTab.firstElementChild.innerHTML : nodeList+" > "+activeTab.firstElementChild.innerHTML;
-			//console.log(nodeList);
-		});
-		breadcrumbs.insertAdjacentHTML("beforeend", nodeList);
-
-	}, 10)
 })
