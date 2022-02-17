@@ -9635,7 +9635,8 @@ function cleanString(str) {
     return str.replace(/[^A-Za-z0-9,_()&reg;.-:{}$%@!~=+'&#39;`? ]/g, "");
 }
 jQuery(window).on('load', function(){
-    var pathname = window.location.pathname + window.location.search + window.location.hash;
+    var pathURL = window.location.pathname + window.location.search + window.location.hash;
+    var pathname = pathURL.replace(/\/$/, "");
     if(pathname.includes('/docs/') || pathname.includes('/ido-specs/')){
         jQuery('.sidebar-docs .leftSection .collapsedArea ul li span a[href="'+pathname+'"]').parent('span').parent('li').addClass('uk-active');
     }
