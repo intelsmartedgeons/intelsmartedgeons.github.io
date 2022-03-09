@@ -17,6 +17,8 @@ function formsubmit(xhrKnown) {
                 if (data.status == 1) {
                     window.location.href = '/thankyou';
                 } else {
+					$(".overlay").hide();
+					console.log(data.msg.serverError);
                     $("#bug").html(data.msg.serverError);
                 }
                 // var result=data;
