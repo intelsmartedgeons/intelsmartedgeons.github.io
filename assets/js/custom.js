@@ -18,8 +18,8 @@ function formsubmit(xhrKnown) {
                     window.location.href = '/thankyou';
                 } else {
 					$(".overlay").hide();
-					console.log(data.msg.serverError);
-                    $("#bug").html(data.msg.serverError);
+					console.log(data.msg);
+                    $("#bug").html(data.msg);
                 }
                 // var result=data;
                 // $('#result').attr("value",result)s;
