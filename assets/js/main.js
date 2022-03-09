@@ -9635,25 +9635,39 @@ function cleanString(str) {
     return str.replace(/[^A-Za-z0-9,_()&reg;.-:{}$%@!~=+'&#39;`? ]/g, "");
 }
 jQuery(window).on('load', function(){
-    setTimeout(function(){
-        jQuery('.sidebar-docs .leftSection .collapsedArea').animate({
-            scrollTop: jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').offset().top
-        });
-    }, 1000)
+    var pathURL = window.location.pathname + window.location.search + window.location.hash;
+    var pathname = pathURL.replace(/\/$/, "");
+    if(pathname.includes('/docs/') || pathname.includes('/ido-specs/')){
+        jQuery('.sidebar-docs .leftSection .collapsedArea ul li span a[href="'+pathname+'"]').parent('span').parent('li').addClass('uk-active');
+    }
     if(jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').length > 0){
         jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parents('.hasChild').addClass('openList');
         jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').parents('.hasChild').children('.uk-nav').slideDown();
     }
+    setTimeout(function(){
+        if(jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').length){
+            jQuery('.sidebar-docs .leftSection .collapsedArea').animate({
+                scrollTop: jQuery('.sidebar-docs .leftSection .collapsedArea ul li.uk-active').offset().top
+            });
+        }
+    }, 1000)
    jQuery('.menuIcon').on('click', function(){
         jQuery(this).parent('.toggleMenu').toggleClass('showMenu')
     })
-    var pathname = window.location.pathname;
-    if(pathname.includes('/docs/')){
-        jQuery('.uk-navbar-container .uk-navbar-left .uk-navbar-nav li a[href="'+pathname+'"]').parent('li').addClass('uk-active');
+    if(jQuery('#breadcrumbs').length){
+        setTimeout(function(){
+            const breadcrumbs    = document.querySelector('#breadcrumbs');
+            const allActiveTabs  = document.querySelectorAll('.openList');
+            let nodeList = '';
+            allActiveTabs.forEach(function(activeTab, i) {
+                nodeList = (i == 0) ? activeTab.firstElementChild.innerHTML : nodeList+" > "+activeTab.firstElementChild.innerHTML;
+                //console.log(nodeList);
+            });
+            const linkText =  jQuery('.sidebar-docs .leftSection .collapsedArea ul li span a[href="'+pathname+'"]').text();
+            breadcrumbs.insertAdjacentHTML("beforeend", nodeList+ " > " +linkText);
+
+        }, 10)
     }
-    jQuery('.sidebar-docs .leftSection .collapsedArea h5').on('click', function(){
-        jQuery(this).next('ul').slideToggle();
-    })
 })
 jQuery(window).on('resize', function(){
     if(jQuery(window).width() >= 960){
