@@ -211,6 +211,21 @@
                             }
                         }
                     }
+                    &.noChild{
+                        margin-bottom: 7px;
+                        > span{
+                            a{
+                                line-height: 23px;
+                                color: #262626;
+                                font-weight: 600;
+                                font-size: 16px;
+                                &:hover{
+                                    color:$blue;
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
                     > ul{
                         display: none;
                         li{
