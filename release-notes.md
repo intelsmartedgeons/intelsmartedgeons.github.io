@@ -33,7 +33,7 @@ permalink: /release-notes/
     <a class="uk-button uk-button-info uk-button-small uk-margin-small-bottom">Added</a>
     <p>The <a href="https://www.intel.com/content/www/us/en/developer/articles/reference-implementation/intelligent-connection-management.html" target="_blank" title="Intelligent Connection Management for Automated Handover" rel="nofollow">Intelligent Connection Management for Automated Handover</a> reference implementation demonstrates how to use machine learning to create a near-real-time RAN intelligent controller (RIC). The reference implementation leverages the Intel&reg; Distribution of OpenVINO&trade; toolkit to deliver low-latency AI inferencing to manage the association of mobile user equipment with available radio cells, optimizing for user throughput, cell coverage, and load balancing.</p>
     <h3>Developer Experience Kit (21.12)</h3>
-    <a class="uk-button uk-button-success uk-button-small uk-margin-small-bottom">Updated</a>
+    <a class="uk-button uk-button-purple uk-button-small uk-margin-small-bottom">Updated</a>
     <p>Updated four <a href="/docs/product-overview/" target="_blank" title="reference implementations">reference implementations</a> for the Developer Experience Kit. These provide a reference for edge solution builders deploying multi-tenant services on the edge platform. They feature the following use cases:</p>
     <ul>
         <li><a href="https://www.intel.com/content/www/us/en/developer/articles/reference-implementation/wireless-network-ready-pcb-defect-detection.html" title="Industry 4.0" target="_blank" rel="nofollow">Industry 4.0</a></li>
