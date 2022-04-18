@@ -19,7 +19,7 @@ permalink: /release-notes/
     <p>Trusted application enclaves: Support for trusted application enclaves using Intel&reg; Software Guard Extensions (<a href="https://www.intel.com/content/www/us/en/cloud-computing/confidential-computing-sgx-video.html?wapkw=SGX" target="_blank" title="Intel&reg; SGX" rel="nofollow">Intel&reg; SGX</a>). Creates a secure execution environment and provides encryption for communication beyond the enclave boundary.</p>
     <p>Automated deployment: The Intel Edge Software Provisioning (ESP) tool has been added to automate the installation of the operating system and software stack on a bare-metal hardware platform. Deployment options include a SASE Cloud cluster, a SASE POP (point of presence) cluster, or on a SASE Edge cluster.</p>
     <a class="uk-button uk-button-warning uk-button-small uk-margin-small-bottom">Known Issues</a>
-    <span>Edge Software Provisioner</span>
+    <br><span>Edge Software Provisioner</span><br>
     <span>There are two known intermittent issues with the Edge Software Provisioner (ESP):</span>
     <ul>
         <li>The ESP occasionally fails to build the USB image and exits with an error.</li>
