@@ -41,7 +41,7 @@
     & + .highlighter-rouge{
         display: none;
     }
-    & ~ h1[id], & ~ h2[id]{
+    & ~ h1[id], & ~ h2[id], & ~ h3[id], & ~ h4[id]{
         &:before{
             content: "";
             display: block;
