@@ -17,9 +17,7 @@ function formsubmit(xhrKnown) {
                 if (data.status == 1) {
                     window.location.href = '/thankyou';
                 } else {
-					$(".overlay").hide();
-					console.log(data.msg);
-                    $("#bug").html(data.msg);
+                    $("#bug").html(data.msg.serverError);
                 }
                 // var result=data;
                 // $('#result').attr("value",result)s;
@@ -310,7 +308,6 @@ jQuery(document).ready(function () {
             },
             message: {
                 required: true,
-                alphabetOnlyName: true
             },
 
 
@@ -336,7 +333,6 @@ jQuery(document).ready(function () {
 
             message: {
                 required: "Please enter the message.",
-                alphabetOnlyName: "Please enter valid message.",
             },
         },
         errorPlacement: function (error, element) {
