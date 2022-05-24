@@ -34,9 +34,14 @@
 }
 #breadcrumbs{
     margin-bottom: 20px;
+    letter-spacing: 0;
     a{
         color: #00c7fd;
         font-weight: 600;
+        letter-spacing: 0;
+        &:hover{
+            text-decoration: none;
+        }
     }
     & + .highlighter-rouge{
         display: none;
