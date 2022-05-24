@@ -42,6 +42,8 @@
         display: none;
     }
     & ~ h1[id], & ~ h2[id], & ~ h3[id], & ~ h4[id]{
+        display: inline-block;
+        border-bottom: 2px solid #333;
         &:before{
             content: "";
             display: block;
