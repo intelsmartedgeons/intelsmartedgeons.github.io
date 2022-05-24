@@ -83,6 +83,19 @@ header ~ .uk-section{
         margin-top: -6px;
     }
 }
+.ctaButton{
+    background-color:$blue;
+    transition: .3s;
+    font-family: "Intel One Display Regular";
+    padding: 0 40px;
+    line-height: 53px;
+    font-size: .875rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    &:hover{
+        background-color:darken($blue, 20%); 
+    }
+}
 #breadcrumbs{
     &:after{
         content: "";
