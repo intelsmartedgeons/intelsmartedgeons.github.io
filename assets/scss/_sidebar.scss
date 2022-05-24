@@ -272,7 +272,8 @@
 }
 .sidebar-fixed-width{
     & + .uk-width-1-1{
-        article{
+        > article{
+            width:70%;
             article{
                 .article-content{
                     table{
@@ -282,6 +283,11 @@
                     }
                 }
             }
+        }
+        .rightSidebar{
+            width: calc(30% - 30px);
+            float: right;
+            padding: 20px 0;
         }
     }
 }
