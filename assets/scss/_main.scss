@@ -65,26 +65,15 @@ header ~ .uk-section{
 .uk-button-primary-outline{
     color: $blue;
     border-color: $blue;
+    svg{
+        fill:$blue;
+    }
     &:hover{
         background-color: $blue;
         color: #fff;
-    }
-}
-.uk-blankBtn{
-    background-color: #fff;
-    border: 1px solid #2a140b;
-    color: #2a140b;
-    border-width: 2px;
-    font-weight: 700;
-    line-height: 1.5;
-    padding: 0.375rem 1rem;
-    text-align: center;
-    transition: .15s ease-in-out;
-    border-radius: 0.25rem;
-    &:hover{
-        text-decoration: none;
-        border-color: $blue;
-        color: #2a140b;
+        svg{
+            fill:#fff;
+        }
     }
     &.breadcrumbRightBtn{
         float: right;
