@@ -92,8 +92,12 @@ header ~ .uk-section{
     font-size: .875rem;
     margin-top: 20px;
     margin-bottom: 20px;
+    border-radius: 30px;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
     &:hover{
-        background-color:darken($blue, 20%); 
+        background-color:darken($blue, 10%); 
     }
 }
 #breadcrumbs{
