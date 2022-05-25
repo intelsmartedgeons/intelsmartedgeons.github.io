@@ -68,11 +68,24 @@ header ~ .uk-section{
     svg{
         fill:$blue;
     }
-    &:hover{
+    &:hover, &:focus{
         background-color: $blue;
         color: #fff;
         svg{
             fill:#fff;
+        }
+    }
+    .copyBtn{
+        padding: 0px 15px;
+        &:before{
+            content: "";
+            background: url(https://d29tbxcbtlbljy.cloudfront.net/smartedge/images/copyIcon.svg) no-repeat center / contain;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            position: relative;
+            top: 3px;
         }
     }
     &.breadcrumbRightBtn{
