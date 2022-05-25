@@ -75,7 +75,7 @@ header ~ .uk-section{
             fill:#fff;
         }
     }
-    .copyBtn{
+    &.copyBtn{
         padding: 0px 15px;
         &:before{
             content: "";
