@@ -88,7 +88,7 @@ header ~ .uk-section{
             position: relative;
             top: 3px;
         }
-        &:hover{
+        &:hover, &:focus{
             background-color: #f7f7f7;
             color: $blue;
         }
