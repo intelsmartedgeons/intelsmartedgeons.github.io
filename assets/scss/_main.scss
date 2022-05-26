@@ -71,6 +71,7 @@ header ~ .uk-section{
     &:hover, &:focus{
         background-color: $blue;
         color: #fff;
+        border-color: $blue;
         svg{
             fill:#fff;
         }
@@ -78,14 +79,17 @@ header ~ .uk-section{
     &.copyBtn{
         padding: 0px 15px;
         &:before{
-            content: "";
-            background: url(https://d29tbxcbtlbljy.cloudfront.net/smartedge/images/copyIcon.svg) no-repeat center / contain;
+            content: url("https://d29tbxcbtlbljy.cloudfront.net/smartedge/images/copyIcon.svg");
+            //background: url(https://d29tbxcbtlbljy.cloudfront.net/smartedge/images/copyIcon.svg) no-repeat center / contain;
             display: inline-block;
             width: 20px;
             height: 20px;
             margin-right: 5px;
             position: relative;
             top: 3px;
+        }
+        &:hover{
+            background-color: #f7f7f7;
         }
     }
     &.breadcrumbRightBtn{
