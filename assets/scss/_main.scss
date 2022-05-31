@@ -92,10 +92,13 @@ pre.highlight{
         padding: 30px;
     }
     .copyBtn{
-        padding: 0px 15px;
+        padding: 0px;
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 10px;
+        top: 10px;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
         &:before{
             content: url("https://d29tbxcbtlbljy.cloudfront.net/smartedge/images/copyIcon.svg");
             display: inline-block;
@@ -106,8 +109,9 @@ pre.highlight{
             top: 3px;
         }
         &:hover, &:focus{
-            background-color: #f7f7f7;
+            background: transparent;
             color: $blue;
+            cursor: pointer;
         }
     }
 }
