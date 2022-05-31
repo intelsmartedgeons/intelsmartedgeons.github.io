@@ -113,6 +113,11 @@ pre.highlight{
             color: $blue;
             cursor: pointer;
         }
+        &.copiedBtn{
+            &:before{
+                display: none;
+            }
+        }
     }
 }
 .ctaButton{
