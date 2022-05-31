@@ -76,11 +76,28 @@ header ~ .uk-section{
             fill:#fff;
         }
     }
-    &.copyBtn{
+    &.breadcrumbRightBtn{
+        float: right;
+        margin-top: -12px;
+    }
+}
+pre.highlight{
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    code{
+        overflow-x: auto;
+        max-width: 100%;
+        display: block;
+        padding: 30px;
+    }
+    .copyBtn{
         padding: 0px 15px;
+        position: absolute;
+        right: 0;
+        top: 0;
         &:before{
             content: url("https://d29tbxcbtlbljy.cloudfront.net/smartedge/images/copyIcon.svg");
-            //background: url(https://d29tbxcbtlbljy.cloudfront.net/smartedge/images/copyIcon.svg) no-repeat center / contain;
             display: inline-block;
             width: 20px;
             height: 20px;
@@ -92,10 +109,6 @@ header ~ .uk-section{
             background-color: #f7f7f7;
             color: $blue;
         }
-    }
-    &.breadcrumbRightBtn{
-        float: right;
-        margin-top: -12px;
     }
 }
 .ctaButton{
