@@ -114,6 +114,8 @@ pre.highlight{
             cursor: pointer;
         }
         &.copiedBtn{
+            font-weight: bold;
+            font-size: 15px;
             &:before{
                 display: none;
             }
