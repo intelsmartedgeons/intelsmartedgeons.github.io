@@ -135,8 +135,12 @@ pre.highlight{
     color: #fff;
     border: 0;
     cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
     &:hover{
-        background-color:darken($blue, 10%); 
+        background-color:darken($blue, 10%);
+        text-decoration: none;
+        color: #fff;
     }
 }
 #breadcrumbs{
