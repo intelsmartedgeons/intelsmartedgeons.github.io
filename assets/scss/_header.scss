@@ -47,8 +47,8 @@
         display: none;
     }
     & ~ h2[id], & ~ h3[id], & ~ h4[id]{
-        display: inline-block;
-        border-bottom: 2px solid #333;
+        text-decoration: underline;
+        text-underline-offset: 7px;
     }
     & ~ h1[id], & ~ h2[id], & ~ h3[id], & ~ h4[id]{
         &:before{
