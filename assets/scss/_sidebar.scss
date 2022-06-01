@@ -328,6 +328,14 @@
     }
 }
 @media (max-width:1199px){
+    .sidebar-fixed-width+.uk-width-1-1{
+        >article{
+            width:100%;
+        }
+        .rightSidebar{
+            display: none;
+        }
+    } 
     .sidebar-docs{
         padding-right: 15px;
         .leftSection{
