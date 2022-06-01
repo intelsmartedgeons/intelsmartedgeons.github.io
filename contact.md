@@ -71,7 +71,7 @@ var apiURL = '{{ site.apiURL }}';
                     </a>
                 </li>
                 <li>
-                    <a class="uk-box-shadow-hover-small" href="https://www.intel.com/content/www/us/en/privacy/intel-privacy-notice.html" rel="nofollow" target="_blank" title="Become a Partner">
+                    <a class="uk-box-shadow-hover-small" href="https://www.intel.com/content/www/us/en/privacy/intel-privacy-notice.html" rel="nofollow" target="_blank" title="Privacy Policy">
                         <span class="linkHead">Privacy Policy</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#0068B5" stroke-width="1.03" points="7 4 13 10 7 16"></polyline></svg>
                     </a>
