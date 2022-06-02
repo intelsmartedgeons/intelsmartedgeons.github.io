@@ -1,10 +1,9 @@
-<div class="uk-margin-large-top paginate-post">
+<div class="uk-margin-large-top paginate-post pagi-desktop-show">
     <div class="uk-child-width-expand@s uk-grid-large uk-pagi" data-uk-grid>
         <div>
             {% if page.next.url %}
                 <h4>{{page.next.title}}</h4>
                 <div class="uk-visible@s uk-text-muted uk-text-small">{{ page.next.excerpt | truncate: 90 }}</div>
-                <!--<div class="uk-text-right"><a class="remove-underline hvr-forward" href="{{page.next.url}}">{{ site.data.translation[site.lang].next | default: "Next" }} &rarr;</a></div>-->
                 <div><a class="remove-underline hvr-back" href="{{page.next.url}}">&larr; {{ site.data.translation[site.lang].previous | default: "Previous" }}</a></div>
             {% endif %}
         </div>
@@ -12,9 +11,36 @@
             {% if page.previous.url %}
                 <h4>{{page.previous.title}}</h4>
                 <div class="uk-visible@s uk-text-muted uk-text-small">{{ page.previous.excerpt | truncate: 90 }}</div>
-                <!--<div><a class="remove-underline hvr-back" href="{{page.previous.url}}">&larr; {{ site.data.translation[site.lang].previous | default: "Previous" }}</a></div>-->
                 <div class="uk-text-right"><a class="remove-underline hvr-forward" href="{{page.previous.url}}">{{ site.data.translation[site.lang].next | default: "Next" }} &rarr;</a></div>
             {% endif %}
         </div>
     </div>
 </div>
+<div style="clear: both;"></div>
+<div class="uk-margin-large-top paginate-post pagi-mobile-show">
+    <div class="uk-child-width-expand@s uk-grid-large uk-pagi" data-uk-grid>
+        <div>
+            {% if page.next.url %}
+                <h4>{{page.next.title}}</h4>
+                <div class="uk-visible@s uk-text-muted uk-text-small">{{ page.next.excerpt | truncate: 90 }}</div>
+                <div><a class="remove-underline hvr-back" href="{{page.next.url}}">&larr; {{ site.data.translation[site.lang].previous | default: "Previous" }}</a></div>
+            {% endif %}
+        </div>
+        <div>
+            {% if page.previous.url %}
+                <h4>{{page.previous.title}}</h4>
+                <div class="uk-visible@s uk-text-muted uk-text-small">{{ page.previous.excerpt | truncate: 90 }}</div>
+                <div><a class="remove-underline hvr-forward" href="{{page.previous.url}}">{{ site.data.translation[site.lang].next | default: "Next" }} &rarr;</a></div>
+            {% endif %}
+        </div>        
+    </div>
+</div>
+
+<style>
+    .pagi-mobile-show{ display:none; }
+    .pagi-desktop-show{ display:block; }
+    @media only screen and (max-width:600px) {
+        .pagi-mobile-show{ display:block; }
+        .pagi-desktop-show{ display:none; }
+    }
+</style>
