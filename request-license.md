@@ -96,7 +96,7 @@ var apiURL = '{{ site.apiURL }}';
 					</div>
                 </div>
 			</div> -->	
-            <div style="margin-top: 20px;color: #222;">By submitting you are agreeing to our Privacy Agreement</div>
+            <div style="margin-top: 20px;color: #222;">By submitting you are agreeing to our <a href="https://www.intel.com/content/www/us/en/privacy/intel-privacy-notice.html" rel="nofollow" target="_blank" title="Privacy Agreement">Privacy Agreement</a></div>
             <div>	
                 <input type="submit" id="sub" name="requestAccess" value="Send Message" title="Send Message" class="uk-button uk-button-primary uk-button-large uk-margin-medium-top contact-btn">
             </div>
