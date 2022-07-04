@@ -4,7 +4,7 @@ permalink: /release-notes/
 ---
 
 <!--{% include formspree.html email="my_name@gmail.com" redirect="/thanks/" name="true" subject="true" %}-->
-<h1 class="uk-text-left">Release Notes</h1>
+<h1 class="uk-text-left">Release Notes Hello</h1>
 
 <div class="noteLeft">
     <p>May 15th, 2022</p>
