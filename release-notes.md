@@ -11,7 +11,7 @@ permalink: /release-notes/
 </div>
 
 
-<div class="noteRight">
+<div class="noteRight"> 
     <h3>Developer Experience Kit (22.03)</h3>
     <p>The 22.03 release of Intel® Smart Edge Open features an updated Developer Experience Kit.</p>
     <p>This release adds secure key management, management of virtual machines, and options for distributed storage.</p>
