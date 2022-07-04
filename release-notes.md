@@ -4,14 +4,14 @@ permalink: /release-notes/
 ---
 
 <!--{% include formspree.html email="my_name@gmail.com" redirect="/thanks/" name="true" subject="true" %}-->
-<h1 class="uk-text-left">Release Notes</h1>
+<h1 class="uk-text-left">Release Notes hello2</h1>
 
 <div class="noteLeft">
     <p>May 15th, 2022</p>
 </div>
 
 
-<div class="noteRight"> 
+<div class="noteRight">
     <h3>Developer Experience Kit (22.03)</h3>
     <p>The 22.03 release of Intel® Smart Edge Open features an updated Developer Experience Kit.</p>
     <p>This release adds secure key management, management of virtual machines, and options for distributed storage.</p>
