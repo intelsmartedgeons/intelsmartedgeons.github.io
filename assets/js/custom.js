@@ -114,6 +114,9 @@ jQuery(document).ready(function () {
             return false;
         }
     });
+    jQuery.validator.addMethod("alphabetNumberSpecial", function (value, element) {
+        return this.optional(element) || value == value.match(/^[a-zA-Z0-9\s.,&#/\\]+$/);
+    });
 
     jQuery("#requestAccess").validate({
         errorElement: 'small',
@@ -155,7 +158,6 @@ jQuery(document).ready(function () {
             },
             companyname: {
                 required: function () {
-                    //console.log(jQuery('input:radio[name="existing_member"]:checked').val())
                     if (jQuery('input:radio[name="existing_member"]:checked').val() == 'yes') {
                         return true;
                     } else {
@@ -182,7 +184,8 @@ jQuery(document).ready(function () {
             interest: {
                 required: true,
                 maxlength: 300,
-                alphabetOnlyName: true,
+                //alphabetOnlyName: true,
+                alphabetNumberSpecial: true,
             },
             use_case: {
                 required: true,
@@ -192,15 +195,6 @@ jQuery(document).ready(function () {
             commercialize: {
                 required: true
             },
-            /* hiddenRecaptcha:{
-                  required: function() {
-                      if(grecaptcha.getResponse() == ''){
-                          return true;
-                      }else{
-                          return false;
-                      }
-                  }
-              },*/
         },
         messages: {
             name: {
@@ -220,7 +214,6 @@ jQuery(document).ready(function () {
             },
             primary_contact: {
                 required: "Please enter primary contact.",
-                //minlength: "Please enter primary contact minimum 3 characters.",
                 maxlength: "Please enter primary contact maximum 300 characters.",
                 alphabetOnlyName: "Please enter valid primary contact.",
             },
@@ -229,19 +222,16 @@ jQuery(document).ready(function () {
             },
             represet_company_name: {
                 required: "Please enter the company you represent.",
-                //minlength: "Please enter the company you represent minimum 3 characters.",
                 maxlength: "Please enter the company you represent maximum 300 characters.",
                 alphabetOnlyName: "Please enter valid company you represent.",
             },
             interest: {
                 required: "Please enter your interested features.",
-                //minlength: "Please enter your interested features minimum 3 characters.",
                 maxlength: "Please enter your interested features maximum 300 characters.",
-                alphabetOnlyName: "Please enter valid interested features.",
+                alphabetNumberSpecial: "Please enter valid interested features.",
             },
             use_case: {
                 required: "Please enter your use cases for edge.",
-                //minlength: "Please enter your use cases for edge minimum 3 characters.",
                 maxlength: "Please enter your use cases for edge maximum 300 characters.",
                 alphabetOnlyName: "Please enter valid use cases for edge.",
             },
