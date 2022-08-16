@@ -190,7 +190,8 @@ jQuery(document).ready(function () {
             use_case: {
                 required: true,
                 maxlength: 300,
-                alphabetOnlyName: true,
+                //alphabetOnlyName: true,
+                alphabetNumberSpecial: true,
             },
             commercialize: {
                 required: true
@@ -228,12 +229,14 @@ jQuery(document).ready(function () {
             interest: {
                 required: "Please enter your interested features.",
                 maxlength: "Please enter your interested features maximum 300 characters.",
+                //alphabetOnlyName: "Please enter valid interested features.",
                 alphabetNumberSpecial: "Please enter valid interested features.",
             },
             use_case: {
                 required: "Please enter your use cases for edge.",
                 maxlength: "Please enter your use cases for edge maximum 300 characters.",
-                alphabetOnlyName: "Please enter valid use cases for edge.",
+                //alphabetOnlyName: "Please enter valid use cases for edge.",
+                alphabetNumberSpecial: "Please enter valid use cases for edge.",
             },
             commercialize: {
                 required: "Please select the option.",
