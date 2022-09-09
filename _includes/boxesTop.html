@@ -1,0 +1,81 @@
+{% if include.columns %}
+    {% assign columns = include.columns %}
+    {% if columns == '1' %}
+        {% assign container = ' uk-container-xsmall' %}
+    {% elsif columns == '2' %}
+        {% assign container = ' uk-container-small' %}
+    {% else %}
+        {% assign container = '' %}
+    {% endif %}
+{% else %}
+    {% assign columns = 3 %}
+    {% assign container = '' %}
+{% endif %}
+
+
+<div class="uk-section topHeadBox">
+    <div class="uk-container{{container}}">
+       <div class="uk-child-width-1-{{ columns }}@m uk-grid-match uk-text-center uk-margin-medium-top" data-uk-grid>
+            <div class="boxHeadBox">
+                <div class="uk-card uk-card-default uk-card-mx">
+                    <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                          <div class="uk-width-expand">
+                                <h2 class="uk-card-title  uk-margin-remove-bottom">Intel® Smart Edge <span>for Developers</span></h2>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card-body uk-text-left uk-padding">
+                        <p>Documentation for Edge application developers creating edge-native solutions.</p>
+                        <p><a href="void">The Developers Experience Kit</a></p>
+                    </div>
+                    <div class="uk-card-footer mx-section-footer uk-padding-remove">
+                        <small> Get Started with <a href="#" class=" uk-button-text">Intel® Smart Edge for Developers</a></small>
+                    </div>
+                </div>
+            </div>
+            <div class="boxHeadBox">
+                <div class="uk-card uk-card-default uk-card-mx">
+                    <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                            <div class="uk-width-expand">
+                                <h2 class="uk-card-title uk-margin-remove-bottom">Intel® Smart Edge <span>for Builders</span></h2>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card-body uk-text-left uk-padding">
+                        <p>Documentation for Edge Builders delivering various layers of the software stack.</p>
+                        <p><a href="void">Private Wireless Experience Kit</a> <br>
+                           <a href="void">Secure Access Service Edge Experience Kit</a>
+                        </p>
+                    </div>
+                    <div class="uk-card-footer mx-section-footer uk-padding-remove">
+                        <small>Get Started with <a href="#" class="uk-button uk-button-text">Intel® Smart Edge for Builders</a></small>
+                    </div>
+                </div>
+            </div>
+            <div class="boxHeadBox">
+                <div class="uk-card uk-card-default uk-card-mx"> 
+                    <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                            <div class="uk-width-expand">
+                                <h2 class="uk-card-title uk-margin-remove-bottom">Intel® Smart Edge <span>for Enterprises</span></h2>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card-body uk-text-left uk-padding">
+                        <p>Documentation for the turnkey commercial software solution delivering highly secure, easy to deploy and manage software stack.</p>
+                        <p><a href="void">Intel® Smart Edge for Enterprises</a></p>
+                    </div>
+                    <div class="uk-card-footer mx-section-footer uk-padding-remove">
+                    <small>Get Started with <a href="#" class="uk-button ">Intel® Smart Edge for Enterprises</a></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
