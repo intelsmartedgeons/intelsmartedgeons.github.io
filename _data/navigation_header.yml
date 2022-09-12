@@ -1,23 +1,26 @@
 # Navbar left menu navigation links
 
 left:
-  - title: Home
-    url: /
+  # - title: Home
+  #   url: /
 
-  - title: Docs
-    url: /docs/product-overview/
+  # - title: Docs
+  #   url: /docs/product-overview/
+
+  - title: Documentation
+    url: /doc/product-overview/
 
   - title: Release Notes
     url: /release-notes/
 
-  - title: APIs
-    url: /api-documentation/
+  # - title: APIs
+  #   url: /api-documentation/
 
-  - title: Blog
+  - title: Technical Blog
     url: /blog/
     
-  - title: Contact
-    url: /contact/
+  # - title: Contact
+  #   url: /contact/
    # dropdown:
 
      # - title: Timeline Style
