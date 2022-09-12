@@ -44,11 +44,16 @@
             box-shadow: -1px 1px 3px #000c inset;
             border: 1px solid #c8d6f700!important;
             color: #fff;   
-            padding: 8px 18px;    
-
+            padding: 8px 10px;  
+            background-image: url("https://d29tbxcbtlbljy.cloudfront.net/smartedge/images/icon_search.svg");  
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: 10px center;
             &::placeholder{
                 color: rgba(255, 255, 255, 0.623);
                 font: 18px 'Intel One Display Regular';
+                padding-left: 32px;
+                
             }
     }
    
