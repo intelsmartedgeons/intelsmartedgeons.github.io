@@ -1,7 +1,11 @@
 .uk-navbar-container:not(.uk-navbar-transparent){
 background-color: $bgcolor;
 }
-
+.topHeadBox{
+    p, ul li a{font-size: 16px;
+        line-height: 1.4;}
+ 
+}
 .uk-section{
     &.topHeadBox{
         padding-bottom: 50px;
@@ -49,7 +53,12 @@ background-color: $bgcolor;
         }
 .mx-section-footer{
     background-color:#f8f8f8;    
-    
+    small, small a{
+        line-height: 24px;
+        padding: 10px;
+        font-size: 12px;
+       
+    }
     
     .lead, h2{
         color: #fff;
