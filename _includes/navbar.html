@@ -14,8 +14,8 @@
                         <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas-docs" data-uk-navbar-toggle-icon data-uk-toggle></a>
                     {% endif %} -->
                     <span class="uk-navbar-toggle uk-hidden@m toggleMenu">
-                        <svg class="menuIcon mainIcon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><rect style="fill:#0068b5" y="9" width="20" height="3"></rect><rect style="fill:#0068b5" y="3" width="20" height="3"></rect><rect style="fill:#0068b5" y="15" width="20" height="3"></rect></svg>
-                        <svg class="menuIcon crossIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><defs><style>.a{fill:#0068b5;}</style></defs><path class="a" d="M25,7.014,22.986,5,15,12.986,7.014,5,5,7.014,12.986,15,5,22.986,7.014,25,15,17.014,22.986,25,25,22.986,17.014,15Z" transform="translate(-5 -5)"/></svg>
+                        <svg class="menuIcon mainIcon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><rect style="fill:#fff" y="9" width="20" height="3"></rect><rect style="fill:#fff" y="3" width="20" height="3"></rect><rect style="fill:#fff" y="15" width="20" height="3"></rect></svg>
+                        <svg class="menuIcon crossIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><defs><style>.a{fill:#fff;}</style></defs><path class="a" d="M25,7.014,22.986,5,15,12.986,7.014,5,5,7.014,12.986,15,5,22.986,7.014,25,15,17.014,22.986,25,25,22.986,17.014,15Z" transform="translate(-5 -5)"/></svg>
                         <a href="/">Intel&reg; Smart Edge Open</a>
                     </span>
 
@@ -63,15 +63,17 @@
                                             </div>
                                         {% endif %}
                                         </li>
+                                       
                                     {% endif %}                                                                    
                                 {% endif %}
                             {% endif %}
                         {% endfor %}
+                        <li><form action="" class="searchdiv">
+                            <input type="text" class="searchicon" placeholder="Search this site...">
+                           
+                        </form></li>
                     </ul>
-                    <form action="" class="searchdiv">
-                        <input type="text" class="searchicon" placeholder="Search this site">
-                       
-                    </form>
+                    
                 </div>
                 <div class="uk-navbar-center uk-hidden@m">
                     <a class="uk-navbar-item uk-logo" href="{{ "/" | relative_url }}">{% if site.logo %}
