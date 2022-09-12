@@ -19,7 +19,7 @@ gulp.task('clean', () => {
 
 gulp.task('watch', () => {
     return gulp.watch('assets/scss/**/*.scss', (done) => {
-        gulp.series('styles')(done);
+        gulp.series('clean','styles')(done);
     })
 })
 
