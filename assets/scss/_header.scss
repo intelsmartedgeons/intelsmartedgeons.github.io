@@ -10,6 +10,10 @@
             font: 36px/47px 'Intel One Display Regular';
             letter-spacing: 1px;
             height: 103px;
+            b{
+                color: #fff;
+            }
+            
         }
         .uk-navbar-nav{
             margin-left: auto;
@@ -28,8 +32,27 @@
                         color:  #00c7fd;
                     }
                 }
+                
             }
         }
+        .searchdiv {
+            margin: 0 10px;
+        }
+        .searchicon {
+            border-radius: 55px;
+            background-color: transparent!important;
+            box-shadow: -1px 1px 3px #000c inset;
+            border: 1px solid #c8d6f700!important;
+            color: #fff;   
+            padding: 8px 18px;    
+
+            &::placeholder{
+                color: rgba(255, 255, 255, 0.623);
+                font: 18px 'Intel One Display Regular';
+            }
+    }
+   
+  
     }
 }
 #breadcrumbs{
