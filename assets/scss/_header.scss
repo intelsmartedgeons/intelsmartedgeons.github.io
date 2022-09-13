@@ -1,3 +1,4 @@
+
 .uk-navbar-container{
     .uk-navbar-center, .uk-navbar-right{
         display: none;
@@ -98,6 +99,13 @@
     }
 }
 @media (max-width:959px){
+    .uk-navbar-nav li a{
+        padding: 15px 30px!important;
+    }
+   .searchdiv {
+        margin-left: 30px!important;
+        max-width: 230px;
+    }
     .uk-navbar-container{
         position: fixed;
         top: 0;

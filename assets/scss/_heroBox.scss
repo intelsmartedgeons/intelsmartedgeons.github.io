@@ -18,6 +18,10 @@ background-color: $bgcolor;
     padding-bottom: 60px;
     background-color: $bgcolor;
 
+    .uk-margin-medium-top{
+        margin-top: 0px!important;
+    }
+
         small {
             line-height: 24px;
         }
@@ -40,7 +44,11 @@ background-color: $bgcolor;
                             display: block;
                         }
                     }
+                    
             }
+            
+            .uk-card-body {text-transform: capitalize;}
+            .uk-card-footer{padding: 5px 10px;}
 
             .uk-padding {
                 padding: 20px;
@@ -75,7 +83,7 @@ background-color: $bgcolor;
         color: #fff;
         }
     a{
-        color: #0068b5; background-color: #f9f9f9;}
+        color: #0068b5; background-color: #f8f8f8;}
     
 }
 .boxHeadExplore{
