@@ -103,8 +103,9 @@
         padding: 15px 30px!important;
     }
    .searchdiv {
-        margin-left: 30px!important;
+    margin: 10px 0 0 30px!important;
         max-width: 230px;
+       
     }
     .uk-navbar-container{
         position: fixed;
@@ -175,7 +176,7 @@
 }
 @media (max-width:639px){
     .uk-navbar-nav li a{
-        padding: 15px 30px!important;
+        padding: 10px 30px!important;
     }
     .uk-navbar-nav li a{
         padding: 15px;
