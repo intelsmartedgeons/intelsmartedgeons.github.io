@@ -37,34 +37,8 @@
                 
             }
         }
-        .searchdiv {
-            margin: 34px 0 0 10px;
-            max-width: 230px;
-            
-        }
-        .searchicon {
-            border-radius: 55px;
-            border: 1px solid #f9f9f9!important;
-            background-color: transparent!important;                   
-            color: #fff;   
-            padding:8px 10px 8px 40px;  
-            background-image: url("https://d29tbxcbtlbljy.cloudfront.net/smartedge/images/icon_search.svg");  
-            background-size: 18px;
-            background-repeat: no-repeat;
-            background-position: 14px center;
-            &::placeholder{
-                color: #fff;
-                font: 16px 'Intel One Display Regular';  
-                font-weight: bold;              
-                
-            }
-            &:focus{
-                font-weight: bold;
-                color: #00c7fd;
-               
-            }
-    }
-   
+        
+         
   
     }
 }
@@ -101,12 +75,7 @@
 @media (max-width:959px){
     .uk-navbar-nav li a{
         padding: 5px 30px!important;
-    }
-   .searchdiv {
-    margin: 10px 0 0 30px!important;
-        max-width: 230px;
-       
-    }
+    }   
     .uk-navbar-container{
         position: fixed;
         top: 0;

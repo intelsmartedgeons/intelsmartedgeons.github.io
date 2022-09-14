@@ -1,0 +1,218 @@
+.uk-navbar-nav{align-items: center;}
+.searchBar-section{
+    position: relative;
+    max-width: 200px;
+    
+    input[type="text"]{
+        width: 100%;
+        border: 1px solid #fff;
+        line-height: 24px;
+        padding: 12px;
+        outline: 0;
+        margin-bottom: 0!important;
+        border-radius: 0px;
+        background: $blue;
+        border-radius: 55px;
+
+        &::placeholder{
+            font-size: 16px;
+            color:white;
+        }
+    }
+    .ais-search-box--powered-by{
+        display: none;
+    }
+    .ais-search-box--magnifier-wrapper{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        background-color: #0068b5;
+        cursor: pointer;
+        border-radius: 50px;
+       
+        .ais-search-box--magnifier{
+            text-align: center;
+            svg{
+                width: 22px;
+                height: 22px;
+                margin-top: 12px;
+                path{
+                    fill: #fff;
+                }
+            }
+        }
+    }
+    .ais-search-box--reset-wrapper{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        background-color: $blue;
+        cursor: pointer;
+        border-radius: 50px;
+        .ais-search-box--reset{
+            background: transparent;
+            color: #fff;
+            border: 0;
+            cursor: pointer;
+            svg{
+                fill: #fff;
+                width: 20px;
+                margin: 15px 0 0 10px;
+                cursor: pointer;
+            }
+        }
+    }    
+    .output-section{
+        display: none;
+        .ais-hits{
+            .ais-hits--item{
+                margin-bottom: 25px;
+                .search-item{
+                    .columns-left-column{
+                        margin-bottom: 10px;
+                        float: left;
+                        margin-right: 10px;
+                        width: 40%;
+                        
+                    }
+                }
+            }
+        }
+    }
+    .popover{
+        background-color: #fff;
+        z-index: 1;
+        border: 1px solid #00000017;
+        box-shadow: 0px 0px 6px 2px #0000004d;
+        border-radius: 6px;
+        right: 0;
+        padding: 5px 20px;
+        overflow: visible !important;
+        position: absolute;
+        width: 400px;
+        left: auto !important;
+        top:60px!important;
+        .arrow, .arrow:after{
+            position: absolute;
+            display: block;
+            width: 0;
+            height: 0;
+            border-color: transparent;
+            border-style: solid;
+        }
+        .ais-search-box--input {
+            border-radius: 55px;
+            border: 1px solid #f9f9f9!important;
+            background-color: transparent!important;                   
+            color: #fff;   
+            padding:8px 10px 8px 40px;  
+            background-image: url("https://d29tbxcbtlbljy.cloudfront.net/smartedge/images/icon_search.svg");  
+            background-size: 18px;
+            background-repeat: no-repeat;
+            background-position: 14px center;
+            &::placeholder{
+                color: #fff;
+                font: 16px 'Intel One Display Regular';  
+                font-weight: bold;              
+                
+            }
+            &:focus{
+                font-weight: bold;
+                color: #00c7fd;
+               
+            }
+        }
+        .arrow{
+            border-width: 11px;
+            top: -11px;
+            left: 80%;
+            margin-left: -11px;
+            border-top-width: 0;
+            border-bottom-color: #999;
+            border-bottom-color: rgba(0,0,0,.25);
+            right: 0;
+            &:after{
+                border-width: 10px;
+                top: 1px;
+                margin-left: -10px;
+                content: " ";
+                border-top-width: 0;
+                border-bottom-color: #fff;
+            }
+        }
+        h3{
+            margin: 0;
+        }
+        .popover-content{
+            .ais-hits{
+                .ais-hits--item{
+                    width:100%;
+                    .columns-left-column{
+                        a{
+                            font-size: 13px;
+                            font-weight: 500;
+                            color: $menuColor;
+                            &:hover{
+                                color: $blue !important;
+                            }
+                        }
+                    }
+                    .columns-right-column{
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        .ais-pagination{
+            margin: 15px auto 5px;
+            padding: 0;
+            text-align: center;
+            width: 100%;
+            float: left;
+            .ais-pagination--item{
+                font-size: 13px;
+                margin: 0 3px;
+                min-height: 100%;
+                min-width: 8px;
+                border-radius: 5px;
+                line-height:18px;
+                display: inline-block;
+                text-align: center;
+
+                a{
+                    border: 1px solid #999;
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    border-radius: 4px;
+                    color: $blue;
+                    font: 14px/22px "Intel One Display Regular";
+                    position: relative;
+                    line-height: 18px;
+                }
+               
+        }
+           
+           
+
+           
+            
+            
+        }
+    }
+    .ais-pagination--item__active,
+    .ais-pagination--item:hover
+        { 
+            .ais-pagination--link
+             {
+                background: #193f6e!important; 
+                border-color: #193f6e!important;  
+                color: #ffffff!important;
+                text-decoration: none!important;
+            }
+        }
+}
