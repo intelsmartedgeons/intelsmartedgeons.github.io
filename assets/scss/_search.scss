@@ -13,6 +13,7 @@
         border-radius: 0px;
         background: $blue;
         border-radius: 55px;
+        color:#ffffff;
 
         &::placeholder{
             font-size: 16px;
@@ -60,8 +61,8 @@
             cursor: pointer;
             svg{
                 fill: #fff;
-                width: 20px;
-                margin: 15px 0 0 10px;
+                width: 18px;
+                margin: 12px 0 0 5px;
                 cursor: pointer;
             }
         }
@@ -226,44 +227,54 @@
         background: #000000cf;
         display: block;
         min-height: 100%;
+        display: none;
         position: fixed;
+        left:0;
         width: 100%;
+    }
+    .ais-search-box--reset-wrapper{
+        top: 13px !important;
+        right: 15px !important;
     }
     .mobile-search {    
             position: fixed;
-            top: 15px;
-            right: 0;
+            top: 16px;
+            right: 15px;
             background: #2196f3;
             padding: 14px;
             border-radius: 50px;    
         svg {
             width: 20px;
-            height: 20px;
+            height: 18px;
             fill: white;
         }
     }
         .searchBar-section{
             max-width: 100%;
             position: fixed;
+            display: none;
             left: 0;
             right: 0;
             margin-top: 0;
             
             // display: none;
             input[type=text]{
-                border-radius: 0;
                 width: 100%;
                 max-width: 100%;
             }
-            .ais-search-box{padding: 10px; background-color: #000c;}
+            .ais-search-box{padding: 10px; background-color: #0068b5;}
             .ais-search-box--magnifier-wrapper{    top: 12px;
                 right: 15px;}
             .popover{
                 width: 340px;
                 left: 0!important;
                 right: 0;
+                top:69px !important;
                 margin: 0 auto;
             }
+        }
+        .searchBar-section.mobile-active, .searchBox.mobile-active{
+            display: block;
         }
     
 }
