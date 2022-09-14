@@ -68,12 +68,20 @@
                                 {% endif %}
                             {% endif %}
                         {% endfor %}
-                        <li><form action="" class="searchdiv">
+                        <li>
+                            <!-- <form action="" class="searchdiv">
                             <input type="text" class="searchicon" placeholder="Search this site...">
                            
-                        </form></li>
+                        </form> -->
+                        <div class="searchBar-section">
+                            <div class="input-section" data-toggle="popover" data-placement="bottom"></div>
+                            <div class="output-section">
+                            <div id="search-result"></div>
+                            <div id="search-result-pagination"></div>
+                            </div>
+                        </div>
+                    </li>
                     </ul>
-                    
                 </div>
                 <div class="uk-navbar-center uk-hidden@m">
                     <a class="uk-navbar-item uk-logo" href="{{ "/" | relative_url }}">{% if site.logo %}
@@ -85,3 +93,7 @@
         </div>
     </nav>
 </div>
+
+
+
+
