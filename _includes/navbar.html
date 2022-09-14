@@ -20,7 +20,12 @@
                     </span>
 
                     <ul class="uk-navbar-nav uk-visible@m">
-                        {% for link in site.data.navigation_header.left %}
+                        {% if page.url == '/' %}
+                            {% assign header_data = site.data.navigation_header.left %}
+                        {% else %}
+                            {% assign header_data = site.data.navigation_header_document.left %}
+                        {% endif %}
+                        {% for link in header_data %}
                             {% if link.url contains 'http' %}
                                 {% assign domain = '' %}
                             {% else %}
