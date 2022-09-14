@@ -89,7 +89,7 @@
                        
                     </form> --> 
                     
-
+                    {% if page.url == '/' %}
                     <div class="searchBar-section">
                         <div class="input-section" data-toggle="popover" data-placement="bottom"></div>
                         <div class="output-section">
@@ -97,6 +97,7 @@
                         <div id="search-result-pagination"></div>
                         </div>
                     </div>
+                    {% endif %}
                 </div>
                 </div>
                 <div class="uk-navbar-center uk-hidden@m">
