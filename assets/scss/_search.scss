@@ -215,4 +215,55 @@
                 text-decoration: none!important;
             }
         }
+        
+}
+.mobile-search {display: none;}
+@media (max-width:959px){
+    .mobile-search {display: block;}
+    .uk-navbar-left{display: block;}
+    .uk-navbar-toggle{justify-content: flex-start;}
+    .searchBox {
+        background: #000000cf;
+        display: block;
+        min-height: 100%;
+        position: fixed;
+        width: 100%;
+    }
+    .mobile-search {    
+            position: fixed;
+            top: 15px;
+            right: 0;
+            background: #2196f3;
+            padding: 14px;
+            border-radius: 50px;    
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+    }
+        .searchBar-section{
+            max-width: 100%;
+            position: fixed;
+            left: 0;
+            right: 0;
+            margin-top: 0;
+            
+            // display: none;
+            input[type=text]{
+                border-radius: 0;
+                width: 100%;
+                max-width: 100%;
+            }
+            .ais-search-box{padding: 10px; background-color: #000c;}
+            .ais-search-box--magnifier-wrapper{    top: 12px;
+                right: 15px;}
+            .popover{
+                width: 340px;
+                left: 0!important;
+                right: 0;
+                margin: 0 auto;
+            }
+        }
+    
 }
