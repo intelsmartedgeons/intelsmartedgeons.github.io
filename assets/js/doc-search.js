@@ -22,7 +22,7 @@ $(document).ready(function () {
     //alert (JSON.stringify(search));
     openness_search.addWidget(instantsearch.widgets.searchBox({
         container: input,
-        placeholder: 'Search document',
+        placeholder: 'Search this site...',
         autofocus: false,
         poweredBy: true
     }));
