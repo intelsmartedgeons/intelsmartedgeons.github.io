@@ -1,5 +1,12 @@
 <!-- <div{% if site.navbar.sticky %} data-uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent; top: 200"{% endif %}> -->
-<div class="uk-navbar-container">
+{% if page.url == '/' %}
+    {% assign header_data = site.data.navigation_header.left %}
+    {% assign navbar_class = "main-header"; %}
+{% else %}
+    {% assign header_data = site.data.navigation_header_document.left %}
+    {% assign navbar_class = "inner-header"; %}
+{% endif %}    
+<div class="uk-navbar-container {{ navbar_class }}">
     <nav class="uk-navbar-container">
         <div class="uk-container">
             <div data-uk-navbar>
@@ -20,11 +27,6 @@
                     </span>
 
                     <ul class="uk-navbar-nav uk-visible@m">
-                        {% if page.url == '/' %}
-                            {% assign header_data = site.data.navigation_header.left %}
-                        {% else %}
-                            {% assign header_data = site.data.navigation_header_document.left %}
-                        {% endif %}
                         {% for link in header_data %}
                             {% if link.url contains 'http' %}
                                 {% assign domain = '' %}
