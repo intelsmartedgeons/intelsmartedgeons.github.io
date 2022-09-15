@@ -219,7 +219,14 @@
         
 }
 .mobile-search {display: none;}
-@media (max-width:959px){
+
+@media(max-width:959px){
+    .searchBox {     
+        right: 0;
+        position: absolute;
+    }
+}
+@media (max-width:450px){
     .mobile-search {display: block;}
     .uk-navbar-left{display: block;}
     .uk-navbar-toggle{justify-content: flex-start;}
@@ -240,7 +247,7 @@
             position: fixed;
             top: 16px;
             right: 15px;
-            background: #2196f3;
+            
             padding: 14px;
             border-radius: 50px;    
         svg {

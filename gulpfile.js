@@ -23,8 +23,8 @@ gulp.task('watch', () => {
     })
 })
 
-/* gulp.task('minifyJs', () => {
+gulp.task('minifyJs', () => {
     return gulp.src('templates/cloverleaf/js/*')
     .pipe(minifyJs())
     .pipe(gulp.dest('templates/cloverleaf/jsMinified'))
-}) */
+}) 

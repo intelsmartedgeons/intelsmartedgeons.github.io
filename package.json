@@ -36,7 +36,7 @@
     "gulp-sass": "^5.1.0",
     "jshint": "^2.10.2",
     "ncp": "latest",
-    "sass": "^1.42.0",
+    "sass": "^1.54.9",
     "uglify-js": "^3.4.10",
     "watch": "^1.0.2"
   },
