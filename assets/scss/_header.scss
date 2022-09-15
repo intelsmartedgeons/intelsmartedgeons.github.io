@@ -5,17 +5,17 @@
     }
     .uk-navbar-left{
         width:100%;
-        .uk-logo{
-            color: #fff;
-            font-weight: inherit;
-            font: 36px/47px 'Intel One Display Regular';
-            letter-spacing: 1px;
-            height: 103px;
-            b{
+            .uk-logo{
                 color: #fff;
+                font-weight: inherit;
+                font: 36px/47px 'Intel One Display Regular';
+                letter-spacing: 1px;
+                height: 103px;
+                b{
+                    color: #fff;
+                }
+                
             }
-            
-        }
         .uk-navbar-nav{
             margin-left: auto;
             li{
@@ -26,19 +26,19 @@
                     letter-spacing: 0.7px;
                     font-weight: bold;
                     &:hover{
-                        color: #00c7fd;
+                        color: #00c7fd!important;
                     }
                 }
                 &.uk-active{
                     a{
-                        color:  #00c7fd;
+                        color:  #00c7fd!important;
                     }
                 }
                 
             }
         }
         
-         
+       
   
     }
 }

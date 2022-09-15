@@ -226,7 +226,25 @@
         position: absolute;
     }
 }
-@media (max-width:450px){
+@media (min-width:960px) and (max-width:1073px){
+    .uk-navbar-container{
+        .uk-navbar-left{
+            .uk-navbar-nav{
+                li {
+                    a{
+                        font-size: 14px;
+                        padding: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+      
+    
+}
+@media (max-width:550px){
     .mobile-search {display: block;}
     .uk-navbar-left{display: block;}
     .uk-navbar-toggle{justify-content: flex-start;}
