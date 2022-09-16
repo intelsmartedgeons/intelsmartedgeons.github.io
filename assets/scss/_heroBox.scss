@@ -4,8 +4,16 @@
         font-size: 16px;
         line-height: 1.4;
     }
- 
+    .boxHeadBox{
+        p{
+            text-transform: initial;
+        }
+        strong{
+            font-size: 16px;
+        }
+    }
 }
+
 .uk-section{
     &.topHeadBox{
         padding-bottom: 50px;
