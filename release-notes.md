@@ -31,7 +31,7 @@ permalink: /release-notes/
      <li><b>User documentation</b> is available within the Smart Edge Controller software web interface</li> 
      <li>Support for <b>edge app deployments using Helm charts</b> to support container (using containerd) and virtual machine (using KubeVirt) based apps</li> 
     </ul> 
-<div class="responsivTable">
+
 <table> 
         <thead>    
             <tr>    
@@ -73,7 +73,7 @@ permalink: /release-notes/
         </tr> 
     </tbody> 
 </table> 
-</div>
+
  
 </div>
 
