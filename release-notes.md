@@ -12,8 +12,7 @@ permalink: /release-notes/
 </div>
 
 <div class="noteRight">
-     <h3>Intel® Smart Edge for Enterprises – Edge Node v6.0, Controller v11.0</h3>    
-    <!-- <a class="uk-button uk-button-info uk-button-small uk-margin-small-bottom">Added</a> -->
+     <h3>Intel® Smart Edge for Enterprises – Edge Node v6.0, Controller v11.0</h3>     
     <p>This is the first release of Intel® Smart Edge for Enterprises, that includes the Intel Smart Edge Node software v6.0 and Intel Smart Edge Controller software v11.0. This release is on a new code base that will eventually replace the current Intel Smart Edge Node software v5 and Intel Smart Edge Controller software v10</p>
     <p>To get more information about Intel Smart Edge for Enterprises and to initiate the process of obtaining a license, visit <a href="https://www.intel.com/content/www/us/en/edge-computing/smart-edge.html">www.intel.com/smartedge</a></p>
 
