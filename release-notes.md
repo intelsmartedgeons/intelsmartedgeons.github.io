@@ -229,7 +229,7 @@ permalink: /release-notes/
 <div class="noteLeft">
     <p>September 30th, 2021</p>
 </div>
-<div class="noteRight">
+<div class="noteRight" id="prev-note">
     <h3>21.09 Updates</h3>
     <p>We are pleased to announce the first release Intel&reg; Smart Edge Open.</p>
     <p>Built from an OpenNESS foundation and representing more than two years of development, the 21.09 release of Intel&reg; Smart Edge Open introduces several technical improvements including a new Developer Experience Kit and an upgraded experience kit for creating 5G private wireless networks.</p>
