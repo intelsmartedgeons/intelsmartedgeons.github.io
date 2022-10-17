@@ -10,6 +10,9 @@
 }
 .noteLeft{
     clear: both;
+    p{
+        padding-right: 15px;
+    }
 }
 .noteRight{
     width: 60%;
@@ -18,6 +21,8 @@
         margin-bottom: 40px;
     }
 }
+
+
 @media (max-width:991px){
     .noteLeft{
         width: 22%;
@@ -25,9 +30,17 @@
     .noteRight{
         width:78%;
     }
+    
 }
 @media (max-width:767px){
     .noteLeft, .noteRight{
         width:100%;
+    }
+    
+}
+@media (max-width:500px){
+    .responsivTable {
+        width: 100%;
+        overflow-x: scroll;
     }
 }
