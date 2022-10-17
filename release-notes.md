@@ -41,8 +41,8 @@ permalink: /release-notes/
         </thead> 
         <tbody>  
         <tr> 
-        <td style="width:55%">5G License Manager dashboard <span class="smt">https://dlm-ui.controller.intel.corp:30443  displays 502 Bad Gateway after license has been uploaded</td> 
-        <td>Reboot the Smart Edge Controller</span></td> 
+        <td style="width:55%">5G License Manager dashboard <span class="smt2">https://dlm-ui.controller.intel.corp:30443 </span> displays 502 Bad Gateway after license has been uploaded</td> 
+        <td>Reboot the Smart Edge Controller</td> 
         </tr> 
         <tr> 
             <td>Sometimes UE to application traffic might stop working after edge node reboot </td> 
