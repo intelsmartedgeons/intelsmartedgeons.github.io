@@ -61,7 +61,7 @@ permalink: /release-notes/
                 Network monitoring graphs showcasing traffic in and out of 5G Core pod are not implemented.
             </td> 
             <td>
-                When viewing the Network traffic for the 5G Core on a two cluster deployment (one node per cluster), the Network graph on the Performance page of the controller UI for the 5G Core Edge Node will not show the data sent to and received from the gNodeB. This is due to an SR-IOV interface being used for the 5G Core's N2/N3 interface. To see the data rate entering and leaving on this 5G Core interface, query the telemetry API for the pcn_throughput_octets_sum metric
+                When viewing the Network traffic for the 5G Core on a two cluster deployment (one node per cluster), the Network graph on the Performance page of the controller UI for the 5G Core Edge Node will not show the data sent to and received from the gNodeB. This is due to an SR-IOV interface being used for the 5G Core's N2/N3 interface. To see the data rate entering and leaving on this 5G Core interface, query the telemetry API for the pcn_through put_octets_sum metric
             </td> 
         </tr> 
         <tr> 
