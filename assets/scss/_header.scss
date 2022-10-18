@@ -86,7 +86,7 @@
 .uk-navbar-container{
     &.inner-header{
         &:not(.uk-navbar-transparent){
-            background-color: green;
+            
             .uk-navbar-container{
                 background-color: #fff;
 
@@ -130,7 +130,8 @@
         width: 100%;
         border-bottom: 1px solid #ccc;
         z-index: 2;
-        background-color: #fff;
+        background-color: $blue!important;      
+        
         .uk-navbar-toggle{
             // color: $blue;
             color: #fff;
@@ -192,6 +193,9 @@
     }
 }
 @media (max-width:639px){
+    .uk-navbar-container{
+        background-color: $blue!important;       
+    }
     .uk-navbar-nav li a{
         padding: 5px 30px !important;
     }
