@@ -1,0 +1,201 @@
+
+.uk-navbar-container{
+    .uk-navbar-center, .uk-navbar-right{
+        display: none;
+    }
+    .uk-navbar-left{
+        width:100%;
+            .uk-logo{
+                color: #fff;
+                font-weight: inherit;
+                font: 36px/47px 'Intel One Display Regular';
+                letter-spacing: 1px;
+                height: 103px;
+                b{
+                    color: #fff;
+                }
+                
+            }
+        .uk-navbar-nav{
+            margin-left: auto;
+            li{
+                a{
+                    color: #fff;
+                    height: 103px;
+                    font: 18px/22px 'Intel One Display Regular';
+                    letter-spacing: 0.7px;
+                    font-weight: bold;
+                    &:hover{
+                        color: #00c7fd!important;
+                    }
+                }
+                &.uk-active{
+                    a{
+                        color:  #00c7fd!important;
+                    }
+                }
+                
+            }
+        }
+        
+       
+  
+    }
+}
+#breadcrumbs{
+    margin-bottom: 20px;
+    letter-spacing: 0;
+    padding-right: 140px;
+    a{
+        color: #00c7fd;
+        font-weight: 600;
+        letter-spacing: 0;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    & + .highlighter-rouge{
+        display: none;
+    }
+    & ~ h2[id], & ~ h3[id], & ~ h4[id]{
+        text-decoration: underline;
+        text-underline-offset: 7px;
+    }
+    & ~ h1[id], & ~ h2[id], & ~ h3[id], & ~ h4[id]{
+        &:before{
+            content: "";
+            display: block;
+            height: 105px;
+            margin-top: -105px;
+            position: relative;
+            z-index: -1;
+        }
+    }
+}
+
+.uk-navbar-container{
+    &.main-header{
+        &:not(.uk-navbar-transparent){
+            background-color: $blue;
+            .uk-navbar-container{
+                background-color: $blue;
+            }
+        }
+    }
+}
+.uk-navbar-container{
+    &.inner-header{
+        &:not(.uk-navbar-transparent){
+            
+            .uk-navbar-container{
+                background-color: #fff;
+
+                .uk-navbar-nav {
+                    li{
+                        a{
+                            color: #bdc3c7;
+                            height: 103px;
+                            font: 18px/22px "Intel One Display Regular";
+                            letter-spacing: .7px;
+                        }
+                    }
+                }
+                .uk-navbar-left{
+                    .uk-logo{
+                        img{display: none;}
+                        b{color: #0068b5;
+                            font-weight: inherit;
+                            font-family:"Intel One Display Regular" ;
+                            font-size: 36px;
+                            letter-spacing: 1px;}
+                    }
+                }
+              
+            }
+
+        }
+    }
+}
+@media (max-width:959px){
+    .uk-navbar-nav li a{
+        padding: 5px 30px!important;
+    }   
+    .uk-navbar-container{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        z-index: 2;
+        background-color: $blue!important;      
+        
+        .uk-navbar-toggle{
+            // color: $blue;
+            color: #fff;
+        }
+     
+    }
+    body{
+        padding-top: 80px;
+    }
+    //.uk-navbar-toggle[aria-expanded="true"] + .uk-navbar-nav{
+    .uk-navbar-nav{
+        display: block !important;
+        margin-left: 0;
+        z-index: 1001;
+        position: fixed;
+        top: 81px;
+        width: 100%;
+        height: calc(100vh - 81px);
+        background: #0068b5;
+        padding-top: 20px;
+        transition: 0.3s;
+        left: -100%;
+        li{
+            a{
+                text-align: left;
+                display: block;
+                height: auto!important;
+                padding: 15px 40px;
+            }
+        }
+    }
+    .uk-navbar-toggle.showMenu + .uk-navbar-nav{
+        left:0;
+    }
+    .uk-navbar-container{
+        .uk-navbar-left{
+            .uk-navbar-toggle{
+                a{
+                    // color: $blue;
+                    color: #fff;
+                    font-size: 18px;
+                    margin-left: 10px;
+                }
+                &.toggleMenu{
+                    .crossIcon{
+                        display: none;
+                    }
+                    &.showMenu{
+                        .mainIcon{
+                            display: none;
+                        }
+                        .crossIcon{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:639px){
+    .uk-navbar-container{
+        background-color: $blue!important;       
+    }
+    .uk-navbar-nav li a{
+        padding: 5px 30px !important;
+    }
+    .uk-navbar-nav li a{
+        padding: 15px;
+    }
+}
