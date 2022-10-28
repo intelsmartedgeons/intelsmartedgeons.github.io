@@ -43,8 +43,8 @@ title: API Documentation
                 <div class="boxHeadBox uk-card uk-card-default uk-box-shadow-medium uk-card-hover uk-card-body uk-inline border-radius-large border-xlight">
                     <h3 class="uk-card-title">GRPC</h3>
                     <ul>
-                        <li class="fa-angle-right"><a href="https://github.com/smart-edge-open/specs/blob/master/schema/pb/ela.proto" target="_blank" title="Edge Lifecycle Management API" rel="nofollow">Edge Lifecycle Management API</a></li>
-                        <li class="fa-angle-right"><a href="https://github.com/smart-edge-open/specs/blob/master/schema/pb/eva.proto" target="_blank" title="Edge Virtualization Infrastructure API" rel="nofollow">Edge Virtualization Infrastructure API</a></li>
+                        <li class="fa-angle-right"><a href="/specs/blob/master/schema/pb/ela.proto" target="_blank" title="Edge Lifecycle Management API" rel="nofollow">Edge Lifecycle Management API</a></li>
+                        <li class="fa-angle-right"><a href="/specs/blob/master/schema/pb/eva.proto" target="_blank" title="Edge Virtualization Infrastructure API" rel="nofollow">Edge Virtualization Infrastructure API</a></li>
                     </ul>
                 </div>
             </div>
