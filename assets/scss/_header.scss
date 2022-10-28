@@ -199,3 +199,20 @@
         padding: 15px;
     }
 }
+
+
+
+.uk-navbar-item:after{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    content:attr(title);
+    color:#666;
+    opacity:0;      
+    -webkit-transition:opacity 0.4s;
+    transition:opacity 0.4s;
+}
+.uk-navbar-item:hover:before{
+    opacity:1;
+}
