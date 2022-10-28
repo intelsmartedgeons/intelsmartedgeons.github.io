@@ -38,8 +38,7 @@ title: API Documentation
                         {% endfor %}
                     </ul>
                 </div>
-            </div>
-            <div>
+            </div><div>
                 <div class="boxHeadBox uk-card uk-card-default uk-box-shadow-medium uk-card-hover uk-card-body uk-inline border-radius-large border-xlight">
                     <h3 class="uk-card-title">GRPC</h3>
                     <ul>
