@@ -6,7 +6,7 @@ path: /building-blocks/
 order: 2
 section:
   - title: Data Plane
-    path: https://github.com/onsumaye-team/specs
+    path: https://github.com/intelsmartedgeons/specs
     section:
     - title: Inter-App Communication
       path: /doc/building-blocks/dataplane/openness-interapp
