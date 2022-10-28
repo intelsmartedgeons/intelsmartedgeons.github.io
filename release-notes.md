@@ -235,7 +235,7 @@ permalink: /release-notes/
     <a class="uk-button uk-button-purple uk-button-small uk-margin-small-bottom">Updated</a>
     <p>Updated four <a href="/docs/product-overview/" target="_blank" title="reference implementations">reference implementations</a> for the Developer Experience Kit. These provide a reference for edge solution builders deploying multi-tenant services on the edge platform. They feature the following use cases:</p>
     <ul>
-     <li><a href="https://www.intel.com/content/www/us/en/developer/articles/reference-implementation/wireless-network-ready-pcb-defect-detection.html" title="Industry 4.0" target="_blank" rel="nofollow">Industry 4.0</a></li>
+        <li><a href="https://www.intel.com/content/www/us/en/developer/articles/reference-implementation/wireless-network-ready-pcb-defect-detection.html" title="Industry 4.0" target="_blank" rel="nofollow">Industry 4.0</a></li>
         <li><a href="https://www.intel.com/content/www/us/en/developer/articles/reference-implementation/wireless-network-ready-intelligent-traffic-management.html" title="Smart Cities" target="_blank" rel="nofollow">Smart Cities</a></li>
         <li><a href="https://www.intel.com/content/www/us/en/developer/articles/reference-implementation/telehealth-remote-monitoring.html" title="eHealth" target="_blank" rel="nofollow">eHealth</a></li>
         <li><a href="https://www.intel.com/content/www/us/en/developer/articles/reference-implementation/smart-vr-live-streaming-of-immersive-media.html" title="AR/VR Services" target="_blank" rel="nofollow">AR/VR Services</a></li>
