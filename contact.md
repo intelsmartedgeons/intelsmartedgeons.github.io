@@ -78,7 +78,7 @@ var apiURL = '{{ site.apiURL }}';
                 </li>
                 <li>
                     <span class="linkHead uk-text-center">Technical Issues?</span>
-                    <span class="linkText uk-text-center">For help with Developer Experience Kit, submit via <a href="https://github.com/smart-edge-open/open-developer-experience-kits/issues" rel="nofollow" target="_blank" title="GitHub Issues">GitHub Issues</a></span>
+                    <span class="linkText uk-text-center">For help with Developer Experience Kit, submit via <a href="https://github.com/IntelSmartEdge/open-developer-experience-kits/issues" rel="nofollow" target="_blank" title="GitHub Issues">GitHub Issues</a></span>
                     <span class="linkText uk-text-center">For help with Intel® Smart Edge Open licensed experience kits, contact your Intel representative</span>
                 </li>
             </ul>
