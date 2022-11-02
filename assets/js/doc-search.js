@@ -3,7 +3,7 @@
  */
 
 $(document).ready(function () {
-    var algoliaIndex = 'openness-staging'; //'smart-edge-open';
+    var algoliaIndex = 'smart-edge-open';
     var landing = 'docs';
     var input = '.input-section';
     var output ='.output-section';
