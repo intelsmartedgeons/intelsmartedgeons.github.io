@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /request-license/
-description: Please select a topic below related to your inquiry. If you don’t find what you need, fill out the Intel® Smart Edge Open contact form.
+description: Please select a topic below related to your inquiry. If you don’t find what you need, fill out the Intel® Smart Edge contact form.
 ---
 <link rel="stylesheet" type="text/css" href="{{ "/assets/css/select2.min.css?v=8.5" | relative_url }}">
 <script type="text/javascript" src="{{ "/assets/js/jquery.validate.min.js" | relative_url }}"></script>
@@ -66,7 +66,7 @@ var apiURL = '{{ site.apiURL }}';
                 <small class="error" generated="true" for="primary_contact" style="display:none;font-size: 100%; font-weight: 400;"></small>
             </div>
             <div>
-                <label class="validationstar">Which features of Intel&reg; Smart Edge Open are of interest to you?<span class="star">*</span></label>
+                <label class="validationstar">Which features of Intel® Smart Edge are of interest to you?<span class="star">*</span></label>
                 <input type="text" class="form-control" name="interest" id="interest" placeholder="Type here" value="" maxlength="100">
                 <small class="error" generated="true" for="interest" style="display:none;font-size: 100%; font-weight: 400;"></small>
             </div>
@@ -76,7 +76,7 @@ var apiURL = '{{ site.apiURL }}';
                 <small class="error" generated="true" for="use_case" style="display:none;font-size: 100%; font-weight: 400;"></small>
             </div>
             <div class="seprateBox">
-                <label class="validationstar">Do you intend to commercialize with Intel&reg; Smart Edge Open?<span class="star">*</span></label>
+                <label class="validationstar">Do you intend to commercialize with Intel® Smart Edge?<span class="star">*</span></label>
                 <input class="form-check-input" type="radio" name="commercialize" id="commercializeRadio1" value="yes">
 				<label class="form-check-label" for="commercializeRadio1">Yes</label>
                 <input class="form-check-input" type="radio" name="commercialize" id="commercializeRadio2" value="no">
@@ -105,9 +105,9 @@ var apiURL = '{{ site.apiURL }}';
 </div>
 
 <div class="formRight section-featured">
-    <p>Source code for certain* experience kits is available under the terms and conditions of Intel’s “Smart Edge Open license” (the “SEO license”). Experience kit source code is provided “as-is,” free of charge, and at Intel’s sole discretion.</p>
+    <p>Source code for certain* experience kits is available under the terms and conditions of Intel’s “Smart Edge license” (the “SEO license”). Experience kit source code is provided “as-is,” free of charge, and at Intel’s sole discretion.</p>
     <p>Access to experience kit source code will be granted within 5 business days of execution (electronic or otherwise) of the SEO license.</p>
-    <p>*The Smart Edge Open Developer Experience Kit is available under the Apache 2.0 license.</p>
+    <p>*The Smart Edge Developer Experience Kit is available under the Apache 2.0 license.</p>
     <ul class="uk-list uk-list-large uk-margin-medium-top">
         <li>
             <a class="uk-box-shadow-hover-small" href="https://www.intel.com/content/www/us/en/privacy/intel-privacy-notice.html" rel="nofollow" target="_blank" title="Privacy Policy">

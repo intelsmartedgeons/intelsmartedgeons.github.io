@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /contact/
-title: Intel® Smart Edge Open - Contact
-description: Please select a topic below related to your inquiry. If you don’t find what you need, fill out the Intel® Smart Edge Open contact form.
+title: Intel® Smart Edge - Contact
+description: Please select a topic below related to your inquiry. If you don’t find what you need, fill out the Intel® Smart Edge contact form.
 ---
 <script type="text/javascript" src="{{ "/assets/js/jquery.validate.min.js" | relative_url }}"></script>
 <script type="text/javascript" src="{{ "/assets/js/custom.js" | relative_url }}"></script>
@@ -59,7 +59,7 @@ var apiURL = '{{ site.apiURL }}';
                 <li>
                     <a class="uk-box-shadow-hover-small" target="_blank" href="https://networkbuilders.intel.com/intel-technologies/publications" title="Get Inspired">
                         <span class="linkHead">Get Inspired</span>
-                        <span class="linkText">Discover the solutions Smart Edge Open has  provided.</span>
+                        <span class="linkText">Discover the solutions Smart Edge has  provided.</span>
                         <svg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><polyline fill='none' stroke='#0068B5' stroke-width='1.03' points='7 4 13 10 7 16' /></svg>
                     </a>
                 </li>
@@ -79,7 +79,7 @@ var apiURL = '{{ site.apiURL }}';
                 <li>
                     <span class="linkHead uk-text-center">Technical Issues?</span>
                     <span class="linkText uk-text-center">For help with Developer Experience Kit, submit via <a href="https://github.com/IntelSmartEdge/open-developer-experience-kits/issues" rel="nofollow" target="_blank" title="GitHub Issues">GitHub Issues</a></span>
-                    <span class="linkText uk-text-center">For help with Intel® Smart Edge Open licensed experience kits, contact your Intel representative</span>
+                    <span class="linkText uk-text-center">For help with Intel® Smart Edge licensed experience kits, contact your Intel representative</span>
                 </li>
             </ul>
         </div>

@@ -1,6 +1,6 @@
 ---
 layout: page
-description: Intel® Smart Edge Open speeds up development with reference solutions design for common network edge and on-premises use cases, powered by a Certified Kubernetes cloud-native stack.
+description: Intel® Smart Edge speeds up development with reference solutions design for common network edge and on-premises use cases, powered by a Certified Kubernetes cloud-native stack.
 width: expand
 hero:
     search: false

@@ -84,7 +84,7 @@ permalink: /release-notes/
 
 <div class="noteRight">
     <h3>Secure Access Service Edge (SASE) Experience Kit (22.05)</h3>
-    <p>The 22.05 release of Intel® Smart Edge Open features a full release of the SASE Experience kit, following the limited 22.02 release. This release adds SDEWAN capability, along with the Nodus software module to provide OVN network controller functionality. It supports hosting of VM-based network functions and supports Rook extensions to Ceph open-source storage to provide self-managing storage services.</p>
+    <p>The 22.05 release of Intel® Smart Edge features a full release of the SASE Experience kit, following the limited 22.02 release. This release adds SDEWAN capability, along with the Nodus software module to provide OVN network controller functionality. It supports hosting of VM-based network functions and supports Rook extensions to Ceph open-source storage to provide self-managing storage services.</p>
     <a class="uk-button uk-button-info uk-button-small uk-margin-small-bottom">Added</a>
     <p><strong>ICN-SDEWAN:</strong> Multiple WAN link support, WAN traffic management, NAT, firewall, IPSec, traffic shaping etc. are now added through the following components:</p>
     <ul>
@@ -148,7 +148,7 @@ permalink: /release-notes/
 
 <div class="noteRight">
     <h3>Private Wireless Experience Kit (22.04)</h3>
-    <p>The 22.04 release of Intel® Smart Edge Open features an update to the Private Wireless Experience kit. This release adds CPU management, network split functions, support for both autonomous and staged deployment through Edge Software Provisioner (ESP), and support for the Intel E810 NIC.</p>
+    <p>The 22.04 release of Intel® Smart Edge features an update to the Private Wireless Experience kit. This release adds CPU management, network split functions, support for both autonomous and staged deployment through Edge Software Provisioner (ESP), and support for the Intel E810 NIC.</p>
     <a class="uk-button uk-button-info uk-button-small uk-margin-small-bottom">Added</a>
     <p><strong>CPU Management:</strong> Native CPU manager enabling on Kubernetes node to allocate exclusive CPUs for certain pods/containers such as 5G network functions (DU/CU and UPF (User Plane Function). Requires dedicated CPU cores to achieve system stability and high performance.</p>
     <p><strong>Network split:</strong> A management network to deploy clusters and support remote login. A cluster network for communication between pods. This split improves efficiency and performance.</p>
@@ -178,7 +178,7 @@ permalink: /release-notes/
 
 <div class="noteRight">
     <h3>Developer Experience Kit (22.03)</h3>
-    <p>The 22.03 release of Intel® Smart Edge Open features an updated Developer Experience Kit.</p>
+    <p>The 22.03 release of Intel® Smart Edge features an updated Developer Experience Kit.</p>
     <p>This release adds secure key management, management of virtual machines, and options for distributed storage.</p>
     <a class="uk-button uk-button-info uk-button-small uk-margin-small-bottom">Added</a>
     <h3>Secure key management</h3>
@@ -208,7 +208,7 @@ permalink: /release-notes/
 
 <div class="noteRight">
     <h3>Secure Access Service Edge Experience Kit (22.02)</h3>
-    <p>The 22.02 release of Intel&reg; Smart Edge Open features an updated Secure Access Services Edge (SASE) Experience Kit.</p>
+    <p>The 22.02 release of Intel® Smart Edge features an updated Secure Access Services Edge (SASE) Experience Kit.</p>
     <p>This preview release is available to a pool of early customer adopters. The full experience kit, featuring a full SD-WAN implementation, will be released in the second quarter of 2022. You can <a href="/" title="browse the documentation">browse the documentation</a> for the preview release or <a href="/request-license" title="request a license">request a license</a> for the upcoming full release.</p>
     <a class="uk-button uk-button-info uk-button-small uk-margin-small-bottom">Added</a>
     <p>Remote Attestation for Trusted Computing: Support for remote attestation using the Intel&reg; Security Libraries for Data Center (<a href="https://www.intel.com/content/www/us/en/architecture-and-technology/security-libraries-for-data-center-article.html?wapkw=security%20libraries" target="_blank" title="Intel&reg; SecL – DC" rel="nofollow">Intel&reg; SecL – DC</a>). Remote attestation is the foundation for trusted compute, providing verification of whether or not the operating system is trustworthy.</p>
@@ -230,7 +230,7 @@ permalink: /release-notes/
     <p>Expanded the Intel&reg Smart Edge Open edge AI capabilities to demonstrate RAN intelligence, by providing a reference implementation on 3rd-generation Intel&reg     Xeon&reg platforms for near-real-time RAN Intelligent Controller (RIC) from the open-source SD-RAN project.
     </p>
     <p>This reference implementation has an AI/ML-based Intelligent Connection Management xApp with significant optimization for AI inference. It uses the Intel&reg        Distribution of OpenVINO™ toolkit to improve inference latency by approximately 10x, which helps meet 5G latency needs and expands OpenVINO AI inference to        network AI use cases.</p>
-    <p>The reference implementation is available through the <a href="https://www.intel.com/content/www/us/en/developer/articles/reference-implementation/intelligent-connection-management.html" target="_blank" title="connection management xApp" rel="nofollow">Intel Developer Catalog</a> and has been announced by the Open Network Foundation (ONF) in their <a href="https://docs.sd-ran.org/master/release_notes/sdran_1.4.html" target="_blank" title="SD-Ran 1.4" rel="nofollow">SD-RAN 1.4 release notes</a>. The Edge AI capabilities in Intel® Smart Edge Open enable multi-vertical and multi-tenant AI services for network automation, intelligent operation and end-user applications.</p>
+    <p>The reference implementation is available through the <a href="https://www.intel.com/content/www/us/en/developer/articles/reference-implementation/intelligent-connection-management.html" target="_blank" title="connection management xApp" rel="nofollow">Intel Developer Catalog</a> and has been announced by the Open Network Foundation (ONF) in their <a href="https://docs.sd-ran.org/master/release_notes/sdran_1.4.html" target="_blank" title="SD-Ran 1.4" rel="nofollow">SD-RAN 1.4 release notes</a>. The Edge AI capabilities in Intel® Smart Edge enable multi-vertical and multi-tenant AI services for network automation, intelligent operation and end-user applications.</p>
     <p>This reference implementation with network AI can run on the same edge platform alongside other AI applications for industry, smart cities etc and can be provided by completely different type of ISVs (network software ISVs and IoT solutions ISVs).</p>
     <a class="uk-button uk-button-purple uk-button-small uk-margin-small-bottom">Updated</a>
     <p>Updated four <a href="https://intelsmartedge.github.io/docs/product-overview/" target="_blank" title="reference implementations">reference implementations</a> for the Developer Experience Kit. These provide a reference for edge solution builders deploying multi-tenant services on the edge platform. They feature the following use cases:</p>
@@ -256,7 +256,7 @@ permalink: /release-notes/
 
 <div class="noteRight">
     <h3>22.01 Updates</h3>
-    <p>We are pleased to announce the 22.01 release of Intel&reg; Smart Edge Open software. This release features an updated Private Wireless Experience Kit for CentOS 7.9 that uses Intel&reg; Edge Software Provisioner to automate deployment.</p>
+    <p>We are pleased to announce the 22.01 release of Intel® Smart Edge software. This release features an updated Private Wireless Experience Kit for CentOS 7.9 that uses Intel&reg; Edge Software Provisioner to automate deployment.</p>
     <a class="uk-button uk-button-info uk-button-small uk-margin-small-bottom">Added</a>
     <p>The <a target="_blank" href="https://intelsmartedge.github.io/docs/experience-kits/private-wireless-experience-kit/" title="Intel&reg; Private Wireless Experience Kit">Intel&reg; Private Wireless Experience Kit</a> supports a single orchestration domain, optimizing the edge node to support both applications and NG-RAN and NG-Core network functions such as DU/CU, AMF, SMF, and UPF.</p>
     <p>Autonomous Deployment Through Intel&reg; Edge Software Provisioner (Intel&reg; ESP): Easy provisioning of a multi-node environment with CentOS 7.9. Intel&reg; ESP enables ODMs, system integrators and developers to automate the installation of a complete operating system and software stack on bare-metal or virtual machines using a just-in-time provision process.</p>
@@ -287,13 +287,9 @@ permalink: /release-notes/
 
 <div class="noteRight">
     <h3>21.12 Updates</h3>
-    <p>We are pleased to announce the 21.12 release of Intel&reg; Smart Edge Open software.</p>
+    <p>We are pleased to announce the 21.12 release of Intel® Smart Edge software.</p>
     <a class="uk-button uk-button-info uk-button-small uk-margin-small-bottom">Added</a>
-<<<<<<< HEAD
-    <p>The <a target="_blank" href="/docs/experience-kits/developer-experience-kit-default-install/">Developer Experience Kit</a> now supports <a href="https://www.intel.com/content/www/us/en/architecture-and-technology/security-libraries-for-data-center-article.html" target="_blank" >Intel&reg; Security Libraries for Data Center</a> (Intel&reg; SecL-DC) for platform integrity.  Platform integrity is established from a collection of both hardware and software that perform measurement and verification to ensure a platform boots into a trusted and desired state.</p>
-=======
     <p>The <a target="_blank" href="https://intelsmartedge.github.io/docs/experience-kits/developer-experience-kit-default-install/">Developer Experience Kit</a> now supports <a href="https://www.intel.com/content/www/us/en/architecture-and-technology/security-libraries-for-data-center-article.html" target="_blank" >Intel&reg; Security Libraries for Data Center</a> (Intel&reg; SecL-DC) for platform integrity.  Platform integrity is established from a collection of both hardware and software that perform measurement and verification to ensure a platform boots into a trusted and desired state.</p>
->>>>>>> neha-local-Oct
     <p>In addition, the Developer Experience Kit also supports <a target="_blank" href="https://www.intel.com/content/www/us/en/developer/tools/software-guard-extensions/overview.html"> Intel&reg; Software Guard Extensions</a> (Intel&reg;  SGX) for protection of selected code and data within a hardened enclave. Developers can now partition their application into hardened enclaves or trusted execution environments to increase application security.</p>
     <p>We are excited to announce an O-RAN compliant near-real time RAN Interface Controller (RIC) is available for the Developer Experience Kit and will soon be available for download from the <a target="_blank" href="https://www.intel.com/content/www/us/en/developer/tools/software-catalog/full-catalog.html?s=Newest&q=%22smart%2Bedge%2Bopen%22">Intel&reg; Developer Catalog.</a> The RIC can be used for development and testing of ORAN AI/ML xAPPs. A 5G RAN simulator is provided to facilitate development and testing.</p>
     <p>Support has been added for the next generation Intel&reg; Xeon&reg;  D processor. More details will be provided after the product has launched.</p>
@@ -310,16 +306,16 @@ permalink: /release-notes/
 </div>
 <div class="noteRight" id="prev-note">
     <h3>21.09 Updates</h3>
-    <p>We are pleased to announce the first release Intel&reg; Smart Edge Open.</p>
-    <p>Built from an OpenNESS foundation and representing more than two years of development, the 21.09 release of Intel&reg; Smart Edge Open introduces several technical improvements including a new Developer Experience Kit and an upgraded experience kit for creating 5G private wireless networks.</p>
+    <p>We are pleased to announce the first release Intel® Smart Edge.</p>
+    <p>Built from an OpenNESS foundation and representing more than two years of development, the 21.09 release of Intel® Smart Edge introduces several technical improvements including a new Developer Experience Kit and an upgraded experience kit for creating 5G private wireless networks.</p>
     <a class="uk-button uk-button-info uk-button-small uk-margin-small-bottom">Added</a>
     <p>Introduced the Developer Experience Kit</p>
-    <p>Intel&reg; Smart Edge Open is shifting to Ubuntu 20.04 LTS as the default OS in order to simplify future OS support. The Developer Experience kit uses Ubuntu 20.04 LTS. Other experience kits will be updated from CentOS to Ubuntu in future releases</p>
+    <p>Intel® Smart Edge is shifting to Ubuntu 20.04 LTS as the default OS in order to simplify future OS support. The Developer Experience kit uses Ubuntu 20.04 LTS. Other experience kits will be updated from CentOS to Ubuntu in future releases</p>
     <ul class="uk-margin-small-top">
         <li>Automated deployment process for experience kits, based on the Intel&reg; Edge Software Provisioner (Intel® ESP). (Currently available in the Developer Experience Kit.)</li>
         <li>Developer Experience Release Notes</li>
     </ul>
-    <p>5G Private Wireless Experience Kit with Integrated RAN that combines a 5G core, 5G RAN and Intel® Smart Edge Open platform in a single, validated solution, using commercial grade CNFs.</p>
+    <p>5G Private Wireless Experience Kit with Integrated RAN that combines a 5G core, 5G RAN and Intel® Smart Edge platform in a single, validated solution, using commercial grade CNFs.</p>
     <ul class="uk-margin-small-top">
         <li>Support for 3rd Generation Intel® Xeon® Scalable Processors (code name Ice Lake)</li>
         <li>Support for Intel® vRAN Dedicated Accelerator ACC100</li>
@@ -342,8 +338,8 @@ permalink: /release-notes/
     <a class="uk-button uk-button-success uk-button-small uk-margin-small-bottom">Changed</a>
     <ul class="uk-margin-small-top">
         <li>5G On Premises Edge has been re-named to 5G Private Wireless Experience Kit with Integrated RAN</li>
-        <li>Calico CNI is the default CNI for Intel® Smart Edge Open.</li>
-        <li>All documentation for Intel® Smart Edge Open is now publicly available</li>
+        <li>Calico CNI is the default CNI for Intel® Smart Edge.</li>
+        <li>All documentation for Intel® Smart Edge is now publicly available</li>
     </ul>
     <a class="uk-button uk-button-danger uk-button-small uk-margin-small-bottom">Fixed</a>
     <ul class="uk-margin-small-top">
